@@ -1,0 +1,13 @@
+{
+  "name": "@spotify/eslint-config-base",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "description": "Spotify's base ESLint config",
+  "main": "index.js",
+  "peerDependencies": {
+    "eslint": "<=5.0.0"
+  },
+  "engines": {
+    "node": "<=6.14.0"
+  }
+}

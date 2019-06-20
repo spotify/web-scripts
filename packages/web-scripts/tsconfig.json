@@ -1,0 +1,11 @@
+{
+  "extends": "@spotify/tsconfig/tsconfig.lib.json",
+  "include": ["src"],
+  "compilerOptions": {
+    "incremental": true,
+    "isolatedModules": false,
+    "noEmit": true,
+    "declaration": false,
+    "jsx": "preserve"
+  }
+}

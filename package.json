@@ -1,0 +1,26 @@
+{
+  "name": "@spotify/web-scripts-monorepo",
+  "private": true,
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "lerna run test --stream",
+    "build": "lerna run build --stream",
+    "lint": "web-scripts lint --ignore-path .gitignore",
+    "commit": "web-scripts commit",
+    "bootstrap": "lerna bootstrap --use-workspaces"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@spotify/web-scripts": "^1.0.0",
+    "husky": "^2.4.0",
+    "lerna": "^3.15.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "web-scripts commitmsg",
+      "pre-commit": "web-scripts precommit --no-tests"
+    }
+  }
+}

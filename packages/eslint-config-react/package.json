@@ -1,0 +1,15 @@
+{
+  "name": "@spotify/eslint-config-react",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "description": "Spotify's ESLint config for React projects",
+  "main": "index.js",
+  "peerDependencies": {
+    "eslint": "<=5.0.0",
+    "eslint-plugin-jsx-a11y": "<=6.0.0",
+    "eslint-plugin-react": "<=7.7.0"
+  },
+  "engines": {
+    "node": "<=6.14.0"
+  }
+}

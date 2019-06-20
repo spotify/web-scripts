@@ -1,0 +1,67 @@
+{
+  "name": "@spotify/web-scripts",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "description": "Build, lint, test, and fix your JS/TS library.",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "types": "types",
+  "bin": {
+    "web-scripts": "./bin/web-scripts"
+  },
+  "files": [
+    "bin",
+    "cjs",
+    "config",
+    "esm",
+    "types"
+  ],
+  "scripts": {
+    "clean": "rm -rf cjs esm types",
+    "build": "node ./bin/web-scripts build",
+    "test": "node ./bin/web-scripts test",
+    "lint": "node ./bin/web-scripts lint",
+    "bootstrap": "$npm_execpath run clean && tsc --allowJs --outDir cjs --noEmit false --module CommonJS",
+    "prepublishOnly": "$npm_execpath run bootstrap && $npm_execpath run build",
+    "prepare": "$npm_execpath run bootstrap"
+  },
+  "dependencies": {
+    "@commitlint/cli": "^7.5.2",
+    "@commitlint/config-conventional": "^7.5.0",
+    "@spotify/eslint-config-base": "^1.0.0",
+    "@spotify/eslint-config-react": "^1.0.0",
+    "@spotify/eslint-config-typescript": "^1.0.0",
+    "@spotify/prettier-config": "^1.0.0",
+    "@spotify/tsconfig": "^1.0.0",
+    "@types/cross-spawn": "^6.0.0",
+    "@types/debug": "^4.1.2",
+    "@types/jest": "^24.0.11",
+    "@types/react": "^16.8.19",
+    "@types/react-dom": "^16.8.4",
+    "@typescript-eslint/eslint-plugin": "^1.7.0",
+    "@typescript-eslint/parser": "^1.7.0",
+    "commander": "^2.20.0",
+    "commitizen": "^3.1.1",
+    "cross-spawn-promise": "^0.10.1",
+    "cz-conventional-changelog": "^2.1.0",
+    "debug": "^4.1.1",
+    "eslint": "^5.15.3",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "jest": "^24.5.0",
+    "jest-junit": "^6.3.0",
+    "lint-staged": "^8.1.5",
+    "prettier": "^1.16.4",
+    "semantic-release": "15",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.4.3"
+  },
+  "devDependencies": {
+    "@types/rimraf": "^2.0.2",
+    "@types/tempy": "^0.2.0",
+    "object.fromentries": "^2.0.0",
+    "rimraf": "^2.6.3",
+    "tempy": "^0.2.1"
+  }
+}

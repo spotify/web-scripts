@@ -1,0 +1,18 @@
+{
+  "name": "@spotify/tsconfig",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "description": "Common tsconfigs to be used as your base configurations",
+  "files": [
+    "tsconfig.*.json"
+  ],
+  "scripts": {
+    "test": "./run-tests.sh"
+  },
+  "devDependencies": {
+    "typescript": "^3.2.2"
+  },
+  "engines": {
+    "node": "<=6.14.0"
+  }
+}
