@@ -1,0 +1,31 @@
+language: node_js
+node_js:
+  - '8'
+  - '10'
+  - '12'
+branches:
+  only:
+  - master
+cache:
+  yarn: true
+  directories:
+    - node_modules
+before_install:
+  - curl -o- -L https://yarnpkg.com/install.sh | bash -s
+  - export PATH="$HOME/.yarn/bin:$PATH"
+before_script:
+  - yarn lerna bootstrap
+  - yarn lerna run bootstrap
+script:
+  - yarn lint
+  - yarn test
+before_deploy:
+  - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
+  - git remote add pub https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git -f
+deploy:
+  provider: script
+  script: yarn lerna publish --conventional-commits --yes --git-remote pub
+  skip_cleanup: true
+  on:
+    node: '12'
+    branch: master
