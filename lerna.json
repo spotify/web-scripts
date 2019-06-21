@@ -4,5 +4,16 @@
   ],
   "npmClient": "yarn",
   "useWorkspaces": true,
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "command": {
+    "publish": {
+      "ignoreChanges": [
+        "*.md",
+        "__test__/**",
+        "__fixtures__/**",
+        "**/*.test.{j|t}s",
+        "@(!(package)).json"
+      ]
+    }
+  }
 }
