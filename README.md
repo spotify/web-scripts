@@ -12,7 +12,7 @@ Five of the projects in this repo are shared configurations for common tools we 
 - [prettier-config](./packages/prettier-config)
 - [tsconfig](./packages/tsconfig)
 
-We also combine the above packages and wrap them as a CLI called `web-scripts`. This library is most useful for buidling and deploying npm packages. It is inspired by [react-scripts](https://www.npmjs.com/package/react-scripts).
+We also combine the above packages and wrap them as a CLI called `web-scripts`. This library is most useful for building and deploying npm packages. It is inspired by [react-scripts](https://www.npmjs.com/package/react-scripts).
 
 - [web-scripts](./packages/web-scripts)
 
