@@ -154,7 +154,7 @@ describe('integration tests', () => {
     // this is what is making the tests fail
     // for some reason in docker it can't set the registry to the internal one
     await exec('yarn', { cwd: PKG_ROOT });
-    // Required for the `fix`, `commit`, and `commitmsg` tasks.
+    // Required for the `commit` and `commitmsg` tasks.
     await exec('git init', { cwd: PKG_ROOT });
   }
 
