@@ -1,5 +1,7 @@
 # web-scripts
 
+[![Build Status](https://travis-ci.com/spotify/web-scripts.svg?branch=master)](https://travis-ci.com/spotify/web-scripts)
+
 A collection of base configs and CLI wrappers used to speed up development @ Spotify.
 
 ## About this project
