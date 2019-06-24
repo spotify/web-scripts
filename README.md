@@ -8,7 +8,7 @@ A collection of base configs and CLI wrappers used to speed up development @ Spo
 
 ### web-scripts CLI
 
-[@spotify/web-scripts](./packages/web-scripts) is a CLI that combines shared configuration for linting, formatting, testing, building, and shipping libraries for Node and the browser. It is opinionated, but allows configuration to avoid lock-in. You can also pick and choose which scripts you use. It is inspired by other tooling bundles like [react-scripts](https://www.npmjs.com/package/react-scripts) and [kcd-scripts](https://www.npmjs.com/package/kcd-scripts).
+[@spotify/web-scripts](./packages/web-scripts) is a CLI that combines shared configuration for building, linting, testing, formatting, and releasing libraries for Node and the browser. It is opinionated, but allows configuration to avoid lock-in. You can also pick and choose which scripts you use. It is inspired by other tooling bundles like [react-scripts](https://www.npmjs.com/package/react-scripts) and [kcd-scripts](https://www.npmjs.com/package/kcd-scripts).
 
 ```bash
 yarn add --dev @spotify/web-scripts husky

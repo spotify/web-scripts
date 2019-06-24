@@ -2,40 +2,32 @@
 
 ## Description
 
-Build, lint, test, fix, and release your JS/TS library. This CLI tool bundles all the necessary configuration and dependencies so you can focus on the code.
+Build, lint, test, format, and release your JS/TS library. This CLI tool bundles all the necessary configuration and dependencies so you can focus on the code.
 
 ## Usage
 
 ```sh
-yarn add @spotify/web-scripts
+yarn add --dev @spotify/web-scripts husky
 ```
 
-Add the scripts to your package.json:
+Add the scripts and commit hooks to your package.json:
 
 ```json
+{
+  "scripts": {
     "test": "web-scripts test",
     "lint": "web-scripts lint",
-    "fix": "web-scripts fix",
     "build": "web-scripts build",
     "commit": "web-scripts commit",
     "release": "web-scripts release"
-```
-
-Add a husky precommit hook:
-
-```sh
-yarn add --dev husky
-```
-
-And in your package.json:
-
-```json
+  },
   "husky": {
     "hooks": {
       "commit-msg": "web-scripts commitmsg",
       "pre-commit": "web-scripts precommit"
     }
   }
+}
 ```
 
 If you plan to use `web-scripts build` to build ESM, CommonJS, and types for your library with ease, update your package.json to define the locations where those will end up. [Read more about our the build script](#the-build-script).
@@ -48,7 +40,7 @@ If you plan to use `web-scripts build` to build ESM, CommonJS, and types for you
 }
 ```
 
-### Editor support steps:
+### Editor support steps
 
 Add a root tsconfig.json:
 
@@ -93,9 +85,9 @@ web-scripts test --watch
 
 `web-scripts build` runs three parallel calls to the TypeScript compiler.
 
-* One of them transpiles the files as CommonJS and outputs it to the `cjs` directory. Your repo should have `"cjs/index.js"` set as `main` in your package.json. You can turn this off using `--no-cjs` when running build.
-* Another does the exact same thing but only transpiles to [EcmaScript modules](https://github.com/standard-things/esm). This is super helpful if your consuming project is using Babel or TypeScript, and you'll end up avoiding playing games of transpilation telephone along the way. Your repo should have `"esm/index.js"` set as `module` in your package.json if using this. You can turn this off with the `--no-esm` flag when running build.
-* Finally, tsc will be run to output type definitions. Your repo should have the `"types"` directory set as `types` in your package.json if using this. You can turn this off with the `--no-types` flag when running build.
+- One of them transpiles the files as CommonJS and outputs it to the `cjs` directory. Your repo should have `"cjs/index.js"` set as `main` in your package.json. You can turn this off using `--no-cjs` when running build.
+- Another does the exact same thing but only transpiles to [EcmaScript modules](https://github.com/standard-things/esm). This is super helpful if your consuming project is using Babel or TypeScript, and you'll end up avoiding playing games of transpilation telephone along the way. Your repo should have `"esm/index.js"` set as `module` in your package.json if using this. You can turn this off with the `--no-esm` flag when running build.
+- Finally, tsc will be run to output type definitions. Your repo should have the `"types"` directory set as `types` in your package.json if using this. You can turn this off with the `--no-types` flag when running build.
 
 These parallel builds are set up to share resources and work efficiently.
 

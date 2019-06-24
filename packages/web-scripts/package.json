@@ -2,7 +2,7 @@
   "name": "@spotify/web-scripts",
   "version": "1.0.0",
   "license": "Apache-2.0",
-  "description": "Build, lint, test, and fix your JS/TS library.",
+  "description": "Build, lint, test, format, and release your JS/TS library.",
   "main": "cjs/index.js",
   "module": "esm/index.js",
   "types": "types",

@@ -87,34 +87,6 @@ program
   });
 
 program
-  .command('fix')
-  .allowUnknownOption()
-  .description('DEPRECATED - use `web-scripts precommit`')
-  .option(
-    '--prettier-config [path]',
-    'path to prettier config',
-    PRETTIER_CONFIG,
-  )
-  .option('--eslint-config [path]', 'path to eslint config', ESLINT_CONFIG)
-  .action((cmd: Command) => {
-    const {
-      'eslint-config': eslintConfig,
-      'prettier-config': prettierConfig,
-    } = cmd.opts();
-    const t: PrecommitTaskDesc = {
-      name: 'precommit',
-      fix: true,
-      tests: false,
-      jestConfig: JEST_CONFIG,
-      eslintConfig,
-      prettierConfig,
-      restOptions: parseRestOptions(cmd),
-    };
-
-    handleSpawnResult(precommitTask(t));
-  });
-
-program
   .command('precommit')
   .allowUnknownOption()
   .description('Locally validate the repo before committing')
