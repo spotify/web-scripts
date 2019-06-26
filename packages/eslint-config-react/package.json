@@ -1,6 +1,6 @@
 {
   "name": "@spotify/eslint-config-react",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "Apache-2.0",
   "description": "Spotify's ESLint config for React projects",
   "main": "index.js",
