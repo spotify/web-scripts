@@ -5,9 +5,9 @@
   "description": "Spotify's ESLint config for TypeScript",
   "main": "index.js",
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "<=1.5.0",
-    "@typescript-eslint/parser": "<=1.5.0",
-    "eslint": "<=5.0.0"
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
+    "eslint": "^5.0.0"
   },
   "publishConfig": {
     "access": "public"

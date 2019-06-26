@@ -5,7 +5,7 @@
   "description": "Spotify's base Prettier config",
   "main": "index.js",
   "peerDependencies": {
-    "prettier": "<=1.0.0"
+    "prettier": "^1.18.0"
   },
   "publishConfig": {
     "access": "public"
