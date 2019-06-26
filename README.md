@@ -77,6 +77,14 @@ the result of consensus between many web engineers inside Spotify, and the defau
 written by Spotify employees. _We may reject PRs to the ESLint config if we don't agree that the rule
 makes sense as part of our baseline, for example._ Use it if it aligns with your needs!
 
+## Running Tests locally
+
+If you get an error like `Cannot find module '../cjs'` when running `yarn test`, you need to bootstrap web-scripts.
+
+```bash
+$ yarn lerna run bootstrap
+```
+
 [eslint]: https://eslint.org/
 [typescript]: https://www.typescriptlang.org/
 [prettier]: https://prettier.io/
