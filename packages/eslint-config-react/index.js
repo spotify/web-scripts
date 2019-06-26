@@ -5,11 +5,6 @@ module.exports = {
       jsx: true,
     },
   },
-  settings: {
-    react: {
-      version: 'detect',
-    },
-  },
   extends: ['plugin:jsx-a11y/recommended'],
   rules: {
     // Prevent missing displayName in a React component definition

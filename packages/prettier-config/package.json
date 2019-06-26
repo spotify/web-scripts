@@ -4,8 +4,11 @@
   "license": "Apache-2.0",
   "description": "Spotify's base Prettier config",
   "main": "index.js",
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  },
   "peerDependencies": {
-    "prettier": "^1.18.0"
+    "prettier": "1.x"
   },
   "publishConfig": {
     "access": "public"

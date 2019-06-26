@@ -4,10 +4,15 @@
   "license": "Apache-2.0",
   "description": "Spotify's ESLint config for TypeScript",
   "main": "index.js",
-  "peerDependencies": {
+  "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^1.11.0",
     "@typescript-eslint/parser": "^1.11.0",
-    "eslint": "^5.0.0"
+    "eslint": "^5.16.0"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": ">=1.5 <2",
+    "@typescript-eslint/parser": ">=1.5 <2",
+    "eslint": "5.x"
   },
   "publishConfig": {
     "access": "public"
