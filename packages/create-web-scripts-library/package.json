@@ -1,0 +1,46 @@
+{
+  "name": "@spotify/create-web-scripts-library",
+  "version": "1.0.2",
+  "description": "Project scaffolding script for @spotify/web-scripts libraries",
+  "author": "Paul Marbach <pmarbach@spotify.com>",
+  "homepage": "https://github.com/spotify/web-scripts#readme",
+  "license": "Apache-2.0",
+  "bin": {
+    "create-web-scripts-library": "bin/create-web-scripts-library"
+  },
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "types": "types",
+  "files": [
+    "cjs",
+    "esm",
+    "bin",
+    "types",
+    "template",
+    "package.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spotify/web-scripts.git"
+  },
+  "scripts": {
+    "test": "web-scripts test",
+    "build": "web-scripts build",
+    "lint": "web-scripts lint"
+  },
+  "bugs": {
+    "url": "https://github.com/spotify/web-scripts/issues"
+  },
+  "dependencies": {
+    "@spotify/web-scripts": "^1.0.2",
+    "chalk": "^2.4.2",
+    "commander": "^2.20.0",
+    "debug": "^4.1.1",
+    "execa": "^2.0.1",
+    "fs-extra": "^7.0.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^7.0.0",
+    "tempy": "^0.3.0"
+  }
+}
