@@ -42,5 +42,11 @@
   "devDependencies": {
     "@types/fs-extra": "^7.0.0",
     "tempy": "^0.3.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=10"
   }
 }
