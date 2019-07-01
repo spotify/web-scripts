@@ -1,14 +1,11 @@
 import program from 'commander';
 import chalk from 'chalk';
-import debug from 'debug';
 
 import createWebScriptsLibrary from '.';
 
 // MUST require and not import this to avoid wrecking the
 // file structure in the build output.
 const pkg = require('../package.json');
-
-const log = debug(pkg.name);
 
 let projectName: string;
 
@@ -26,8 +23,10 @@ async function run() {
   try {
     await createWebScriptsLibrary(projectName);
   } catch (err) {
-    log(chalk.redBright('Failed to create your project!'));
-    log(err.message);
+    /* eslint-disable no-console */
+    console.log(chalk.redBright('Failed to create your project!'));
+    console.log(err.message);
+    /* eslint-enable no-console */
     process.exit(1);
     return;
   }
