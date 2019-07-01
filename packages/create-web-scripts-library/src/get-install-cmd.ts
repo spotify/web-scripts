@@ -1,6 +1,6 @@
 // from https://github.com/zeit/create-next-app/blob/master/lib/utils/get-install-cmd.js
 
-import * as execa from 'execa';
+import execa from 'execa';
 
 let cmd: string;
 
