@@ -16,13 +16,6 @@ yarn create @spotify/web-scripts-library my-cool-library
 npx @spotify/web-scripts-create-library my-cool-library
 ```
 
-### Installed globally
-
-```sh
-npm i -g @spotify/web-scripts-create-library
-web-scripts-create-library my-cool-library
-```
-
 ### Programatically
 
 ```javascript
