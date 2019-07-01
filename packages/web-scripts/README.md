@@ -99,8 +99,31 @@ The following steps should be from your local repository folder.
 
 (Optional but probably mandatory): Visit https://travis-ci.com/account/repositories and click "Sync Account" otherwise the Travis CLI may not be able to register your ENV vars later. 
 
-1) Add a .travis.yaml
-2) Append a "release" stage that invokes `web-scripts release`:
+1) Add a basic .travis.yaml. You probably want something like:
+
+```yml
+language: node_js
+node_js:
+- '8'
+- '10'
+- '12'
+branches:
+  only:
+  - master
+cache:
+  yarn: true
+  directories:
+  - node_modules
+before_install:
+- curl -o- -L https://yarnpkg.com/install.sh | bash -s
+- export PATH="$HOME/.yarn/bin:$PATH"
+script:
+- yarn lint
+- yarn test
+```
+
+
+2) Append a "release" stage to the `jobs:` that invokes `web-scripts release`:
 
 ```
 jobs:
