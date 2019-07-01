@@ -93,6 +93,45 @@ These parallel builds are set up to share resources and work efficiently.
 
 If you need to use Babel for some reason, that's ok! Simply use babel directly instead of using `web-scripts build`. Teams inside Spotify mix and match which scripts they use to serve their needs. In many cases, `tsc` is all you need and is lighter and simpler to set up.
 
+### Setting up CI publishing (Travis CI)
+
+The following steps should be from your local repository folder.
+
+(Optional but probably mandatory): Visit https://travis-ci.com/account/repositories and click "Sync Account" otherwise the Travis CLI may not be able to register your ENV vars later. 
+
+1) Add a .travis.yaml
+2) Append a "release" stage that invokes `web-scripts release`:
+
+```
+jobs:
+  include:
+    - stage: release
+      node_js: lts/*
+      script: skip # do not run tests again
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script:
+          - npx web-scripts release # or yarn release if you defined it in your package.json scripts
+```
+
+3) Install the travis CI CLI: `gem install travis`
+4) Create an NPM token: `https://www.npmjs.com/settings/[NPM USERNAME]/tokens` (scope: Read and Publish)
+5) Set the secure ENV var: `travis env set NPM_TOKEN YOUR-NPM-TOKEN`
+6) Create a Github Token: `https://github.com/settings/tokens` (required scope: `public_repo` !)
+7) Set the secure ENV var: `travis env set GH_TOKEN YOUR-GH-TOKEN`
+8) Commit all your changes with `yarn commit`, and push.
+
+If you use a scoped public package, such as `@yourusername/packagename`, then you'll need explicitly set in your `package.json`:
+
+```
+  "publishConfig": {
+    "access": "public"
+  },
+```
+
+Otherwise you'll receive an error during release like "You must sign up for private packages" or a missing flag `--access=public`.
+
 ## Contributing
 
 To start working in the repo:
