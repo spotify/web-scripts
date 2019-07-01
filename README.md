@@ -2,7 +2,9 @@
 
 [![Build Status](https://travis-ci.com/spotify/web-scripts.svg?branch=master)](https://travis-ci.com/spotify/web-scripts)
 
-A collection of base configs and CLI wrappers used to speed up development @ Spotify.
+A monorepo of base configs and CLI wrappers used to speed up development @ Spotify.
+
+Want to use it? Check out the [CLI documentation](https://github.com/spotify/web-scripts/blob/master/packages/web-scripts) to get started!
 
 ## About this project
 
