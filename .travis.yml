@@ -23,4 +23,4 @@ before_script:
   - yarn lerna run bootstrap
 script:
   - yarn lint
-  - yarn test
+  - yarn test --parallel
