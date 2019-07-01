@@ -52,6 +52,7 @@ const TEST_SCRIPTS_TIMEOUT = 60000;
 // const GITHUB_URL = 'https://github.com/spotify/web-scripts.git';
 
 describe('integration tests', () => {
+  const MONOREPO_ROOT = join(root, '../..');
   let PKG_ROOT: string;
 
   beforeEach(() => {
@@ -148,7 +149,10 @@ describe('integration tests', () => {
         join(PKG_ROOT, 'src', fileName),
       ),
     );
-    await copyFile(join(THIS_ROOT, '.gitignore'), join(PKG_ROOT, '.gitignore'));
+    await copyFile(
+      join(MONOREPO_ROOT, '.gitignore'),
+      join(PKG_ROOT, '.gitignore'),
+    );
 
     // install the dependencies we specified above in pkg
     // this is what is making the tests fail
