@@ -12,7 +12,7 @@
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": ">=1.5 <2",
     "@typescript-eslint/parser": ">=1.5 <2",
-    "eslint": "5.x"
+    "eslint": ">=5.x"
   },
   "publishConfig": {
     "access": "public"
