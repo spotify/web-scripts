@@ -26,7 +26,8 @@
   "scripts": {
     "test": "web-scripts test",
     "build": "web-scripts build",
-    "lint": "web-scripts lint"
+    "lint": "web-scripts lint",
+    "prepublishOnly": "$npm_execpath run build"
   },
   "bugs": {
     "url": "https://github.com/spotify/web-scripts/issues"
