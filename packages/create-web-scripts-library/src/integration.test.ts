@@ -37,7 +37,7 @@ describe('integration test', () => {
     [
       { cmd: 'lint' },
       { cmd: 'test' },
-      { cmd: 'build', asyncTimeout: 35000 },
+      { cmd: 'build', asyncTimeout: 60000 },
     ].forEach(
       ({
         cmd,
