@@ -44,7 +44,7 @@ View the [full CLI documentation](./packages/web-scripts) for more details on ho
 
 ### Create a new library
 
-To quickly get started with a new `@spotify/web-scripts` library, you can build one with our library scaffolding tool:
+To quickly get started with a new `@spotify/web-scripts` library, you can build one with our [library scaffolding tool](https://github.com/spotify/web-scripts/tree/master/packages/create-web-scripts-library):
 
 ```sh
 yarn create @spotify/web-scripts-library my-library-name
