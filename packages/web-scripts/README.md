@@ -135,7 +135,7 @@ jobs:
         provider: script
         skip_cleanup: true
         script:
-          - npx web-scripts release # or yarn release if you defined it in your package.json scripts
+          - yarn web-scripts release # or `yarn release` if you defined it in your package.json scripts
 ```
 
 3) Install the travis CI CLI: `gem install travis`
