@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/spotify/web-scripts/compare/v1.1.2...v1.1.3) (2019-07-02)
+
+### Bug Fixes
+
+- **create-web-scripts-library:** move web-scripts to devDependency ([868354d](https://github.com/spotify/web-scripts/commit/868354d))
+
 ## [1.1.2](https://github.com/spotify/web-scripts/compare/v1.1.1...v1.1.2) (2019-07-01)
 
 ### Bug Fixes
