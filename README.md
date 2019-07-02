@@ -42,6 +42,14 @@ It is intended to be used within a project as a series of npm scripts.
 
 View the [full CLI documentation](./packages/web-scripts) for more details on how to get started.
 
+### Create a new library
+
+To quickly get started with a new `@spotify/web-scripts` library, you can build one with our library scaffolding tool:
+
+```sh
+yarn create @spotify/web-scripts-library my-library-name
+```
+
 ### Spotify shared configurations
 
 The other five projects in this repo are shared configurations for common tools we use for building, linting, and formatting our code. They can be installed separately and used by anyone should they opt to follow our standards. We have a [specialized point-of-view on what belongs in our configs](#methodology). They are all used by the web-scripts CLI by default.
