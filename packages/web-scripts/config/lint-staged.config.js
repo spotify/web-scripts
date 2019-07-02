@@ -1,5 +1,4 @@
 const { PRETTIER_CONFIG, ESLINT_CONFIG, JEST_CONFIG } = require('../cjs/Paths');
-const path = require('path');
 
 const fix = process.env.WEB_SCRIPTS_SHOULD_FIX === 'true';
 const tests = process.env.WEB_SCRIPTS_RUN_TESTS === 'true';
@@ -8,10 +7,7 @@ const prettierConfig =
   process.env.WEB_SCRIPTS_PRETTIER_CONFIG || PRETTIER_CONFIG;
 const eslintConfig = process.env.WEB_SCRIPTS_ESLINT_CONFIG || ESLINT_CONFIG;
 
-const testRelatedChanges = `jest --config ${jestConfig} --rootDir ${path.join(
-  process.cwd(),
-  'src',
-)} --bail --findRelatedTests`;
+const testRelatedChanges = `jest --config ${jestConfig} --bail --findRelatedTests`;
 
 const lintRelatedChanges = `eslint ${
   fix ? '--fix' : ''
