@@ -13,7 +13,7 @@ yarn create @spotify/web-scripts-library my-cool-library
 ### With `npx`
 
 ```sh
-npx @spotify/web-scripts-create-library my-cool-library
+npx @spotify/create-web-scripts-library my-cool-library
 ```
 
 ### Programatically
