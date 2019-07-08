@@ -7,6 +7,10 @@
   "peerDependencies": {
     "eslint": ">=5.x"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spotify/web-scripts.git"
+  },
   "publishConfig": {
     "access": "public"
   },

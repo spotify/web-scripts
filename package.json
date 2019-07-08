@@ -2,6 +2,10 @@
   "name": "@spotify/web-scripts-monorepo",
   "private": true,
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spotify/web-scripts.git"
+  },
   "scripts": {
     "test": "lerna run test --stream",
     "build": "lerna run build --stream",
