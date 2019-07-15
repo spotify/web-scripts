@@ -1,4 +1,4 @@
-# web-scripts
+# @spotify/web-scripts
 
 [![Build Status](https://travis-ci.com/spotify/web-scripts.svg?branch=master)](https://travis-ci.com/spotify/web-scripts)
 
