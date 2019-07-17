@@ -87,7 +87,7 @@ the result of consensus between many web engineers inside Spotify, and the defau
 written by Spotify employees. _We may reject PRs to the ESLint config if we don't agree that the rule
 makes sense as part of our baseline, for example._ Use it if it aligns with your needs!
 
-## Running Tests locally
+### Running Tests locally
 
 If you get an error like `Cannot find module '../cjs'` when running `yarn test`, you need to bootstrap web-scripts.
 
@@ -103,6 +103,10 @@ $ yarn lerna run bootstrap
 [lint-staged]: https://github.com/okonet/lint-staged
 [code-of-conduct]: https://github.com/spotify/code-of-conduct/blob/master/code-of-conduct.md
 
-## Releasing
+### Releasing
 
-For now, we will release this repo manually with fixed versions. To do that, use `lerna publish --conventional-commits`.
+For now, we will release this repo manually with fixed versions. To do that, use:
+
+```sh
+lerna publish --conventional-commits --registry=https://registry.npmjs.com
+```
