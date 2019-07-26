@@ -97,33 +97,32 @@ If you need to use Babel for some reason, that's ok! Simply use babel directly i
 
 The following steps should be from your local repository folder.
 
-(Optional but probably mandatory): Visit https://travis-ci.com/account/repositories and click "Sync Account" otherwise the Travis CLI may not be able to register your ENV vars later. 
+(Optional but probably mandatory): Visit https://travis-ci.com/account/repositories and click "Sync Account" otherwise the Travis CLI may not be able to register your ENV vars later.
 
-1) Add a basic .travis.yaml. You probably want something like:
+1. Add a basic .travis.yaml. You probably want something like:
 
 ```yml
 language: node_js
 node_js:
-- '8'
-- '10'
-- '12'
+  - '8'
+  - '10'
+  - '12'
 branches:
   only:
-  - master
+    - master
 cache:
   yarn: true
   directories:
-  - node_modules
+    - node_modules
 before_install:
-- curl -o- -L https://yarnpkg.com/install.sh | bash -s
-- export PATH="$HOME/.yarn/bin:$PATH"
+  - curl -o- -L https://yarnpkg.com/install.sh | bash -s
+  - export PATH="$HOME/.yarn/bin:$PATH"
 script:
-- yarn lint
-- yarn test
+  - yarn lint
+  - yarn test
 ```
 
-
-2) Append a "release" stage to the `jobs:` that invokes `web-scripts release`:
+2. Append a "release" stage to the `jobs:` that invokes `web-scripts release`:
 
 ```
 jobs:
@@ -138,12 +137,12 @@ jobs:
           - yarn web-scripts release # or `yarn release` if you defined it in your package.json scripts
 ```
 
-3) Install the travis CI CLI: `gem install travis`
-4) Create an NPM token: `https://www.npmjs.com/settings/[NPM USERNAME]/tokens` (scope: Read and Publish)
-5) Set the secure ENV var: `travis env set NPM_TOKEN YOUR-NPM-TOKEN`
-6) Create a Github Token: `https://github.com/settings/tokens` (required scope: `public_repo` !)
-7) Set the secure ENV var: `travis env set GH_TOKEN YOUR-GH-TOKEN`
-8) Commit all your changes with `yarn commit`, and push.
+3. Install the travis CI CLI: `gem install travis`
+4. Create an NPM token: `https://www.npmjs.com/settings/[NPM USERNAME]/tokens` (scope: Read and Publish)
+5. Set the secure ENV var: `travis env set NPM_TOKEN YOUR-NPM-TOKEN`
+6. Create a Github Token: `https://github.com/settings/tokens` (required scope: `public_repo` !)
+7. Set the secure ENV var: `travis env set GH_TOKEN YOUR-GH-TOKEN`
+8. Commit all your changes with `yarn commit`, and push.
 
 If you use a scoped public package, such as `@yourusername/packagename`, then you'll need explicitly set in your `package.json`:
 

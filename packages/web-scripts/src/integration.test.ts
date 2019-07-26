@@ -102,6 +102,7 @@ describe('integration tests', () => {
     // dependencies is removed from package.json, this test will fail when the
     // commands are run at the end.
     const localDependencies = [
+      'react',
       'ts-jest',
       'typescript',
       '@types/jest',
