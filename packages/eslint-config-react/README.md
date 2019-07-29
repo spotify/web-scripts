@@ -5,7 +5,7 @@ Spotify's ESLint config for react.
 ## Installation
 
 ```sh
-yarn add --dev @spotify/eslint-config-react eslint eslint-plugin-react
+yarn add --dev @spotify/eslint-config-react eslint eslint-plugin-react eslint-plugin-jsx-a11y
 ```
 
 ## Usage
