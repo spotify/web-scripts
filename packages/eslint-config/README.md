@@ -5,7 +5,7 @@ Spotify's TypeScript full ESLint config.
 ## Installation
 
 ```sh
-npm install --save-dev eslint @spotify/eslint-config-typescript
+npm install --save-dev eslint @spotify/eslint-config
 ```
 
 ## Usage
