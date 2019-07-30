@@ -16,7 +16,7 @@ const lintRelatedChanges = `eslint ${
 // have to run the script in a way that the files aren't passed in.
 // we need to run tsc on the whole project.
 // https://github.com/okonet/lint-staged/issues/174#issuecomment-461423707
-const typecheckRelatedChanges = `bash -c \"tsc --noEmit\"`;
+const typecheckRelatedChanges = 'bash -c "tsc --noEmit"';
 
 const formatRelatedChanges = `prettier ${
   fix ? '--write' : '--check'

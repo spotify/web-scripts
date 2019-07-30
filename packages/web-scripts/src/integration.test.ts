@@ -26,16 +26,18 @@ const copyFile = promisify(copyFileFS);
 // log output after the command finishes
 const exec = async (cmd: string, options?: object) => {
   function _log(resp: { stdout?: string | Buffer; stderr?: string | Buffer }) {
-    if (resp.stdout)
+    if (resp.stdout) {
       resp.stdout
         .toString()
         .split('\n')
         .forEach(dbg);
-    if (resp.stderr)
+    }
+    if (resp.stderr) {
       resp.stderr
         .toString()
         .split('\n')
         .forEach(dbg);
+    }
   }
   try {
     const resp = await execPromise(cmd, options);

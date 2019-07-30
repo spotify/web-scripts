@@ -22,7 +22,6 @@
     "@spotify/eslint-config-typescript": "^1.1.4",
     "@typescript-eslint/eslint-plugin": "^1.11.0",
     "@typescript-eslint/parser": "^1.11.0",
-    "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4"
   },
