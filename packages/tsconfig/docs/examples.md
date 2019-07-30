@@ -16,8 +16,9 @@ Use the `"extends"` option in your tsconfig.json to extend the appropriate confi
 
 ## Apps
 
-This setup assumes that create-react-app, webpack, or babel will transpile your bundled assets (aka `tsc` is not used for emitting transpiled code, only for type-checking).
+This setup assumes that create-react-app, webpack, and/or babel will transpile your bundled assets (aka `tsc` is not used for emitting transpiled code, only for type-checking).
 
+Extend your `tsconfig.json` with our `tsconfig.app.json`
 ```json
 {
   "extends": "@spotify/tsconfig/tsconfig.app.json",
@@ -25,22 +26,81 @@ This setup assumes that create-react-app, webpack, or babel will transpile your 
 }
 ```
 
-After this, if you manage your own Webpack config, be sure you install and configure [ts-loader](https://github.com/TypeStrong/ts-loader) to handle resolution of TypeScript files. See their docs for full details, but something like this will be necessary:
+### Webpack
 
-```javascript
+Use `babel-loader` to compile TypeScript via Webpack.
+
+```bash
+yarn add -D babel-loader @babel/typescript
+```
+
+Include the preset in your `.babelrc` (or wherever you configure Babel).
+
+```js
+{
+  // ...
+  "presets": [
+    "@babel/typescript"
+  ],
+  // ...
+}
+```
+
+And make sure to add the TypeScript filetypes to your Webpack config.
+
+```js
 module.exports = {
   // ...
   resolve: {
-    // Add `.ts` and `.tsx` as a resolvable extension.
     extensions: ['.ts', '.tsx', '.js'],
   },
   module: {
     rules: [
-      // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
-      { test: /\.tsx?$/, loader: 'ts-loader' },
+      {
+        test: /\.(ts|tsx|js|jsx|json)$/,
+        use: 'babel-loader',
+        exclude: /node_modules/,
+      },
     ],
   },
+  // ...
 };
+```
+
+### Webpack without `babel-loader`
+
+If you don't use `babel-loader` or you prefer for it not to handle your TypeScript, you can use `ts-loader` instead.
+
+```bash
+yarn add -D ts-loader
+```
+
+Make sure to add the TypeScript filetypes and `ts-loader` to your Webpack config.
+
+```js
+module.exports = {
+  // ...
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js'],
+  },
+  module: {
+    rules: [
+      { test: /\.(ts|tsx)$/, loader: 'ts-loader' },
+    ],
+  },
+  // ...
+};
+```
+
+**IMPORTANT** You will need to opt out of `noEmit: true`:
+```json
+{
+  "extends": "@spotify/tsconfig/tsconfig.app.json",
+  "include": ["src"],
+    "compilerOptions": {
+    "noEmit": false
+  }
+}
 ```
 
 ## Libraries
