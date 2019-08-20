@@ -1,5 +1,7 @@
 # @spotify/web-scripts
 
+[![Actions Status](https://github.com/spotify/web-scripts/workflows/Tests/badge.svg)](https://github.com/spotify/web-scripts/actions)
+
 [![Build Status](https://travis-ci.com/spotify/web-scripts.svg?branch=master)](https://travis-ci.com/spotify/web-scripts)
 
 A monorepo of base configs and CLI wrappers used to speed up development @ Spotify.
