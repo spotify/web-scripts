@@ -8,7 +8,7 @@ if [ $? -eq 0 ]
 then
   echo "spotify/web-scripts: A release will be triggered."
   yarn lerna publish --yes --conventional-commits --registry=https://registry.npmjs.com
-  exit 0
+  exit $?
 else
   echo "spotify/web-scripts: No release will be triggered." >&2
   exit 0
