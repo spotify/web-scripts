@@ -11,7 +11,8 @@
     "build": "lerna run build --stream",
     "lint": "web-scripts lint --ignore-path .gitignore",
     "commit": "web-scripts commit",
-    "bootstrap": "lerna bootstrap --use-workspaces"
+    "bootstrap": "lerna bootstrap --use-workspaces",
+    "release": "./release.sh"
   },
   "workspaces": [
     "packages/*"
