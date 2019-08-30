@@ -31,7 +31,9 @@ jobs:
         git checkout master
         git config --global user.email "no-reply@spotify.com"
         git config --global user.name "GitHub Action"
+        git remote set-url origin https://<GH_USERNAME>:<GH_TOKEN>@github.com/spotify/web-scripts.git
         yarn release
       env:
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        GH_USERNAME: ${{ secrets.GH_USERNAME }}
