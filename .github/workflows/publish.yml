@@ -1,0 +1,31 @@
+name: Publish
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - uses: textbook/git-checkout-submodule-action@master
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 12.0
+    - name: yarn install
+      run: yarn
+    - name: lint
+      run: yarn lint
+    - name: test
+      run: yarn test
+    - name: build
+      run: yarn build
+    - name: release
+      run: yarn release
+      env:
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
