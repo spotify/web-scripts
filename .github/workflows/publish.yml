@@ -18,12 +18,12 @@ jobs:
         node-version: 12.0
     - name: yarn install
       run: yarn
+    - name: build
+      run: yarn build
     - name: lint
       run: yarn lint
     - name: test
       run: yarn test
-    - name: build
-      run: yarn build
     - name: release
       run: yarn release
       env:
