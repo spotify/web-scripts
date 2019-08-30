@@ -78,7 +78,7 @@ describe('integration tests', () => {
 
     test(
       'Full integration test',
-      async () => await testScripts([], ['--typecheck']),
+      async () => await testScripts(),
       TEST_SCRIPTS_TIMEOUT,
     );
   });
@@ -163,10 +163,7 @@ describe('integration tests', () => {
     await exec('git init', { cwd: PKG_ROOT });
   }
 
-  async function testScripts(
-    buildArgs: string[] = [],
-    lintArgs: string[] = [],
-  ) {
+  async function testScripts(buildArgs: string[] = []) {
     try {
       rimraf.sync(join(PKG_ROOT, 'cjs'));
       expect(existsSync(join(PKG_ROOT, 'cjs/index.js'))).toBe(false);
@@ -174,7 +171,7 @@ describe('integration tests', () => {
       expect(existsSync(join(PKG_ROOT, 'cjs/index.js'))).toBe(true);
 
       await exec('yarn test', { cwd: PKG_ROOT });
-      await exec(['yarn lint', ...lintArgs].join(' '), { cwd: PKG_ROOT });
+      await exec('yarn lint', { cwd: PKG_ROOT });
     } catch (e) {
       // We are not capturing and printing stdout above, where TSC prints its errors. This makes sure it's printed.
       console.log(e.stdout); // eslint-disable-line no-console
