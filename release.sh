@@ -1,7 +1,7 @@
-# this message appears when one of the commits found by web-scripts should trigger a release.
+# this message is logged by semantic-release when one of the commits found by web-scripts should trigger a release
 expected_release_message="The release type for the commit is"
 
-# run web-scripts release in dry-run mode, looking of the release message
+echo "spotify/web-scripts: Running semantic-release in --dry-run to see if we should trigger a lerna release."
 yarn web-scripts release --dry-run | grep "${expected_release_message}"
 
 if [ $? -eq 0 ]
