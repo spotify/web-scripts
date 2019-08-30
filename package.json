@@ -9,7 +9,7 @@
   "scripts": {
     "test": "lerna run test --stream",
     "build": "lerna run build --stream",
-    "lint": "web-scripts lint --ignore-path .gitignore",
+    "lint": "lerna run lint --stream",
     "commit": "web-scripts commit",
     "bootstrap": "lerna bootstrap --use-workspaces"
   },

@@ -73,17 +73,19 @@ program
 program
   .command('lint')
   .allowUnknownOption()
-  .description('Run eslint')
+  .description('Run ESLint and TypeScript to statically analyze your code')
   .option('--config [path]', 'path to ESLint config', ESLINT_CONFIG)
+  .option('--typecheck', 'do not run a TypeScript type check')
   .action((cmd: Command) => {
-    const { config } = cmd.opts();
+    const { typecheck, config } = cmd.opts();
     const t: LintTaskDesc = {
       name: 'lint',
       config,
+      typecheck,
       restOptions: parseRestOptions(cmd),
     };
 
-    handleSpawnResult(lintTask(t));
+    handlePromiseResult(lintTask(t));
   });
 
 program
