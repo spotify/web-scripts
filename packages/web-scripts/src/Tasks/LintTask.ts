@@ -1,10 +1,27 @@
 import { default as spawn } from 'cross-spawn-promise';
 import { default as Debug } from 'debug';
+import { existsSync } from 'fs';
+import { join } from 'path';
+import readPkgUp from 'read-pkg-up';
 
 import { LintTaskDesc } from '../SharedTypes';
-import { CONSUMING_ROOT } from '../Paths';
+import { CONSUMING_ROOT, ESLINT_CONFIG } from '../Paths';
 
 const dbg = Debug('web-scripts:lint'); // eslint-disable-line new-cap
+
+export function getEslintConfig(): string | null {
+  if (
+    !existsSync(join(CONSUMING_ROOT, '.eslintrc')) &&
+    !existsSync(join(CONSUMING_ROOT, '.eslintrc.js')) &&
+    !(readPkgUp.sync({ cwd: CONSUMING_ROOT }) || {}).hasOwnProperty(
+      'eslintConfig',
+    )
+  ) {
+    return ESLINT_CONFIG;
+  }
+
+  return null;
+}
 
 export async function lintTask(task: LintTaskDesc): Promise<string[]> {
   const fns = [eslintRun];
@@ -22,20 +39,21 @@ export async function lintTask(task: LintTaskDesc): Promise<string[]> {
 
 async function eslintRun(task: LintTaskDesc): Promise<string> {
   const cmd = 'npx';
+  const config = task.config || getEslintConfig();
+
   const args = [
     '--no-install',
     'eslint',
     '--ext',
     'js,ts,jsx,tsx',
     CONSUMING_ROOT,
-    '--config',
-    task.config,
     '--ignore-pattern',
     'types/',
     '--ignore-pattern',
     'cjs/',
     '--ignore-pattern',
     'esm/',
+    ...(config ? ['--config', config] : []),
     ...task.restOptions,
   ];
   dbg('npx args %o', args);

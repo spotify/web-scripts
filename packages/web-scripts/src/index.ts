@@ -10,12 +10,7 @@ import {
   ReleaseTaskDesc,
   PrecommitTaskDesc,
 } from './SharedTypes';
-import {
-  JEST_CONFIG,
-  COMMITLINT_CONIFG,
-  PRETTIER_CONFIG,
-  ESLINT_CONFIG,
-} from './Paths';
+import { JEST_CONFIG, COMMITLINT_CONIFG, PRETTIER_CONFIG } from './Paths';
 import { testTask } from './Tasks/TestTask';
 import { buildTask } from './Tasks/BuildTask';
 import { lintTask } from './Tasks/LintTask';
@@ -74,7 +69,7 @@ program
   .command('lint')
   .allowUnknownOption()
   .description('Run ESLint and TypeScript to statically analyze your code')
-  .option('--config [path]', 'path to ESLint config', ESLINT_CONFIG)
+  .option('--config [path]', 'path to ESLint config')
   .option('--typecheck', 'run a TypeScript type check')
   .action((cmd: Command) => {
     const { typecheck, config } = cmd.opts();
@@ -98,7 +93,7 @@ program
     'path to prettier config',
     PRETTIER_CONFIG,
   )
-  .option('--eslint-config [path]', 'path to eslint config', ESLINT_CONFIG)
+  .option('--eslint-config [path]', 'path to eslint config')
   .option('--no-fix', 'Do not auto-fix any static analysis errors')
   .option('--no-tests', 'Do not run Jest tests')
   .action((cmd: Command) => {

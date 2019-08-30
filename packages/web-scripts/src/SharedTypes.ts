@@ -27,7 +27,7 @@ export type TestTaskDesc = {
 
 export type LintTaskDesc = {
   name: 'lint';
-  config: string;
+  config?: string;
   typecheck: boolean;
 } & TaskDesc;
 

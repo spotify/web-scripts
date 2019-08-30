@@ -1,17 +1,18 @@
-const { PRETTIER_CONFIG, ESLINT_CONFIG, JEST_CONFIG } = require('../cjs/Paths');
+const { PRETTIER_CONFIG, JEST_CONFIG } = require('../cjs/Paths');
+const { getEslintConfig } = require('../cjs/Tasks/LintTask');
 
 const fix = process.env.WEB_SCRIPTS_SHOULD_FIX === 'true';
 const tests = process.env.WEB_SCRIPTS_RUN_TESTS === 'true';
 const jestConfig = process.env.WEB_SCRIPTS_JEST_CONFIG || JEST_CONFIG;
 const prettierConfig =
   process.env.WEB_SCRIPTS_PRETTIER_CONFIG || PRETTIER_CONFIG;
-const eslintConfig = process.env.WEB_SCRIPTS_ESLINT_CONFIG || ESLINT_CONFIG;
+const eslintConfig = process.env.WEB_SCRIPTS_ESLINT_CONFIG || getEslintConfig();
 
 const testRelatedChanges = `jest --config ${jestConfig} --bail --findRelatedTests`;
 
-const lintRelatedChanges = `eslint ${
-  fix ? '--fix' : ''
-} --config ${eslintConfig}`;
+const lintRelatedChanges = `eslint ${fix ? '--fix' : ''} ${
+  eslintConfig ? `--config ${eslintConfig}` : ''
+}`.trim();
 
 // have to run the script in a way that the files aren't passed in.
 // we need to run tsc on the whole project.
