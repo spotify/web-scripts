@@ -27,7 +27,9 @@ jobs:
     - name: test
       run: yarn test
     - name: release
-      run: yarn release
+      run: |
+        git checkout master
+        yarn release
       env:
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
