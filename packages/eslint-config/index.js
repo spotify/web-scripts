@@ -4,6 +4,7 @@ module.exports = {
     '@spotify/eslint-config-react',
     '@spotify/eslint-config-typescript',
     'prettier',
+    'prettier/react',
     'prettier/@typescript-eslint',
   ],
   parser: '@typescript-eslint/parser',
