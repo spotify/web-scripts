@@ -22,7 +22,7 @@ export type BuildTaskDesc = {
 
 export type TestTaskDesc = {
   name: 'test';
-  config: string;
+  config?: string;
 } & TaskDesc;
 
 export type LintTaskDesc = {

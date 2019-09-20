@@ -12,7 +12,7 @@ export const hasConfig = (
 ): boolean =>
   sources.some(source => {
     if (source.type === 'file') {
-      return !!glob.sync(source.pattern).length;
+      return !!glob.sync(source.pattern, { cwd: CONSUMING_ROOT }).length;
     } else if (source.type === 'package.json') {
       return !!pkg.hasOwnProperty(source.property);
     }

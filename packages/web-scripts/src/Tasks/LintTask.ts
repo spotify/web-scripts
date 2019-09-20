@@ -11,7 +11,7 @@ export function getEslintConfig(): string | null {
   if (
     !hasConfig([
       { type: 'file', pattern: '.eslintrc.*' },
-      { type: 'package.json', property: 'eslint' },
+      { type: 'package.json', property: 'eslintConfig' },
     ])
   ) {
     return ESLINT_CONFIG;

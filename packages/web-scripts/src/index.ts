@@ -10,7 +10,7 @@ import {
   ReleaseTaskDesc,
   PrecommitTaskDesc,
 } from './SharedTypes';
-import { JEST_CONFIG, COMMITLINT_CONIFG, PRETTIER_CONFIG } from './Paths';
+import { COMMITLINT_CONIFG, PRETTIER_CONFIG } from './Paths';
 import { testTask } from './Tasks/TestTask';
 import { buildTask } from './Tasks/BuildTask';
 import { lintTask } from './Tasks/LintTask';
@@ -52,7 +52,7 @@ program
   .command('test')
   .allowUnknownOption()
   .description('Run tests via jest')
-  .option('--config [path]', 'path to jest config', JEST_CONFIG)
+  .option('--config [path]', 'path to jest config')
   .action((cmd: Command) => {
     const { config } = cmd.opts();
     const t: TestTaskDesc = {
@@ -87,7 +87,7 @@ program
   .command('precommit')
   .allowUnknownOption()
   .description('Locally validate the repo before committing')
-  .option('--jest-config [path]', 'path to jest config', JEST_CONFIG)
+  .option('--jest-config [path]', 'path to jest config')
   .option(
     '--prettier-config [path]',
     'path to prettier config',
