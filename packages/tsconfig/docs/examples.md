@@ -31,7 +31,7 @@ Extend your `tsconfig.json` with our `tsconfig.app.json`
 Use `babel-loader` to compile TypeScript via Webpack.
 
 ```bash
-yarn add -D babel-loader @babel/typescript
+yarn add -D babel-loader @babel/preset-typescript
 ```
 
 Include the preset in your `.babelrc` (or wherever you configure Babel).
