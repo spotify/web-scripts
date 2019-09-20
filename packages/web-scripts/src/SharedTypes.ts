@@ -3,6 +3,7 @@ export type TaskName =
   | 'build'
   | 'test'
   | 'lint'
+  | 'format'
   | 'commit'
   | 'commitmsg'
   | 'precommit'
@@ -29,6 +30,11 @@ export type LintTaskDesc = {
   name: 'lint';
   config?: string;
   typecheck: boolean;
+} & TaskDesc;
+
+export type FormatTaskDesc = {
+  name: 'format';
+  config?: string;
 } & TaskDesc;
 
 export type CommitTaskDesc = {
