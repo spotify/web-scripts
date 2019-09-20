@@ -1,21 +1,18 @@
 import { default as spawn } from 'cross-spawn-promise';
 import { default as Debug } from 'debug';
-import { existsSync } from 'fs';
-import { join } from 'path';
-import readPkgUp from 'read-pkg-up';
 
 import { LintTaskDesc } from '../SharedTypes';
 import { CONSUMING_ROOT, ESLINT_CONFIG } from '../Paths';
+import { hasConfig } from '../hasConfig';
 
 const dbg = Debug('web-scripts:lint'); // eslint-disable-line new-cap
 
 export function getEslintConfig(): string | null {
   if (
-    !existsSync(join(CONSUMING_ROOT, '.eslintrc')) &&
-    !existsSync(join(CONSUMING_ROOT, '.eslintrc.js')) &&
-    !(readPkgUp.sync({ cwd: CONSUMING_ROOT }) || {}).hasOwnProperty(
-      'eslintConfig',
-    )
+    !hasConfig([
+      { type: 'file', pattern: '.eslintrc.*' },
+      { type: 'package.json', property: 'eslint' },
+    ])
   ) {
     return ESLINT_CONFIG;
   }

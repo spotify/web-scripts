@@ -46,6 +46,7 @@
     "cz-conventional-changelog": "^2.1.0",
     "debug": "^4.1.1",
     "eslint": "^5.16.0",
+    "glob": "^7.1.4",
     "jest": "^24.5.0",
     "jest-junit": "^6.3.0",
     "lint-staged": "^8.1.5",
@@ -56,6 +57,7 @@
     "typescript": "^3.4.3"
   },
   "devDependencies": {
+    "@types/glob": "^7.1.1",
     "@types/rimraf": "^2.0.2",
     "@types/tempy": "^0.2.0",
     "object.fromentries": "^2.0.0",
