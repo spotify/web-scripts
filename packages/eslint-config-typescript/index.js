@@ -21,5 +21,8 @@ module.exports = {
     // no-unused-vars interference fix.
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'warn',
+    // semi interference fix.
+    'semi': 'off',
+    '@typescript-eslint/semi': 'warn',
   },
 };
