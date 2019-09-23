@@ -22,12 +22,13 @@ It is intended to be used within a project as a series of npm scripts.
 ```json
 {
   "devDependencies": {
-    "@spotify/web-scripts": "^1.0.0",
+    "@spotify/web-scripts": "^2.0.0",
     "husky": "^2.5.0"
   },
   "scripts": {
     "build": "web-scripts build",
     "test": "web-scripts test",
+    "format": "web-scripts format",
     "lint": "web-scripts lint",
     "commit": "web-scripts commit",
     "release": "web-scripts release"

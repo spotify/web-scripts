@@ -26,16 +26,26 @@ export function precommitTask(
     ...task.restOptions,
   ];
   dbg('npx args %o', args);
+
+  const env: { [key: string]: string } = {
+    ...process.env,
+    WEB_SCRIPTS_SHOULD_FIX: task.fix.toString(),
+    WEB_SCRIPTS_RUN_TESTS: task.tests.toString(),
+  };
+
+  if (task.eslintConfig) {
+    env.WEB_SCRIPTS_ESLINT_CONFIG = task.eslintConfig;
+  }
+  if (task.jestConfig) {
+    env.WEB_SCRIPTS_JEST_CONFIG = task.jestConfig;
+  }
+  if (task.prettierConfig) {
+    env.WEB_SCRIPTS_PRETTIER_CONFIG = task.prettierConfig;
+  }
+
   return spawn.sync(cmd, args, {
-    env: {
-      ...process.env,
-      WEB_SCRIPTS_SHOULD_FIX: task.fix.toString(),
-      WEB_SCRIPTS_RUN_TESTS: task.tests.toString(),
-      WEB_SCRIPTS_ESLINT_CONFIG: task.eslintConfig,
-      WEB_SCRIPTS_JEST_CONFIG: task.jestConfig,
-      WEB_SCRIPTS_PRETTIER_CONFIG: task.prettierConfig,
-    },
     stdio: 'inherit',
+    env,
   });
 }
 

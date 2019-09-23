@@ -17,6 +17,7 @@ Add the scripts and commit hooks to your package.json:
   "scripts": {
     "test": "web-scripts test",
     "lint": "web-scripts lint",
+    "format": "web-scripts format",
     "build": "web-scripts build",
     "commit": "web-scripts commit",
     "release": "web-scripts release"

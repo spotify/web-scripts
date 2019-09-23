@@ -3,6 +3,7 @@ export type TaskName =
   | 'build'
   | 'test'
   | 'lint'
+  | 'format'
   | 'commit'
   | 'commitmsg'
   | 'precommit'
@@ -22,13 +23,18 @@ export type BuildTaskDesc = {
 
 export type TestTaskDesc = {
   name: 'test';
-  config: string;
+  config?: string;
 } & TaskDesc;
 
 export type LintTaskDesc = {
   name: 'lint';
-  config: string;
+  config?: string;
   typecheck: boolean;
+} & TaskDesc;
+
+export type FormatTaskDesc = {
+  name: 'format';
+  config?: string;
 } & TaskDesc;
 
 export type CommitTaskDesc = {

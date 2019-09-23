@@ -12,10 +12,10 @@ then
   git config --global user.name "GitHub Action"
   git remote set-url origin "https://${GH_USERNAME}:${GH_TOKEN}@github.com/spotify/web-scripts.git"
   git checkout master
-  echo "spotify/web-scripts: Configuring yarn for Github Actions Lerna publish..."
-  yarn config set _authToken $NPM_TOKEN
+  echo "spotify/web-scripts: Configuring npm for publishing..."
+  echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
   echo "spotify/web-scripts: Attempting publish..."
-  yarn lerna publish --yes --conventional-commits --registry=https://registry.npmjs.com
+  npx lerna publish --yes --conventional-commits --registry=https://registry.npmjs.org
   exit $?
 else
   echo "spotify/web-scripts: No release will be triggered." >&2

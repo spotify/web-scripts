@@ -5,20 +5,17 @@ import {
   TestTaskDesc,
   BuildTaskDesc,
   LintTaskDesc,
+  FormatTaskDesc,
   CommitTaskDesc,
   CommitMsgTaskDesc,
   ReleaseTaskDesc,
   PrecommitTaskDesc,
 } from './SharedTypes';
-import {
-  JEST_CONFIG,
-  COMMITLINT_CONIFG,
-  PRETTIER_CONFIG,
-  ESLINT_CONFIG,
-} from './Paths';
+import { COMMITLINT_CONIFG } from './Paths';
 import { testTask } from './Tasks/TestTask';
 import { buildTask } from './Tasks/BuildTask';
 import { lintTask } from './Tasks/LintTask';
+import { formatTask } from './Tasks/FormatTask';
 import {
   commitTask,
   commitMsgTask,
@@ -40,14 +37,16 @@ program
   .option('--no-esm', 'do not build esm target')
   .option('--no-cjs', 'do not build cjs target')
   .option('--no-types', 'do not build types target')
-  .action((cmd: Command) => {
-    const { esm, types, cjs } = cmd.opts();
+  .action((...args) => {
+    const cmd = getCommand(args);
+    const rest = getPositionalArgs(args);
+    const { esm, types, cjs } = getOpts(cmd);
     const t: BuildTaskDesc = {
       name: 'build',
       esm,
       types,
       cjs,
-      restOptions: parseRestOptions(cmd),
+      restOptions: [...parseRestOptions(cmd), ...rest],
     };
 
     handlePromiseResult(buildTask(t));
@@ -57,13 +56,15 @@ program
   .command('test')
   .allowUnknownOption()
   .description('Run tests via jest')
-  .option('--config [path]', 'path to jest config', JEST_CONFIG)
-  .action((cmd: Command) => {
-    const { config } = cmd.opts();
+  .option('--config [path]', 'path to jest config')
+  .action((...args) => {
+    const cmd = getCommand(args);
+    const rest = getPositionalArgs(args);
+    const { config } = getOpts(cmd);
     const t: TestTaskDesc = {
       name: 'test',
       config,
-      restOptions: parseRestOptions(cmd),
+      restOptions: [...parseRestOptions(cmd), ...rest],
     };
 
     const result = testTask(t);
@@ -74,41 +75,59 @@ program
   .command('lint')
   .allowUnknownOption()
   .description('Run ESLint and TypeScript to statically analyze your code')
-  .option('--config [path]', 'path to ESLint config', ESLINT_CONFIG)
+  .option('--config [path]', 'path to ESLint config')
   .option('--typecheck', 'run a TypeScript type check')
-  .action((cmd: Command) => {
-    const { typecheck, config } = cmd.opts();
+  .action((...args) => {
+    const cmd = getCommand(args);
+    const rest = getPositionalArgs(args);
+    const { typecheck, config } = getOpts(cmd);
     const t: LintTaskDesc = {
       name: 'lint',
       config,
       typecheck,
-      restOptions: parseRestOptions(cmd),
+      restOptions: [...parseRestOptions(cmd), ...rest],
     };
 
     handlePromiseResult(lintTask(t));
   });
 
 program
+  .command('format')
+  .allowUnknownOption()
+  .description('Run Prettier to format your code')
+  .option('--config [path]', 'path to Prettier config')
+  .action((...args) => {
+    const cmd = getCommand(args);
+    const rest = getPositionalArgs(args);
+    const { config } = getOpts(cmd);
+    const t: FormatTaskDesc = {
+      name: 'format',
+      config,
+      restOptions: [...parseRestOptions(cmd), ...rest],
+    };
+
+    handleSpawnResult(formatTask(t));
+  });
+
+program
   .command('precommit')
   .allowUnknownOption()
   .description('Locally validate the repo before committing')
-  .option('--jest-config [path]', 'path to jest config', JEST_CONFIG)
-  .option(
-    '--prettier-config [path]',
-    'path to prettier config',
-    PRETTIER_CONFIG,
-  )
-  .option('--eslint-config [path]', 'path to eslint config', ESLINT_CONFIG)
+  .option('--jest-config [path]', 'path to jest config')
+  .option('--prettier-config [path]', 'path to prettier config')
+  .option('--eslint-config [path]', 'path to eslint config')
   .option('--no-fix', 'Do not auto-fix any static analysis errors')
   .option('--no-tests', 'Do not run Jest tests')
-  .action((cmd: Command) => {
+  .action((...args) => {
+    const cmd = getCommand(args);
+    const rest = getPositionalArgs(args);
     const {
       fix,
       tests,
       'jest-config': jestConfig,
       'eslint-config': eslintConfig,
       'prettier-config': prettierConfig,
-    } = cmd.opts();
+    } = getOpts(cmd);
     const t: PrecommitTaskDesc = {
       name: 'precommit',
       fix,
@@ -116,7 +135,7 @@ program
       jestConfig,
       eslintConfig,
       prettierConfig,
-      restOptions: parseRestOptions(cmd),
+      restOptions: [...parseRestOptions(cmd), ...rest],
     };
 
     handleSpawnResult(precommitTask(t));
@@ -131,12 +150,14 @@ program
     'path for commitizen adapter to use',
     'cz-conventional-changelog',
   )
-  .action((cmd: Command) => {
-    const { path } = cmd.opts();
+  .action((...args) => {
+    const cmd = getCommand(args);
+    const rest = getPositionalArgs(args);
+    const { path } = getOpts(cmd);
     const t: CommitTaskDesc = {
       name: 'commit',
       path,
-      restOptions: parseRestOptions(cmd),
+      restOptions: [...parseRestOptions(cmd), ...rest],
     };
 
     try {
@@ -155,12 +176,14 @@ program
     'path to the commitlint config.',
     COMMITLINT_CONIFG,
   )
-  .action((cmd: Command) => {
-    const { config } = cmd.opts();
+  .action((...args) => {
+    const cmd = getCommand(args);
+    const rest = getPositionalArgs(args);
+    const { config } = getOpts(cmd);
     const t: CommitMsgTaskDesc = {
       name: 'commitmsg',
       config,
-      restOptions: parseRestOptions(cmd),
+      restOptions: [...parseRestOptions(cmd), ...rest],
     };
 
     handleSpawnResult(commitMsgTask(t));
@@ -170,10 +193,12 @@ program
   .command('release')
   .allowUnknownOption()
   .description('Run semantic-release')
-  .action((cmd: Command) => {
+  .action((...args) => {
+    const cmd = getCommand(args);
+    const rest = getPositionalArgs(args);
     const t: ReleaseTaskDesc = {
       name: 'release',
-      restOptions: parseRestOptions(cmd),
+      restOptions: [...parseRestOptions(cmd), ...rest],
     };
 
     handleSpawnResult(releaseTask(t));
@@ -183,11 +208,14 @@ function handlePromiseResult(result: Promise<any>) {
   result.catch(handleError);
 }
 
-function handleError(error: Error) {
+function handleError(error: Error & { exitStatus?: number }) {
   /* eslint-disable no-console */
-  console.error(error);
+  // only log if the error is useful (e.g. not the default message from non-zero status is in cross-spawn)
+  if (error.message && error.message.indexOf('Error: Exited with status') < 0) {
+    console.error(error);
+  }
   /* eslint-enable no-console */
-  process.exit(1);
+  process.exit(error.exitStatus || 1);
 }
 
 function handleSpawnResult(result: SpawnSyncReturns<Buffer>) {
@@ -200,8 +228,19 @@ function handleSpawnResult(result: SpawnSyncReturns<Buffer>) {
   }
 }
 
-function parseRestOptions(cmd: Command) {
-  // parse the rest of the options
+function getCommand(args: any[]): Command {
+  return args[args.length - 1] as Command;
+}
+
+function getPositionalArgs(args: any[]): string[] {
+  return args.slice(0, args.length - 1) as string[];
+}
+
+function getOpts(cmd: Command): { [key: string]: any } {
+  return cmd.opts();
+}
+
+function parseRestOptions(cmd: Command): string[] {
   return cmd.parseOptions(process.argv).unknown;
 }
 
