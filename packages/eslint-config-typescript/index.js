@@ -24,5 +24,8 @@ module.exports = {
     // no-useless-constructor interference fix.
     'no-useless-constructor': 'off',
     '@typescript-eslint/no-useless-constructor': 'error',
+    // semi interference fix.
+    'semi': 'off',
+    '@typescript-eslint/semi': 'warn',
   },
 };
