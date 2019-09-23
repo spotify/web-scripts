@@ -3,17 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [2.0.0](https://github.com/spotify/web-scripts/compare/v1.4.0...v2.0.0) (2019-09-23)
-
-### Features
-
-- **eslint-config-base:** Add rule for disallowing useless constructors ([beab7ec](https://github.com/spotify/web-scripts/commit/beab7ec))
-
-### BREAKING CHANGES
-
-- **eslint-config-base:** Adding a lint rule which doesn't have a fix, which means that upgrading could break
-  builds due to the new rule.
-
 ## [1.1.4](https://github.com/spotify/web-scripts/compare/v1.1.3...v1.1.4) (2019-07-17)
 
 ### Bug Fixes
