@@ -1,26 +1,30 @@
-const { PRETTIER_CONFIG, ESLINT_CONFIG, JEST_CONFIG } = require('../cjs/Paths');
+const { getEslintConfig } = require('../cjs/Tasks/LintTask');
+const { getPrettierConfig } = require('../cjs/Tasks/FormatTask');
+const { getJestConfig } = require('../cjs/Tasks/TestTask');
 
 const fix = process.env.WEB_SCRIPTS_SHOULD_FIX === 'true';
 const tests = process.env.WEB_SCRIPTS_RUN_TESTS === 'true';
-const jestConfig = process.env.WEB_SCRIPTS_JEST_CONFIG || JEST_CONFIG;
+const jestConfig = process.env.WEB_SCRIPTS_JEST_CONFIG || getJestConfig();
 const prettierConfig =
-  process.env.WEB_SCRIPTS_PRETTIER_CONFIG || PRETTIER_CONFIG;
-const eslintConfig = process.env.WEB_SCRIPTS_ESLINT_CONFIG || ESLINT_CONFIG;
+  process.env.WEB_SCRIPTS_PRETTIER_CONFIG || getPrettierConfig();
+const eslintConfig = process.env.WEB_SCRIPTS_ESLINT_CONFIG || getEslintConfig();
 
-const testRelatedChanges = `jest --config ${jestConfig} --bail --findRelatedTests`;
+const testRelatedChanges = `jest ${
+  jestConfig ? `--config ${jestConfig} ` : ''
+}--bail --findRelatedTests`;
 
-const lintRelatedChanges = `eslint ${
-  fix ? '--fix' : ''
-} --config ${eslintConfig}`;
+const lintRelatedChanges = `eslint ${fix ? '--fix' : ''} ${
+  eslintConfig ? `--config ${eslintConfig}` : ''
+}`.trim();
 
 // have to run the script in a way that the files aren't passed in.
 // we need to run tsc on the whole project.
 // https://github.com/okonet/lint-staged/issues/174#issuecomment-461423707
 const typecheckRelatedChanges = `bash -c \"tsc --noEmit\"`;
 
-const formatRelatedChanges = `prettier ${
-  fix ? '--write' : '--check'
-} --config ${prettierConfig}`;
+const formatRelatedChanges = `prettier ${fix ? '--write' : '--check'} ${
+  prettierConfig ? `--config ${prettierConfig}` : ''
+}`.trim();
 
 const gitAdd = 'git add';
 
