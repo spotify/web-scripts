@@ -12,6 +12,8 @@ then
   git config --global user.name "GitHub Action"
   git remote set-url origin "https://${GH_USERNAME}:${GH_TOKEN}@github.com/spotify/web-scripts.git"
   git checkout master
+  echo "spotify/web-scripts: Configuring npm for publishing..."
+  echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
   echo "spotify/web-scripts: Attempting publish..."
   npx lerna publish --yes --conventional-commits --registry=https://registry.npmjs.org
   exit $?
