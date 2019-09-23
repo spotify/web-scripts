@@ -1,0 +1,4 @@
+{
+  "extends": "@spotify/tsconfig/tsconfig.lib.json",
+  "include": ["src"]
+}

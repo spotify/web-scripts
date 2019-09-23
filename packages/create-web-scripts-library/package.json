@@ -40,7 +40,6 @@
     "fs-extra": "^7.0.1"
   },
   "devDependencies": {
-    "@spotify/web-scripts": "^2.0.0",
     "@types/fs-extra": "^7.0.0",
     "tempy": "^0.3.0"
   },

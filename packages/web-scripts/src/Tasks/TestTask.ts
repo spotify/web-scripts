@@ -1,8 +1,9 @@
-import { TestTaskDesc } from '../SharedTypes';
 import { default as spawn } from 'cross-spawn';
 import { default as Debug } from 'debug';
 import { SpawnSyncReturns } from 'child_process';
-import { hasConfig } from '../hasConfig';
+import { hasConfig } from '@spotify/web-scripts-utils';
+
+import { TestTaskDesc } from '../SharedTypes';
 import { JEST_CONFIG } from '../Paths';
 
 const dbg = Debug('web-scripts:test'); // eslint-disable-line new-cap

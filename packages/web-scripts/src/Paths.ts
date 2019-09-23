@@ -1,8 +1,9 @@
 import { join } from 'path';
+import { getConsumingRoot } from '@spotify/web-scripts-utils';
 
 // The ROOT folder of the consuming package, aka where the user is using this
 // package from.
-export const CONSUMING_ROOT = join(process.cwd());
+export const CONSUMING_ROOT = getConsumingRoot();
 
 // This tool's ROOT folder.
 export const THIS_ROOT = join(__dirname, '..');

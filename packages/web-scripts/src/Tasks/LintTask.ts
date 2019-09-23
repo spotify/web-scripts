@@ -1,9 +1,9 @@
 import { default as spawn } from 'cross-spawn-promise';
 import { default as Debug } from 'debug';
+import { hasConfig } from '@spotify/web-scripts-utils';
 
 import { LintTaskDesc } from '../SharedTypes';
 import { CONSUMING_ROOT, ESLINT_CONFIG } from '../Paths';
-import { hasConfig } from '../hasConfig';
 
 const dbg = Debug('web-scripts:lint'); // eslint-disable-line new-cap
 
