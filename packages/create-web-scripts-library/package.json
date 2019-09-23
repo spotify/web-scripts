@@ -27,6 +27,7 @@
     "test": "web-scripts test",
     "build": "web-scripts build",
     "lint": "web-scripts lint",
+    "format": "web-scripts format",
     "prepublishOnly": "$npm_execpath run build"
   },
   "bugs": {
