@@ -36,7 +36,7 @@
     "@spotify/eslint-config": "^2.0.1",
     "@spotify/prettier-config": "^2.0.0",
     "@spotify/tsconfig": "^2.0.0",
-    "@spotify/web-scripts-utils": "^2.0.0",
+    "@spotify/web-scripts-utils": "^2.0.1",
     "@types/cross-spawn": "^6.0.0",
     "@types/debug": "^4.1.2",
     "@types/jest": "^24.0.11",
