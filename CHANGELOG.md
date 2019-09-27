@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/spotify/web-scripts/compare/v2.0.0...v2.0.1) (2019-09-27)
+
+### Bug Fixes
+
+- **eslint-config-typescript:** add no-useless-constructor override ([72c6651](https://github.com/spotify/web-scripts/commit/72c6651))
+
 # [2.0.0](https://github.com/spotify/web-scripts/compare/v1.4.0...v2.0.0) (2019-09-23)
 
 ### Features

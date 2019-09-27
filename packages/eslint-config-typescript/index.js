@@ -21,6 +21,9 @@ module.exports = {
     // no-unused-vars interference fix.
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'warn',
+    // no-useless-constructor interference fix.
+    'no-useless-constructor': 'off',
+    '@typescript-eslint/no-useless-constructor': 'error',
     // semi interference fix.
     'semi': 'off',
     '@typescript-eslint/semi': 'warn',
