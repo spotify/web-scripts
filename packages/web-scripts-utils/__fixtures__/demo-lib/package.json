@@ -1,0 +1,15 @@
+{
+  "name": "some-dummy-project",
+  "jest": {
+    "collectCoverageFrom": "src/**/*.ts"
+  },
+  "dependencies": {
+    "react": "*"
+  },
+  "devDependencies": {
+    "@testing-library/react": "*"
+  },
+  "peerDependencies": {
+    "styled-components": "*"
+  }
+}

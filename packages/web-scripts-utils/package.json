@@ -1,0 +1,38 @@
+{
+  "name": "@spotify/web-scripts-utils",
+  "version": "2.0.1",
+  "private": true,
+  "description": "Private package which contains re-used utils within web-scripts projects",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spotify/web-scripts.git"
+  },
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "types": "types",
+  "files": [
+    "cjs",
+    "esm",
+    "types"
+  ],
+  "scripts": {
+    "clean": "rm -rf cjs esm types",
+    "build": "web-scripts build",
+    "test": "web-scripts test",
+    "lint": "web-scripts lint",
+    "format": "web-scripts format",
+    "bootstrap": "$npm_execpath run clean && tsc --allowJs --outDir cjs --noEmit false --module CommonJS && tsc --declaration --isolatedModules false --outDir types --emitDeclarationOnly --noEmit false",
+    "prepublishOnly": "$npm_execpath run build",
+    "prepare": "$npm_execpath run build"
+  },
+  "dependencies": {
+    "glob": "^7.1.4",
+    "read-pkg-up": "^6.0.0"
+  },
+  "devDependencies": {
+    "@spotify/tsconfig": "^2.0.0"
+  },
+  "engines": {
+    "node": ">= 10"
+  }
+}

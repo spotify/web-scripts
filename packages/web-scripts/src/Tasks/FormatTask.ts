@@ -1,10 +1,10 @@
 import { default as Debug } from 'debug';
 import { default as spawn } from 'cross-spawn';
 import { SpawnSyncReturns } from 'child_process';
+import { hasConfig } from '@spotify/web-scripts-utils';
 
 import { FormatTaskDesc } from '../SharedTypes';
 import { PRETTIER_CONFIG } from '../Paths';
-import { hasConfig } from '../hasConfig';
 
 const dbg = Debug('web-scripts:format'); // eslint-disable-line new-cap
 
