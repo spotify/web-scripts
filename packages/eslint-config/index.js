@@ -10,6 +10,16 @@ const hasTypescript = hasConfig([
   { type: 'file', pattern: 'tsconfig.json' },
 ]);
 
+let config;
+
+if (hasReact) {
+  config = {
+    react: {
+      version: 'detect',
+    },
+  };
+}
+
 module.exports = {
   extends: [
     '@spotify/eslint-config-base',
@@ -27,4 +37,5 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
+  config,
 };
