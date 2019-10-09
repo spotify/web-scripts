@@ -1,7 +1,6 @@
 {
   "name": "@spotify/web-scripts-utils",
-  "version": "2.1.0",
-  "private": true,
+  "version": "2.0.1",
   "description": "Private package which contains re-used utils within web-scripts projects",
   "repository": {
     "type": "git",
@@ -31,6 +30,9 @@
   },
   "devDependencies": {
     "@spotify/tsconfig": "^2.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "engines": {
     "node": ">= 10"
