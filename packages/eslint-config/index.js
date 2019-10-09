@@ -10,10 +10,10 @@ const hasTypescript = hasConfig([
   { type: 'file', pattern: 'tsconfig.json' },
 ]);
 
-let config;
+let settings;
 
 if (hasReact) {
-  config = {
+  settings = {
     react: {
       version: 'detect',
     },
@@ -37,5 +37,5 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  config,
+  settings,
 };
