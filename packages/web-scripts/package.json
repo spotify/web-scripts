@@ -26,8 +26,8 @@
     "test": "node ./bin/web-scripts test",
     "lint": "node ./bin/web-scripts lint",
     "format": "node ./bin/web-scripts format",
-    "bootstrap": "$npm_execpath run clean && tsc --allowJs --outDir cjs --noEmit false --module CommonJS",
-    "prepublishOnly": "$npm_execpath run bootstrap && $npm_execpath run build"
+    "bootstrap": "yarn run clean && tsc --allowJs --outDir cjs --noEmit false --module CommonJS",
+    "prepublishOnly": "yarn run bootstrap && yarn run build"
   },
   "dependencies": {
     "@commitlint/cli": "^7.5.2",
