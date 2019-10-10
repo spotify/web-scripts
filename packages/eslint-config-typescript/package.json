@@ -5,8 +5,8 @@
   "description": "Spotify's ESLint config for TypeScript",
   "main": "index.js",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^1.11.0",
-    "@typescript-eslint/parser": "^1.11.0",
+    "@typescript-eslint/eslint-plugin": "^2.2.0",
+    "@typescript-eslint/parser": "^2.2.0",
     "eslint": "^5.16.0"
   },
   "repository": {
@@ -14,8 +14,8 @@
     "url": "git+https://github.com/spotify/web-scripts.git"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": ">=1.5 <2",
-    "@typescript-eslint/parser": ">=1.5 <2",
+    "@typescript-eslint/eslint-plugin": ">=2",
+    "@typescript-eslint/parser": ">=2",
     "eslint": ">=5.x"
   },
   "publishConfig": {
