@@ -1,6 +1,6 @@
 {
   "name": "@spotify/web-scripts-utils",
-  "version": "2.1.0",
+  "version": "2.0.1",
   "description": "Private package which contains re-used utils within web-scripts projects",
   "repository": {
     "type": "git",
@@ -21,8 +21,7 @@
     "lint": "web-scripts lint",
     "format": "web-scripts format",
     "bootstrap": "$npm_execpath run clean && tsc --allowJs --outDir cjs --noEmit false --module CommonJS && tsc --declaration --isolatedModules false --outDir types --emitDeclarationOnly --noEmit false",
-    "prepublishOnly": "$npm_execpath run build",
-    "prepare": "$npm_execpath run build"
+    "prepublishOnly": "$npm_execpath run bootstrap && $npm_execpath run build"
   },
   "dependencies": {
     "glob": "^7.1.4",
