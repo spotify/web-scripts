@@ -1,6 +1,6 @@
 {
   "name": "@spotify/create-web-scripts-library",
-  "version": "2.1.0",
+  "version": "2.0.1",
   "description": "Project scaffolding script for @spotify/web-scripts libraries",
   "author": "Paul Marbach <pmarbach@spotify.com>",
   "homepage": "https://github.com/spotify/web-scripts#readme",
@@ -28,7 +28,7 @@
     "build": "web-scripts build",
     "lint": "web-scripts lint",
     "format": "web-scripts format",
-    "prepublishOnly": "$npm_execpath run build"
+    "prepublishOnly": "yarn run build"
   },
   "bugs": {
     "url": "https://github.com/spotify/web-scripts/issues"
@@ -40,7 +40,7 @@
     "fs-extra": "^7.0.1"
   },
   "devDependencies": {
-    "@spotify/web-scripts": "^2.1.0",
+    "@spotify/web-scripts": "^2.0.1",
     "@types/fs-extra": "^7.0.0",
     "tempy": "^0.3.0"
   },
