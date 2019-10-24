@@ -53,6 +53,7 @@ module.exports = {
       {
         order: [
           'statics',
+          'static-variables',
           'static-methods',
           'instance-variables',
           'constructor',
