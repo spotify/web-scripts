@@ -108,8 +108,4 @@ $ yarn lerna run bootstrap
 
 ### Releasing
 
-For now, we will release this repo manually with fixed versions. To do that, use:
-
-```sh
-lerna publish --conventional-commits --registry=https://registry.npmjs.com
-```
+The repo [releases automatically on merge to master](https://github.com/spotify/web-scripts/blob/master/release.sh) using `semantic-release` and `lerna` in a Github Action.
