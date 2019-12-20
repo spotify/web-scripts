@@ -9,12 +9,14 @@ import {
   CommitTaskDesc,
   CommitMsgTaskDesc,
   ReleaseTaskDesc,
+  PreinstallTaskDesc,
   PrecommitTaskDesc,
 } from './SharedTypes';
 import { COMMITLINT_CONIFG } from './Paths';
 import { testTask } from './Tasks/TestTask';
 import { buildTask } from './Tasks/BuildTask';
 import { lintTask } from './Tasks/LintTask';
+import { preinstallTask } from './Tasks/PreinstallTasks';
 import { formatTask } from './Tasks/FormatTask';
 import {
   commitTask,
@@ -139,6 +141,26 @@ program
     };
 
     handleSpawnResult(precommitTask(t));
+  });
+
+program
+  .command('preinstall')
+  .allowUnknownOption()
+  .description(
+    `Run yarn audit and exit non-zero if the security vulnerability threshold is breached`,
+  )
+  .option('--threshold [level]', 'The amount of permissible vulnerabilities')
+  .action((...args) => {
+    const cmd = getCommand(args);
+    const rest = getPositionalArgs(args);
+    const { threshold } = getOpts(cmd);
+    const t: PreinstallTaskDesc = {
+      name: 'preinstall',
+      threshold,
+      restOptions: [...parseRestOptions(cmd), ...rest],
+    };
+
+    handlePromiseResult(preinstallTask(t));
   });
 
 program
