@@ -6,6 +6,15 @@ import { CONSUMING_ROOT } from '../Paths';
 
 const dbg = Debug('web-scripts:preinstall'); // eslint-disable-line new-cap
 
+enum ThresholdLimits {
+  info = 1,
+  low = 2,
+  moderate = 4,
+  high = 8,
+  critical = 16,
+  none = 32,
+}
+
 export async function preinstallTask(
   task: PreinstallTaskDesc,
 ): Promise<string[]> {
@@ -36,7 +45,7 @@ export async function preinstallTask(
  */
 async function yarnRun(task: PreinstallTaskDesc): Promise<string> {
   const cmd = 'npx';
-  const { threshold = 32 } = task;
+  const { threshold } = task;
 
   const args = [
     '--no-install',
@@ -49,11 +58,11 @@ async function yarnRun(task: PreinstallTaskDesc): Promise<string> {
   dbg('npx args %o', args);
 
   try {
-    const stdout = await spawn(cmd, args, { stdio: 'inherit' });
-    return (stdout || '').toString();
+    await spawn(cmd, args, { stdio: 'inherit' });
   } catch (err) {
-    const thresholdReached = err.exitStatus >= threshold;
+    const thresholdReached = err.exitStatus >= ThresholdLimits[threshold];
     if (thresholdReached) process.exit(err.exitStatus);
-    return '';
   }
+
+  return '';
 }

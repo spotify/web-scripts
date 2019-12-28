@@ -143,13 +143,31 @@ program
     handleSpawnResult(precommitTask(t));
   });
 
+function thresholdLimiter(value: string, defaultValue: string) {
+  switch (value) {
+    case 'info':
+    case 'low':
+    case 'moderate':
+    case 'high':
+    case 'critical':
+      return value;
+    default:
+      return defaultValue;
+  }
+}
+
 program
   .command('preinstall')
   .allowUnknownOption()
   .description(
     `Run yarn audit and exit non-zero if the security vulnerability threshold is breached`,
   )
-  .option('--threshold [level]', 'The amount of permissible vulnerabilities')
+  .option(
+    '--threshold [info|low|moderate|high|critical]',
+    'The amount of permissible vulnerabilities',
+    thresholdLimiter,
+    'none',
+  )
   .action((...args) => {
     const cmd = getCommand(args);
     const rest = getPositionalArgs(args);

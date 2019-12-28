@@ -1,3 +1,11 @@
+type ThresholdLimits =
+  | 'info'
+  | 'low'
+  | 'moderate'
+  | 'high'
+  | 'critical'
+  | 'none';
+
 export type TaskName =
   | 'init'
   | 'build'
@@ -54,7 +62,7 @@ export type ReleaseTaskDesc = {
 
 export type PreinstallTaskDesc = {
   name: 'preinstall';
-  threshold?: number;
+  threshold: ThresholdLimits;
 } & TaskDesc;
 
 export type PrecommitTaskDesc = {
