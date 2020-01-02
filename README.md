@@ -31,7 +31,8 @@ It is intended to be used within a project as a series of npm scripts.
     "format": "web-scripts format",
     "lint": "web-scripts lint",
     "commit": "web-scripts commit",
-    "release": "web-scripts release"
+    "release": "web-scripts release",
+    "preinstall": "web-scripts preinstall"
   },
   "husky": {
     "hooks": {
