@@ -71,6 +71,7 @@ We have a few guiding principles for this project.
 2. Avoid enforcing code style in static analysis; search for bugs with static analysis, and let auto-formatting deal with code style.
 3. Push "fast" checks as far left as you can. Optimize for code editors/IDEs fixing issues and enforcing things; write Git hooks that catch things as a failsafe; and use static analysis in CI to prevent bad things from getting into master.
 4. `web-scripts` is meant to be configurable. We want to avoid the "eject" problem. You should be able to easily take the base configs and extend them in your project.
+5. Fewer top-level scripts that encapsulate all behavior for that lifecycle are preferable to lots of smaller, composable scripts. For example, we do `yarn lint` which includes Prettier, ESLint, and TypeScript checks. We could have done `yarn lint`, `yarn typecheck`, and `yarn stylecheck`. That would have meant pushing "new" linting to all repos on new versions would be much harder, as we would need to communicate that you need to update your invocation in package.json.
 
 ## Related projects we use
 
