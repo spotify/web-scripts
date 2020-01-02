@@ -18,10 +18,6 @@ jobs:
         node-version: 12.0
     - name: yarn install
       run: yarn
-    - name: bootstrap lerna
-      run: |
-        yarn lerna bootstrap
-        yarn lerna run bootstrap
     - name: lint
       run: yarn lint
     - name: test

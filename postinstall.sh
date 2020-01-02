@@ -1,7 +1,2 @@
-web-scripts --help &> /dev/null;
-if ! [ $? -eq 0 ]; then
-  echo "Bootstrapping web-scripts..."
-  yarn lerna run bootstrap
-fi
-
+yarn lerna run bootstrap
 web-scripts postinstall --threshold low
