@@ -37,7 +37,7 @@
     "chalk": "^2.4.2",
     "commander": "^2.20.0",
     "execa": "^2.0.1",
-    "fs-extra": "^7.0.1"
+    "fs-extra": "^8.1.0"
   },
   "devDependencies": {
     "@spotify/web-scripts": "^3.2.0",
