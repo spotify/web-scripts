@@ -9,14 +9,14 @@ import {
   CommitTaskDesc,
   CommitMsgTaskDesc,
   ReleaseTaskDesc,
-  PreinstallTaskDesc,
+  PostinstallTaskDesc,
   PrecommitTaskDesc,
 } from './SharedTypes';
 import { COMMITLINT_CONIFG } from './Paths';
 import { testTask } from './Tasks/TestTask';
 import { buildTask } from './Tasks/BuildTask';
 import { lintTask } from './Tasks/LintTask';
-import { preinstallTask } from './Tasks/PreinstallTasks';
+import { postinstallTask } from './Tasks/PostinstallTasks';
 import { formatTask } from './Tasks/FormatTask';
 import {
   commitTask,
@@ -157,7 +157,7 @@ function thresholdLimiter(value: string, defaultValue: string) {
 }
 
 program
-  .command('preinstall')
+  .command('postinstall')
   .allowUnknownOption()
   .description(
     `Run yarn audit and exit non-zero if the security vulnerability threshold is breached`,
@@ -172,13 +172,13 @@ program
     const cmd = getCommand(args);
     const rest = getPositionalArgs(args);
     const { threshold } = getOpts(cmd);
-    const t: PreinstallTaskDesc = {
-      name: 'preinstall',
+    const t: PostinstallTaskDesc = {
+      name: 'postinstall',
       threshold,
       restOptions: [...parseRestOptions(cmd), ...rest],
     };
 
-    handlePromiseResult(preinstallTask(t));
+    handlePromiseResult(postinstallTask(t));
   });
 
 program

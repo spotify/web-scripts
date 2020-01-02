@@ -32,7 +32,7 @@ It is intended to be used within a project as a series of npm scripts.
     "lint": "web-scripts lint",
     "commit": "web-scripts commit",
     "release": "web-scripts release",
-    "preinstall": "web-scripts preinstall"
+    "postinstall": "web-scripts postinstall"
   },
   "husky": {
     "hooks": {

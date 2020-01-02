@@ -15,7 +15,7 @@ export type TaskName =
   | 'commit'
   | 'commitmsg'
   | 'precommit'
-  | 'preinstall'
+  | 'postinstall'
   | 'release';
 
 export type TaskDesc = {
@@ -60,8 +60,8 @@ export type ReleaseTaskDesc = {
   name: 'release';
 } & TaskDesc;
 
-export type PreinstallTaskDesc = {
-  name: 'preinstall';
+export type PostinstallTaskDesc = {
+  name: 'postinstall';
   threshold: ThresholdLimits;
 } & TaskDesc;
 
