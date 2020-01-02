@@ -14,7 +14,7 @@
     "test": "./run-tests.sh"
   },
   "devDependencies": {
-    "typescript": "^3.4.3"
+    "typescript": "^3.7.4"
   },
   "peerDependencies": {
     "typescript": ">=3.2 <4"
