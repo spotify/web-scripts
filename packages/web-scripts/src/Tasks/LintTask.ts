@@ -4,6 +4,7 @@ import { hasConfig } from '@spotify/web-scripts-utils';
 
 import { LintTaskDesc } from '../SharedTypes';
 import { CONSUMING_ROOT, ESLINT_CONFIG } from '../Paths';
+import { getPrettierConfig } from './FormatTask';
 
 const dbg = Debug('web-scripts:lint'); // eslint-disable-line new-cap
 
@@ -69,7 +70,14 @@ async function typeCheck(): Promise<string> {
 
 async function styleCheck(): Promise<string> {
   const cmd = 'npx';
-  const args = ['prettier', '--check', `${CONSUMING_ROOT}/src/**/*.[jt]s?(x)`];
+  const args = ['prettier'];
+
+  const config = getPrettierConfig();
+  if (config) {
+    args.push('--config', config);
+  }
+
+  args.push('--check', `${CONSUMING_ROOT}/src/**/*.[jt]s?(x)`);
   const stdout = await spawn(cmd, args, { stdio: 'inherit' });
   return (stdout || '').toString();
 }
