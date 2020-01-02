@@ -1,3 +1,11 @@
+type ThresholdLimits =
+  | 'info'
+  | 'low'
+  | 'moderate'
+  | 'high'
+  | 'critical'
+  | 'none';
+
 export type TaskName =
   | 'init'
   | 'build'
@@ -7,6 +15,7 @@ export type TaskName =
   | 'commit'
   | 'commitmsg'
   | 'precommit'
+  | 'postinstall'
   | 'release';
 
 export type TaskDesc = {
@@ -50,6 +59,11 @@ export type CommitMsgTaskDesc = {
 
 export type ReleaseTaskDesc = {
   name: 'release';
+} & TaskDesc;
+
+export type PostinstallTaskDesc = {
+  name: 'postinstall';
+  threshold: ThresholdLimits;
 } & TaskDesc;
 
 export type PrecommitTaskDesc = {

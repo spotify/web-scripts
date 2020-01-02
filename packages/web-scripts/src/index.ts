@@ -9,12 +9,14 @@ import {
   CommitTaskDesc,
   CommitMsgTaskDesc,
   ReleaseTaskDesc,
+  PostinstallTaskDesc,
   PrecommitTaskDesc,
 } from './SharedTypes';
 import { COMMITLINT_CONIFG } from './Paths';
 import { testTask } from './Tasks/TestTask';
 import { buildTask } from './Tasks/BuildTask';
 import { lintTask } from './Tasks/LintTask';
+import { postinstallTask } from './Tasks/PostinstallTasks';
 import { formatTask } from './Tasks/FormatTask';
 import {
   commitTask,
@@ -141,6 +143,44 @@ program
     };
 
     handleSpawnResult(precommitTask(t));
+  });
+
+function thresholdLimiter(value: string, defaultValue: string) {
+  switch (value) {
+    case 'info':
+    case 'low':
+    case 'moderate':
+    case 'high':
+    case 'critical':
+      return value;
+    default:
+      return defaultValue;
+  }
+}
+
+program
+  .command('postinstall')
+  .allowUnknownOption()
+  .description(
+    `Run yarn audit and exit non-zero if the security vulnerability threshold is breached`,
+  )
+  .option(
+    '--threshold [info|low|moderate|high|critical]',
+    'The amount of permissible vulnerabilities',
+    thresholdLimiter,
+    'none',
+  )
+  .action((...args) => {
+    const cmd = getCommand(args);
+    const rest = getPositionalArgs(args);
+    const { threshold } = getOpts(cmd);
+    const t: PostinstallTaskDesc = {
+      name: 'postinstall',
+      threshold,
+      restOptions: [...parseRestOptions(cmd), ...rest],
+    };
+
+    handlePromiseResult(postinstallTask(t));
   });
 
 program

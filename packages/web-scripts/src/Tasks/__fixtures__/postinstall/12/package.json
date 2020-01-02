@@ -1,0 +1,7 @@
+{
+  "name": "postinstall-test",
+  "description": "Throws a high and moderate status. See => https://www.npmjs.com/advisories/10",
+  "devDependencies": {
+    "geddy": "13.0.7"
+  }
+}
