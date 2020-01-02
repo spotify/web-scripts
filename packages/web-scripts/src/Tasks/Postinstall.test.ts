@@ -1,4 +1,4 @@
-import { preinstallTask } from './PreinstallTasks';
+import { postinstallTask } from './PostinstallTasks';
 import { THIS_ROOT } from '../Paths';
 
 // @ts-ignore
@@ -13,7 +13,7 @@ jest.spyOn(process, 'exit').mockImplementation(c => c);
  * Should these tests begin to fail suddenly, it might be worth trading test coverage
  * confidence for test reliability by mocking the network calls made by yarn audit.
  */
-describe('web-scripts preinstall', () => {
+describe('web-scripts postinstall', () => {
   beforeEach(() => jest.clearAllMocks());
   afterAll(() => jest.restoreAllMocks());
 
@@ -36,10 +36,10 @@ describe('web-scripts preinstall', () => {
   `(
     'return status code $status when audited dependencies have $violations violations and $threshold threshold',
     async ({ violations, threshold, status }) => {
-      const source = `${THIS_ROOT}/src/Tasks/__fixtures__/preinstall/${violations}`;
+      const source = `${THIS_ROOT}/src/Tasks/__fixtures__/postinstall/${violations}`;
 
-      await preinstallTask({
-        name: 'preinstall',
+      await postinstallTask({
+        name: 'postinstall',
         threshold,
         // Overrides implementation logic for CWD
         restOptions: ['--cwd', source],
