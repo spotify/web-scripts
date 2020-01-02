@@ -1,12 +1,22 @@
 version: 1
 update_configs:
   - package_manager: "javascript"
-    directory: "/packages/web-scripts/src/Tasks/__fixtures__"
-    update_schedule: "live"
+    directory: "/"
+    update_schedule: "daily"
+
+  # these dependencies are intentionally included in
+  # the test fixtures to see if the postinstall step
+  # works as designed
+  - package_manager: "javascript"
+    directory: "/packages/web-scripts/src/Tasks/__fixtures__/postinstall/12"
+    update_schedule: "daily"
     ignored_updates:
-      # these dependencies are intentionally included in
-      # the test fixtures to see if the postinstall step
-      # works as designed
+      - match:
+          dependency_name: "geddy"
+  - package_manager: "javascript"
+    directory: "/packages/web-scripts/src/Tasks/__fixtures__/postinstall/30"
+    update_schedule: "daily"
+    ignored_updates:
       - match:
           dependency_name: "geddy"
       - match:
