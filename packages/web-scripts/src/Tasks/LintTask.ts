@@ -4,6 +4,7 @@ import { hasConfig } from '@spotify/web-scripts-utils';
 
 import { LintTaskDesc } from '../SharedTypes';
 import { CONSUMING_ROOT, ESLINT_CONFIG } from '../Paths';
+import { getPrettierConfig } from './FormatTask';
 
 const dbg = Debug('web-scripts:lint'); // eslint-disable-line new-cap
 
@@ -23,6 +24,7 @@ export function getEslintConfig(): string | null {
 export async function lintTask(task: LintTaskDesc): Promise<string[]> {
   const fns = [eslintRun];
   if (task.typecheck) fns.push(typeCheck);
+  if (task.stylecheck) fns.push(styleCheck);
 
   return await Promise.all(
     fns.map(async fn => {
@@ -62,6 +64,20 @@ async function eslintRun(task: LintTaskDesc): Promise<string> {
 async function typeCheck(): Promise<string> {
   const cmd = 'npx';
   const args = ['tsc', '--noEmit'];
+  const stdout = await spawn(cmd, args, { stdio: 'inherit' });
+  return (stdout || '').toString();
+}
+
+async function styleCheck(): Promise<string> {
+  const cmd = 'npx';
+  const args = ['prettier'];
+
+  const config = getPrettierConfig();
+  if (config) {
+    args.push('--config', config);
+  }
+
+  args.push('--check', `${CONSUMING_ROOT}/src/**/*.[jt]s?(x)`);
   const stdout = await spawn(cmd, args, { stdio: 'inherit' });
   return (stdout || '').toString();
 }

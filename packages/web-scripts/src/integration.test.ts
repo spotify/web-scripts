@@ -78,7 +78,7 @@ describe('integration tests', () => {
 
     test(
       'Full integration test',
-      async () => await testScripts([], ['--typecheck']),
+      async () => await testScripts([], ['--typecheck', '--stylecheck']),
       TEST_SCRIPTS_TIMEOUT,
     );
   });
