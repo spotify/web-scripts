@@ -1,0 +1,17 @@
+version: 1
+update_configs:
+  - package_manager: "javascript"
+    directory: "/packages/web-scripts/src/Tasks/__fixtures__"
+    update_schedule: "live"
+    ignored_updates:
+      # these dependencies are intentionally included in
+      # the test fixtures to see if the postinstall step
+      # works as designed
+      - match:
+          dependency_name: "geddy"
+      - match:
+          dependency_name: "bassmaster"
+      - match:
+          dependency_name: "uglify-js"
+      - match:
+          dependency_name: "chokidar"
