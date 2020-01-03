@@ -1,5 +1,5 @@
 {
-  "extends": "@spotify/tsconfig/tsconfig.lib.json",
+  "extends": "@spotify/tsconfig",
   "include": ["src"],
   "compilerOptions": {
     "incremental": true,

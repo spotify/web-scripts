@@ -1,11 +1,14 @@
 {
-  "extends": "@spotify/tsconfig/tsconfig.lib.json",
+  "extends": "@spotify/tsconfig",
   "include": ["src"],
   "compilerOptions": {
+    "declaration": true,
     "incremental": true,
     "isolatedModules": false,
-    "noEmit": true,
-    "declaration": false,
-    "jsx": "preserve"
+    "jsx": "react",
+    "lib": ["es6", "dom"],
+    "module": "commonjs",
+    "sourceMap": true,
+    "target": "es6"
   }
 }
