@@ -36,6 +36,7 @@ async function buildTypes(task: BuildTaskDesc): Promise<string> {
   const args = [
     'tsc',
     '--declaration',
+    '--declarationMap',
     '--isolatedModules',
     'false',
     '--outDir',
