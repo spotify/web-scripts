@@ -28,10 +28,10 @@
     "eslint-plugin-react": "^7.12.4"
   },
   "devDependencies": {
-    "eslint": "^5.16.0"
+    "eslint": "^6.8.0"
   },
   "peerDependencies": {
-    "eslint": ">=5.x"
+    "eslint": ">=6.x"
   },
   "publishConfig": {
     "access": "public"
