@@ -3,7 +3,7 @@ jest.mock('./get-consuming-root');
 import path from 'path';
 import { hasConfig } from './has-config';
 
-const { getConsumingRoot } = require.requireMock('./get-consuming-root');
+const { getConsumingRoot } = jest.requireMock('./get-consuming-root');
 
 describe('hasConfig', () => {
   beforeEach(() => {

@@ -50,12 +50,23 @@ export function precommitTask(
 }
 
 export function commitTask(task: CommitTaskDesc): void {
-  dbg('running commitizen commit');
+  dbg('running commitizen commit', task.restOptions);
 
   // use this to get the resolved path to the root of the commitizen directory
   const cliPath = require
     .resolve('commitizen/package.json')
     .replace('package.json', '');
+
+  // https://github.com/commitizen/cz-cli/issues/667
+  Object.assign(process.env, {
+    CZ_TYPE: process.env.CZ_TYPE || ' ',
+    CZ_SCOPE: process.env.CZ_SCOPE || ' ',
+    CZ_SUBJECT: process.env.CZ_SUBJECT || ' ',
+    CZ_BODY: process.env.CZ_BODY || ' ',
+    CZ_ISSUES: process.env.CZ_ISSUES || ' ',
+    CZ_MAX_HEADER_WIDTH: process.env.CZ_MAX_HEADER_WIDTH || 100,
+    CZ_MAX_LINE_WIDTH: process.env.CZ_MAX_LINE_WIDTH || 100,
+  });
 
   return czBootstrap(
     {
