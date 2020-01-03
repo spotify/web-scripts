@@ -46,7 +46,7 @@
     "cross-spawn-promise": "^0.10.1",
     "cz-conventional-changelog": "^2.1.0",
     "debug": "^4.1.1",
-    "eslint": "^5.16.0",
+    "eslint": "^6.8.0",
     "jest": "^24.5.0",
     "jest-junit": "^6.3.0",
     "lint-staged": "^8.1.5",
