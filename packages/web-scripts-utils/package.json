@@ -28,7 +28,8 @@
     "read-pkg-up": "^6.0.0"
   },
   "devDependencies": {
-    "@spotify/tsconfig": "^3.0.0"
+    "@spotify/tsconfig": "^3.0.0",
+    "@types/jest": "^24.0.25"
   },
   "publishConfig": {
     "access": "public"

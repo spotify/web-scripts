@@ -28,7 +28,8 @@ export const hasConfig = (
         type: 'dependency';
         dependency: string;
         dependencyType?: 'peer' | 'dev';
-      })[],
+      }
+  )[],
 ): boolean => {
   const { path: pkgPath, package: pkg } = readPkgUp.sync({
     cwd: getConsumingRoot(),
