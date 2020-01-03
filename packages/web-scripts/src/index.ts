@@ -288,6 +288,6 @@ function parseRestOptions(cmd: Command): string[] {
 
 program.parse(process.argv);
 
-if (program.args.length === 0) {
+if (!process.argv.slice(2).length) {
   program.help();
 }

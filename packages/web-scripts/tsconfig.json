@@ -6,7 +6,6 @@
     "isolatedModules": false,
     "noEmit": true,
     "declaration": false,
-    "jsx": "preserve",
-    "skipLibCheck": true
+    "jsx": "preserve"
   }
 }
