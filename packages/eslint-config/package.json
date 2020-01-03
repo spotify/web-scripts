@@ -21,22 +21,22 @@
     "@spotify/eslint-config-react": "^3.0.1",
     "@spotify/eslint-config-typescript": "^3.0.0",
     "@spotify/web-scripts-utils": "^3.3.0",
-    "@typescript-eslint/eslint-plugin": "^2.2.0",
-    "@typescript-eslint/parser": "^2.2.0",
+    "@typescript-eslint/eslint-plugin": "^2.14.0",
+    "@typescript-eslint/parser": "^2.14.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4"
   },
   "devDependencies": {
-    "eslint": "^5.16.0"
+    "eslint": "^6.8.0"
   },
   "peerDependencies": {
-    "eslint": ">=5.x"
+    "eslint": ">=6.x"
   },
   "publishConfig": {
     "access": "public"
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=10.13.0"
   }
 }

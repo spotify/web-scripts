@@ -3,7 +3,7 @@ module.exports = {
   parserOptions: {
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint/eslint-plugin'],
   // camelcase, indent, no-array-constructor, and no-unused-vars are all
   // busted when using TypeScript at the moment. When you use this plugin, you're
   // forced to turn off the base rules from ESLint and turn on the TypeScript-friendly
@@ -25,7 +25,7 @@ module.exports = {
     'no-useless-constructor': 'off',
     '@typescript-eslint/no-useless-constructor': 'error',
     // semi interference fix.
-    'semi': 'off',
+    semi: 'off',
     '@typescript-eslint/semi': 'warn',
   },
 };
