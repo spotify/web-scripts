@@ -6,25 +6,21 @@
 
 Install TypeScript and configure it for use with Create React App by following their [brief tutorial](https://facebook.github.io/create-react-app/docs/adding-typescript).
 
-```sh
-yarn add -D typescript @types/node @types/react @types/react-dom @types/jest
-```
-
 _Feel free to commit just that part as a first step._
 
 ## Install and use the Spotify TypeScript config
 
-Next, install the Spotify TypeScript config as a devDependency:
+Next, install the Spotify TypeScript config as a dev dependency:
 
 ```sh
 yarn add -D @spotify/tsconfig
 ```
 
-Create React App will have already created a `tsconfig.json` for you. Replace the contents of the file with this config, which should be used for any app.
+Create React App will have already created a `tsconfig.json` for you. In this file, add an `extends` configuration:
 
 ```json
 {
-  "extends": "@spotify/tsconfig/tsconfig.app.json",
+  "extends": "@spotify/tsconfig",
   "include": ["src"]
 }
 ```
