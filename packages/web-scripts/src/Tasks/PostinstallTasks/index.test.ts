@@ -1,5 +1,6 @@
-import { postinstallTask } from './PostinstallTasks';
-import { THIS_ROOT } from '../Paths';
+import { join } from 'path';
+
+import { postinstallTask } from '.';
 
 // @ts-ignore
 jest.spyOn(process, 'exit').mockImplementation(c => c);
@@ -36,7 +37,7 @@ describe('web-scripts postinstall', () => {
   `(
     'return status code $status when audited dependencies have $violations violations and $threshold threshold',
     async ({ violations, threshold, status }) => {
-      const source = `${THIS_ROOT}/src/Tasks/__fixtures__/postinstall/${violations}`;
+      const source = join(__dirname, '__fixtures__', violations.toString());
 
       await postinstallTask({
         name: 'postinstall',

@@ -1,8 +1,8 @@
 import { default as spawn } from 'cross-spawn-promise';
 import { default as Debug } from 'debug';
 
-import { PostinstallTaskDesc } from '../SharedTypes';
-import { CONSUMING_ROOT } from '../Paths';
+import { PostinstallTaskDesc } from '../../SharedTypes';
+import { CONSUMING_ROOT } from '../../Paths';
 
 const dbg = Debug('web-scripts:postinstall'); // eslint-disable-line new-cap
 

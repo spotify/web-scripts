@@ -271,11 +271,11 @@ function handleSpawnResult(result: SpawnSyncReturns<Buffer>) {
 }
 
 function getCommand(args: any[]): Command {
-  return args[args.length - 1] as Command;
+  return args[0] as Command;
 }
 
 function getPositionalArgs(args: any[]): string[] {
-  return args.slice(0, args.length - 1) as string[];
+  return args.slice(1) as string[];
 }
 
 function getOpts(cmd: Command): { [key: string]: any } {

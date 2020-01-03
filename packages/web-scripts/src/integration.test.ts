@@ -184,6 +184,7 @@ describe('integration tests', () => {
       expect(existsSync(join(PKG_ROOT, 'cjs/index.js'))).toBe(true);
 
       await exec('yarn test', { cwd: PKG_ROOT });
+      await exec('yarn test index.test', { cwd: PKG_ROOT });
       await exec(['yarn lint', ...lintArgs].join(' '), { cwd: PKG_ROOT });
     } catch (e) {
       // We are not capturing and printing stdout above, where TSC prints its errors. This makes sure it's printed.
