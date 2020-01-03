@@ -8,13 +8,13 @@ update_configs:
   # the test fixtures to see if the postinstall step
   # works as designed
   - package_manager: "javascript"
-    directory: "/packages/web-scripts/src/Tasks/__fixtures__/postinstall/12"
+    directory: "/packages/web-scripts/src/Tasks/PostinstallTasks/__fixtures__/12"
     update_schedule: "daily"
     ignored_updates:
       - match:
           dependency_name: "geddy"
   - package_manager: "javascript"
-    directory: "/packages/web-scripts/src/Tasks/__fixtures__/postinstall/30"
+    directory: "/packages/web-scripts/src/Tasks/PostinstallTasks/__fixtures__/30"
     update_schedule: "daily"
     ignored_updates:
       - match:
