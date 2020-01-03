@@ -288,6 +288,10 @@ function parseRestOptions(cmd: Command): string[] {
 
 program.parse(process.argv);
 
-if (program.args.length === 0) {
+/**
+ * TODO: program.args.length can no longer be used
+ * @see - https://github.com/tj/commander.js/blob/master/CHANGELOG.md#migration-tips
+ */
+if (program.rawArgs.length === 0) {
   program.help();
 }
