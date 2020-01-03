@@ -18,6 +18,9 @@ import { THIS_ROOT, TSCONFIG } from './Paths';
 const dbg = Debug('web-scripts:integration-test'); // eslint-disable-line new-cap
 const root = join(__dirname, '..');
 const CLI = join(root, 'bin/web-scripts');
+const MONOREPO_ROOT = join(root, '../..');
+const ESLINT_ROOT = join(MONOREPO_ROOT, 'packages/eslint-config');
+
 const execPromise = promisify(execCP);
 const writeFile = promisify(writeFileFS);
 const mkdir = promisify(mkdirFS);
@@ -52,7 +55,6 @@ const TEST_SCRIPTS_TIMEOUT = 60000;
 // const GITHUB_URL = 'https://github.com/spotify/web-scripts.git';
 
 describe('integration tests', () => {
-  const MONOREPO_ROOT = join(root, '../..');
   let PKG_ROOT: string;
 
   beforeEach(() => {
@@ -101,7 +103,8 @@ describe('integration tests', () => {
     // slows this test down and often results in errors in CI. If one of these
     // dependencies is removed from package.json, this test will fail when the
     // commands are run at the end.
-    const localDependencies = [
+    const localDependencies: string[] = [
+      'eslint',
       'react',
       'ts-jest',
       'typescript',
@@ -109,6 +112,10 @@ describe('integration tests', () => {
       '@types/react',
       '@types/react-dom',
     ];
+
+    // as of ESLint 6, the TypeScript plugin needs to be installed
+    // more directly to be usable in this integration test.
+    const eslintDependencies: string[] = ['@typescript-eslint/eslint-plugin'];
 
     const pkg = {
       name: 'test-pkg',
@@ -119,11 +126,14 @@ describe('integration tests', () => {
         commit: `${CLI} commit`,
         release: `${CLI} release`,
       },
-      dependencies: fromEntries(
-        Object.entries(
+      dependencies: fromEntries([
+        ...Object.entries(
           require(`${THIS_ROOT}/package.json`).dependencies,
         ).filter(([k]) => localDependencies.includes(k)),
-      ),
+        ...Object.entries(
+          require(`${ESLINT_ROOT}/package.json`).dependencies,
+        ).filter(([k]) => eslintDependencies.includes(k)),
+      ]),
     };
 
     // extend the tsconfig from the web-scripts/config folder, using an absolute
