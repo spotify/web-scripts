@@ -9,7 +9,7 @@
   },
   "main": "tsconfig.json",
   "files": [
-    "tsconfig*.json"
+    "tsconfig.json"
   ],
   "scripts": {
     "test": "./run-tests.sh"

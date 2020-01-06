@@ -78,15 +78,17 @@ module.exports = {
 
 ### @spotify/web-scripts
 
-We think it's easiest to use the `web-scripts build` script to build web libraries. [Give it a shot!](https://www.github.com/spotify/web-scripts)
+With one command, [`web-scripts build`](https://github.com/spotify/web-scripts/tree/master/packages/web-scripts#the-build-script) takes your TypeScript code and outputs types, esm, and cjs files ready for publishing. It's probably want you want!
 
-### For a full TS library
+If you want or need to manually control how your library is built using our shared configs, read on.
+
+### Manual builds
 
 Assumes the library will be consumed as a node module by an app that will provide, if needed, polyfills for platforms lacking in ES6/2015 support. For example, this config will not transpile `async`/`await`. It will assume the consuming platform either supports those features natively or provides transpilation / polyfills.
 
 This config also assumes that `tsc` (the TypeScript compiler) is responsible for emitting / transpiling the TS -> JS (and providing type declaration files).
 
-Essentially, this config takes the base config and extends it to output
+Essentially, this config takes the base config and extends it to output Common JS modules and the corresponding type definitions.
 
 ```json
 {
@@ -106,39 +108,4 @@ Essentially, this config takes the base config and extends it to output
 }
 ```
 
-### For a mixed TS and JS library
-
-The TypeScript compiler can do most of what you already want without additional tools. But it will need a two-step process to also output declaration files for other TS apps to consume.
-
-```json
-{
-  "extends": "@spotify/tsconfig",
-  "include": ["src"],
-  "compilerOptions": {
-    "noEmit": false,
-    "outDir": "dist",
-    "allowJs": true,
-    "declaration": false,
-    "jsx": "react",
-    "lib": ["es6", "dom"],
-    "module": "commonjs",
-    "sourceMap": true,
-    "target": "es6"
-  }
-}
-```
-
-And then in your build steps:
-
-1. Output JS:
-   `tsc`
-1. Output declaration files:
-   `tsc -d --emitDeclarationOnly --allowJs false --declarationDir dist --declarationMap`
-
-[Source](https://translate.google.com/translate?sl=auto&tl=en&u=https%3A%2F%2Fshuoit.net%2Ftech-notes%2FAllow--declaration-with--allowJs-1546511333.html)
-
-## Libraries with Babel (Advanced)
-
-Setting TypeScript up with Babel isn't recommended if you have a green field project, or really just in general. This is mainly because using them together takes longer to setup, and they both do the task of transpilation. However, there are situations where you may need to use Babel and TypeScript together. Some cases may include that you temporarily want to use Babel to gradually move to TypeScript in a large project with many Babel customizations in place already. Or, you may want access to experimental language features that aren't yet supported in TypeScript, but are usable via some Babel preset.
-
-For information on setting this up, [this great blog post from Artsy Engineering](http://artsy.github.io/blog/2017/11/27/Babel-7-and-TypeScript/) is a good starting point.
+Run `tsc -p tsconfig.json` to see your output.
