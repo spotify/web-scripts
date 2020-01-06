@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "declaration": false,
     "experimentalDecorators": false,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -7,6 +8,7 @@
     "isolatedModules": true,
     "module": "esnext",
     "moduleResolution": "node",
+    "noEmit": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
@@ -21,7 +23,6 @@
     "strictFunctionTypes": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
-    "stripInternal": true,
-    "target": "es5"
+    "stripInternal": true
   }
 }

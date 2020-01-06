@@ -7,8 +7,9 @@
     "type": "git",
     "url": "git+https://github.com/spotify/web-scripts.git"
   },
+  "main": "tsconfig.json",
   "files": [
-    "tsconfig.*.json"
+    "tsconfig.json"
   ],
   "scripts": {
     "test": "./run-tests.sh"
