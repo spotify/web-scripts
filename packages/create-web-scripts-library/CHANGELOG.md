@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.1](https://github.com/spotify/web-scripts/compare/v5.0.0...v5.0.1) (2020-01-07)
+
+### Bug Fixes
+
+- **create-web-scripts-library:** bump template submodule ([e4280f4](https://github.com/spotify/web-scripts/commit/e4280f42dcf41ce46c5cd34ff4bde66e1d7e9bca))
+
 # [5.0.0](https://github.com/spotify/web-scripts/compare/v4.0.2...v5.0.0) (2020-01-06)
 
 **Note:** Version bump only for package @spotify/create-web-scripts-library
