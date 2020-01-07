@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@spotify/web-scripts": "^5.0.0",
-    "@types/fs-extra": "^7.0.0",
+    "@types/fs-extra": "^8.0.1",
     "tempy": "^0.3.0"
   },
   "publishConfig": {
