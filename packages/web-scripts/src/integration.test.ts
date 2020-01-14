@@ -75,7 +75,12 @@ describe('integration tests', () => {
 
   describe('TypeScript', () => {
     beforeEach(async () => {
-      await setupRepo('index.ts', 'index.test.ts', 'Component.tsx');
+      await setupRepo(
+        'index.ts',
+        'index.test.ts',
+        'Component.tsx',
+        'Component.test.tsx',
+      );
     }, SETUP_REPO_TIMEOUT);
 
     test(
@@ -87,7 +92,12 @@ describe('integration tests', () => {
 
   describe('JavaScript', () => {
     beforeEach(async () => {
-      await setupRepo('index.js', 'index.test.js', 'Component.jsx');
+      await setupRepo(
+        'index.js',
+        'index.test.js',
+        'Component.jsx',
+        'Component.test.jsx',
+      );
     }, SETUP_REPO_TIMEOUT);
 
     test(
@@ -105,7 +115,6 @@ describe('integration tests', () => {
     // commands are run at the end.
     const localDependencies: string[] = [
       'eslint',
-      'react',
       'ts-jest',
       'typescript',
       '@types/jest',
@@ -113,9 +122,12 @@ describe('integration tests', () => {
       '@types/react-dom',
     ];
 
-    // as of ESLint 6, the TypeScript plugin needs to be installed
-    // more directly to be usable in this integration test.
-    const eslintDependencies: string[] = ['@typescript-eslint/eslint-plugin'];
+    // as of ESLint 6, ESLint plugins need to be locally installed too.
+    const eslintDependencies: string[] = [
+      '@typescript-eslint/eslint-plugin',
+      'eslint-plugin-jsx-a11y',
+      'eslint-plugin-react',
+    ];
 
     const pkg = {
       name: 'test-pkg',
@@ -133,6 +145,8 @@ describe('integration tests', () => {
         ...Object.entries(
           require(`${ESLINT_ROOT}/package.json`).dependencies,
         ).filter(([k]) => eslintDependencies.includes(k)),
+        // react isn't a local dependency so it needs to be directly specified
+        ['react', '^16'],
       ]),
     };
 
