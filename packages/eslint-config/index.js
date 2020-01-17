@@ -30,12 +30,20 @@ module.exports = {
     hasTypescript ? 'prettier/@typescript-eslint' : null,
   ].filter(s => !!s),
   parser: '@typescript-eslint/parser',
-  env: {
-    jest: true,
-  },
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
+  overrides: [
+    {
+      files: [
+        '**/__@(tests|mocks)__/**/*.[jt]s?(x)',
+        '**/*.@(spec|test).[jt]s?(x)',
+      ],
+      env: {
+        jest: true,
+      },
+    },
+  ],
   settings,
 };
