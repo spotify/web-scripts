@@ -20,4 +20,8 @@ describe('hasKeyInObj', () => {
   it('works when the key is nested and undefined early', () => {
     expect(hasKeyInObj('d.baz', { a: 1, b: 2, c: { foo: 'bar' } })).toBe(false);
   });
+
+  it('does not fail when the object is undefined', () => {
+    expect(() => hasKeyInObj('foo', undefined)).not.toThrow();
+  });
 });

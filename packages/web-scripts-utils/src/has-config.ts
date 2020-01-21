@@ -31,7 +31,7 @@ export const hasConfig = (
       }
   )[],
 ): boolean => {
-  const { path: pkgPath, package: pkg } = readPkgUp.sync({
+  const { path: pkgPath, packageJson } = readPkgUp.sync({
     cwd: getConsumingRoot(),
   }) || { package: {}, path: getConsumingRoot() };
   const root = pkgPath.slice(0, pkgPath.length - '/package.json'.length);
@@ -40,11 +40,11 @@ export const hasConfig = (
       case 'file':
         return !!glob.sync(source.pattern, { cwd: root }).length;
       case 'package.json':
-        return hasKeyInObj(source.property, pkg);
+        return hasKeyInObj(source.property, packageJson);
       case 'dependency':
         return hasKeyInObj(
           getDependencyTypePath(source.dependency, source.dependencyType),
-          pkg,
+          packageJson,
         );
       default:
         return false;
