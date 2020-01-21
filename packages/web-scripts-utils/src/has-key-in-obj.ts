@@ -1,6 +1,6 @@
 export const hasKeyInObj = (
   key: string,
-  obj: { [s: string]: any },
+  obj: { [s: string]: any } = {},
 ): boolean => {
   const [k, ...restOfK] = key.split('.');
   if (restOfK.length === 0) {
