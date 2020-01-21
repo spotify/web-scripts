@@ -1,6 +1,6 @@
 {
   "name": "@spotify/create-web-scripts-library",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "Project scaffolding script for @spotify/web-scripts libraries",
   "author": "Paul Marbach <pmarbach@spotify.com>",
   "homepage": "https://github.com/spotify/web-scripts#readme",
@@ -40,7 +40,7 @@
     "fs-extra": "^8.1.0"
   },
   "devDependencies": {
-    "@spotify/web-scripts": "^5.0.0",
+    "@spotify/web-scripts": "^5.0.2",
     "@types/fs-extra": "^8.0.1",
     "tempy": "^0.3.0"
   },

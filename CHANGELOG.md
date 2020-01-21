@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.2](https://github.com/spotify/web-scripts/compare/v5.0.1...v5.0.2) (2020-01-21)
+
+### Bug Fixes
+
+- **eslint-config-base:** allow triple slashes ([8ee981d](https://github.com/spotify/web-scripts/commit/8ee981dc6a2628fad0e62fb0d25938fd9dd0b4aa)), closes [#117](https://github.com/spotify/web-scripts/issues/117)
+
 ## [5.0.1](https://github.com/spotify/web-scripts/compare/v5.0.0...v5.0.1) (2020-01-07)
 
 ### Bug Fixes
