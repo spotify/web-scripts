@@ -125,29 +125,29 @@ program
   .option('--jest-config [path]', 'path to jest config')
   .option('--prettier-config [path]', 'path to prettier config')
   .option('--eslint-config [path]', 'path to eslint config')
-  .option('--no-fix', 'Do not auto-fix any static analysis errors')
   .option('--no-tests', 'Do not run Jest tests')
+  .option('--no-typecheck', 'Do not type check using TypeScript')
   .action((...args) => {
     const cmd = getCommand(args);
     const rest = getPositionalArgs(args);
     const {
-      fix,
       tests,
+      typecheck,
       'jest-config': jestConfig,
       'eslint-config': eslintConfig,
       'prettier-config': prettierConfig,
     } = getOpts(cmd);
     const t: PrecommitTaskDesc = {
       name: 'precommit',
-      fix,
       tests,
+      typecheck,
       jestConfig,
       eslintConfig,
       prettierConfig,
       restOptions: [...parseRestOptions(cmd), ...rest],
     };
 
-    handleSpawnResult(precommitTask(t));
+    handlePromiseResult(precommitTask(t));
   });
 
 function thresholdLimiter(value: string, defaultValue: string) {

@@ -36,7 +36,7 @@ export async function lintTask(task: LintTaskDesc): Promise<string[]> {
   );
 }
 
-async function eslintRun(task: LintTaskDesc): Promise<string> {
+export async function eslintRun(task: LintTaskDesc): Promise<string> {
   const cmd = 'npx';
   const config = task.config || getEslintConfig();
 
@@ -61,14 +61,14 @@ async function eslintRun(task: LintTaskDesc): Promise<string> {
   return (stdout || '').toString();
 }
 
-async function typeCheck(): Promise<string> {
+export async function typeCheck(): Promise<string> {
   const cmd = 'npx';
   const args = ['tsc', '--noEmit'];
   const stdout = await spawn(cmd, args, { stdio: 'inherit' });
   return (stdout || '').toString();
 }
 
-async function styleCheck(): Promise<string> {
+export async function styleCheck(): Promise<string> {
   const cmd = 'npx';
   const args = ['--no-install', 'prettier'];
 
