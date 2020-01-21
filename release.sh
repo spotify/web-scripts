@@ -15,7 +15,7 @@ then
   echo "spotify/web-scripts: Configuring npm for publishing..."
   echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
   echo "spotify/web-scripts: Attempting publish..."
-  npx lerna publish --yes --conventional-commits --registry=https://registry.npmjs.org
+  npx lerna publish --yes --conventional-commits --create-release=github --registry=https://registry.npmjs.org
   exit $?
 else
   echo "spotify/web-scripts: No release will be triggered." >&2

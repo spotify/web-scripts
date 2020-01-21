@@ -20,7 +20,7 @@
   ],
   "devDependencies": {
     "husky": "^4.0.0",
-    "lerna": "^3.15.0",
+    "lerna": "^3.20.2",
     "prettier": "^1.18.2",
     "typescript": "^3.7.4"
   },
