@@ -15,8 +15,8 @@ export type TaskName =
   | 'commit'
   | 'commitmsg'
   | 'precommit'
-  | 'postinstall'
-  | 'release';
+  | 'release'
+  | 'audit';
 
 export type TaskDesc = {
   name: TaskName;
@@ -61,8 +61,8 @@ export type ReleaseTaskDesc = {
   name: 'release';
 } & TaskDesc;
 
-export type PostinstallTaskDesc = {
-  name: 'postinstall';
+export type AuditTaskDesc = {
+  name: 'audit';
   threshold: ThresholdLimits;
 } & TaskDesc;
 

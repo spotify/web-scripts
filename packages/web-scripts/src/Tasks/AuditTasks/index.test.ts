@@ -1,6 +1,6 @@
 import { join } from 'path';
 
-import { postinstallTask } from '.';
+import { auditTask } from '.';
 
 // @ts-ignore
 jest.spyOn(process, 'exit').mockImplementation(c => c);
@@ -14,7 +14,7 @@ jest.spyOn(process, 'exit').mockImplementation(c => c);
  * Should these tests begin to fail suddenly, it might be worth trading test coverage
  * confidence for test reliability by mocking the network calls made by yarn audit.
  */
-describe('web-scripts postinstall', () => {
+describe('web-scripts audit', () => {
   beforeEach(() => jest.clearAllMocks());
   afterAll(() => jest.restoreAllMocks());
 
@@ -39,8 +39,8 @@ describe('web-scripts postinstall', () => {
     async ({ violations, threshold, status }) => {
       const source = join(__dirname, '__fixtures__', violations.toString());
 
-      await postinstallTask({
-        name: 'postinstall',
+      await auditTask({
+        name: 'audit',
         threshold,
         // Overrides implementation logic for CWD
         restOptions: ['--cwd', source],
