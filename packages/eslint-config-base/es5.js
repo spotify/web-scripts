@@ -317,7 +317,7 @@ module.exports = {
       'always',
       {
         exceptions: ['-', '+'],
-        markers: ['=', '!'], // space here to support sprockets directives
+        markers: ['=', '!', '/'], // space here to support sprockets directives
       },
     ],
     // require regex literals to be wrapped in parentheses
