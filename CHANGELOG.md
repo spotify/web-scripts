@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.2.0](https://github.com/spotify/web-scripts/compare/v5.1.0...v5.2.0) (2020-01-22)
+
+### Features
+
+- **index.js:** Add react/jsx-curly-brace-presence rule ([fbef1ae](https://github.com/spotify/web-scripts/commit/fbef1ae18d4176819c357862a031e34c16d12bbb))
+
 # [5.1.0](https://github.com/spotify/web-scripts/compare/v5.0.2...v5.1.0) (2020-01-22)
 
 ### Features
