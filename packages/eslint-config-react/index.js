@@ -13,6 +13,8 @@ module.exports = {
     'react/jsx-boolean-value': 2,
     // Enforce or disallow spaces inside of curly braces in JSX attributes
     'react/jsx-curly-spacing': 0,
+    // Enforce or disallow react string props to be wrapped in curly braces
+    'react/jsx-curly-brace-presence': 2,
     // Prevent duplicate props in JSX
     'react/jsx-no-duplicate-props': 0,
     // Disallow undeclared variables in JSX
