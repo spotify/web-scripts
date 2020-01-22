@@ -1,10 +1,10 @@
 import { default as spawn } from 'cross-spawn-promise';
 import { default as Debug } from 'debug';
 
-import { PostinstallTaskDesc } from '../../SharedTypes';
+import { AuditTaskDesc } from '../../SharedTypes';
 import { CONSUMING_ROOT } from '../../Paths';
 
-const dbg = Debug('web-scripts:postinstall'); // eslint-disable-line new-cap
+const dbg = Debug('web-scripts:audit'); // eslint-disable-line new-cap
 
 enum ThresholdLimits {
   info = 1,
@@ -15,9 +15,7 @@ enum ThresholdLimits {
   none = 32,
 }
 
-export async function postinstallTask(
-  task: PostinstallTaskDesc,
-): Promise<string[]> {
+export async function auditTask(task: AuditTaskDesc): Promise<string[]> {
   const fns = [yarnRun];
 
   return await Promise.all(
@@ -43,7 +41,7 @@ export async function postinstallTask(
  * is 32, returning 0 exit status unless a threshold option is set.
  * @see https://yarnpkg.com/lang/en/docs/cli/audit/
  */
-async function yarnRun(task: PostinstallTaskDesc): Promise<string> {
+async function yarnRun(task: AuditTaskDesc): Promise<string> {
   const cmd = 'npx';
   const { threshold } = task;
 

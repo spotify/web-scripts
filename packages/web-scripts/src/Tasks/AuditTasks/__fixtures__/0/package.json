@@ -1,0 +1,4 @@
+{
+  "name": "audit-test",
+  "description": "This test has no dependencies, so the audit dependency should return a status code of 0"
+}

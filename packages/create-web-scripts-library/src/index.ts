@@ -2,6 +2,7 @@ import path from 'path';
 import fs from 'fs-extra';
 import execa from 'execa';
 import chalk from 'chalk';
+import readPkgUp from 'read-pkg-up';
 
 import * as messages from './messages';
 import getInstallCmd from './get-install-cmd';
@@ -17,6 +18,11 @@ export default async function createWebScriptsLibrary(projectName?: string) {
     throw new Error(messages.alreadyExists(projectName));
   }
 
+  const { packageJson: cwslPkg } =
+    readPkgUp.sync({
+      cwd: __dirname,
+    }) || {};
+
   const projectPath = path.resolve(process.cwd(), projectName);
   const templatePath = path.resolve(__dirname, '..', 'template');
 
@@ -28,6 +34,9 @@ export default async function createWebScriptsLibrary(projectName?: string) {
   const newPkgPath = path.join(projectPath, 'package.json');
   const newPkg = require(newPkgPath);
   newPkg.name = projectName;
+  newPkg.devDependencies['@spotify/web-scripts'] =
+    (cwslPkg?.devDependencies || {})['@spotify/web-scripts'] ||
+    newPkg.devDependencies['@spotify/web-scripts'];
   await fs.writeFile(newPkgPath, JSON.stringify(newPkg));
 
   console.log(chalk.gray('Installing dependencies...'));

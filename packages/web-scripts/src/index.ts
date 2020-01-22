@@ -2,21 +2,21 @@ import program, { Command } from 'commander';
 import { SpawnSyncReturns } from 'child_process';
 
 import {
-  TestTaskDesc,
+  AuditTaskDesc,
   BuildTaskDesc,
-  LintTaskDesc,
-  FormatTaskDesc,
   CommitTaskDesc,
   CommitMsgTaskDesc,
-  ReleaseTaskDesc,
-  PostinstallTaskDesc,
+  FormatTaskDesc,
+  LintTaskDesc,
   PrecommitTaskDesc,
+  ReleaseTaskDesc,
+  TestTaskDesc,
 } from './SharedTypes';
 import { COMMITLINT_CONIFG } from './Paths';
+import { auditTask } from './Tasks/AuditTasks';
 import { testTask } from './Tasks/TestTask';
 import { buildTask } from './Tasks/BuildTask';
 import { lintTask } from './Tasks/LintTask';
-import { postinstallTask } from './Tasks/PostinstallTasks';
 import { formatTask } from './Tasks/FormatTask';
 import {
   commitTask,
@@ -159,7 +159,8 @@ function thresholdLimiter(value: string, defaultValue: string) {
 }
 
 program
-  .command('postinstall')
+  .command('audit')
+  .alias('postinstall')
   .allowUnknownOption()
   .description(
     `Run yarn audit and exit non-zero if the security vulnerability threshold is breached`,
@@ -174,13 +175,13 @@ program
     const cmd = getCommand(args);
     const rest = getPositionalArgs(args);
     const { threshold } = getOpts(cmd);
-    const t: PostinstallTaskDesc = {
-      name: 'postinstall',
+    const t: AuditTaskDesc = {
+      name: 'audit',
       threshold,
       restOptions: [...parseRestOptions(cmd), ...rest],
     };
 
-    handlePromiseResult(postinstallTask(t));
+    handlePromiseResult(auditTask(t));
   });
 
 program

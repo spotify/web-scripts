@@ -1,4 +1,0 @@
-{
-  "name": "postinstall-test",
-  "description": "This test has no dependencies, so the postinstall dependency should return a status code of 0"
-}

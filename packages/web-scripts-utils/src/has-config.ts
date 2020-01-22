@@ -33,7 +33,7 @@ export const hasConfig = (
 ): boolean => {
   const { path: pkgPath, packageJson } = readPkgUp.sync({
     cwd: getConsumingRoot(),
-  }) || { package: {}, path: getConsumingRoot() };
+  }) || { packageJson: {}, path: getConsumingRoot() };
   const root = pkgPath.slice(0, pkgPath.length - '/package.json'.length);
   return sources.some(source => {
     switch (source.type) {
