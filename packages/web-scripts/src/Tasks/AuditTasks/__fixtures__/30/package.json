@@ -3,7 +3,7 @@
   "description": "Throws a high and moderate status. See => https://www.npmjs.com/advisories/10 + 48 + 1 ",
   "devDependencies": {
     "bassmaster": "1.5.1",
-    "geddy": "13.0.7",
+    "geddy": "14.0.1",
     "uglify-js": "2.5.0",
     "chokidar": "2.1.8"
   }
