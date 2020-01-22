@@ -4,7 +4,7 @@
   "devDependencies": {
     "bassmaster": "1.5.1",
     "geddy": "13.0.7",
-    "uglify-js": "2.5.0",
+    "uglify-js": "3.7.6",
     "chokidar": "2.1.8"
   }
 }
