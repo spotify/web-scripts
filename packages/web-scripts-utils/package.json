@@ -1,6 +1,6 @@
 {
   "name": "@spotify/web-scripts-utils",
-  "version": "5.0.2",
+  "version": "5.1.0",
   "description": "Private package which contains re-used utils within web-scripts projects",
   "repository": {
     "type": "git",

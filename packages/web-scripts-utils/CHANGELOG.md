@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.1.0](https://github.com/spotify/web-scripts/compare/v5.0.2...v5.1.0) (2020-01-22)
+
+### Features
+
+- **web-scripts:** rename postinstall to audit ([169f3c1](https://github.com/spotify/web-scripts/commit/169f3c18641d7a51c5319ba8e155cd5a7bd4b85e)), closes [#131](https://github.com/spotify/web-scripts/issues/131)
+
 ## [5.0.2](https://github.com/spotify/web-scripts/compare/v5.0.1...v5.0.2) (2020-01-21)
 
 **Note:** Version bump only for package @spotify/web-scripts-utils
