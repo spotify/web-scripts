@@ -100,13 +100,18 @@ program
   .allowUnknownOption()
   .description('Run Prettier to format your code')
   .option('--config [path]', 'path to Prettier config')
+  .option(
+    '--path [path]',
+    'path to project folder to format. targets the `src` directory within this path only.',
+  )
   .action((...args) => {
     const cmd = getCommand(args);
     const rest = getPositionalArgs(args);
-    const { config } = getOpts(cmd);
+    const { config, path } = getOpts(cmd);
     const t: FormatTaskDesc = {
       name: 'format',
       config,
+      path,
       restOptions: [...parseRestOptions(cmd), ...rest],
     };
 

@@ -70,7 +70,7 @@ async function typeCheck(): Promise<string> {
 
 async function styleCheck(): Promise<string> {
   const cmd = 'npx';
-  const args = ['prettier'];
+  const args = ['--no-install', 'prettier'];
 
   const config = getPrettierConfig();
   if (config) {

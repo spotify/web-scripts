@@ -45,6 +45,7 @@ export type LintTaskDesc = {
 export type FormatTaskDesc = {
   name: 'format';
   config?: string;
+  path?: string;
 } & TaskDesc;
 
 export type CommitTaskDesc = {
