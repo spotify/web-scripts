@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.2.1](https://github.com/spotify/web-scripts/compare/v5.2.0...v5.2.1) (2020-01-23)
+
+### Bug Fixes
+
+- **web-scripts:** get format working, add test ([5bcf926](https://github.com/spotify/web-scripts/commit/5bcf9267b640a5cf986d0b4528da63ccf6c352c7))
+
 # [5.2.0](https://github.com/spotify/web-scripts/compare/v5.1.0...v5.2.0) (2020-01-22)
 
 **Note:** Version bump only for package @spotify/web-scripts
