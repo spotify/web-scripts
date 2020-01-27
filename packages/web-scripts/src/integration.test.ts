@@ -1,4 +1,3 @@
-import 'jest';
 import { exec as execCP } from 'child_process';
 import { join } from 'path';
 import { promisify } from 'util';
