@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](https://github.com/spotify/web-scripts/compare/v5.3.0...v6.0.0) (2020-01-29)
+
+### Build System
+
+- bump node in engines to 10.18.0 ([08ea936](https://github.com/spotify/web-scripts/commit/08ea936faf879be18b97f8a4ba99aba5926ccff8))
+
+### Features
+
+- **web-scripts:** fix lint-staged usage for latest version ([5215e25](https://github.com/spotify/web-scripts/commit/5215e251bba223b24100c92d16e6ee81944c582c))
+
+### BREAKING CHANGES
+
+- increasing Node version in engines declaration
+- **web-scripts:** \* the --no-fix option has been removed from web-scripts precommit
+- a --no-typecheck was added to web-scripts precommit because the typecheck had to be removed from lint-staged, and so it is no longer aware of which files changed.
+
 # [5.3.0](https://github.com/spotify/web-scripts/compare/v5.2.1...v5.3.0) (2020-01-29)
 
 ### Features
