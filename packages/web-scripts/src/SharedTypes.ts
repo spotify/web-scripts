@@ -69,8 +69,8 @@ export type AuditTaskDesc = {
 
 export type PrecommitTaskDesc = {
   name: 'precommit';
-  fix: boolean;
   tests: boolean;
+  typecheck: boolean;
   eslintConfig: string;
   jestConfig: string;
   prettierConfig: string;

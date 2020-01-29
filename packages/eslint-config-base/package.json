@@ -15,6 +15,6 @@
     "access": "public"
   },
   "engines": {
-    "node": ">=10.13.0"
+    "node": ">=10.18.0"
   }
 }

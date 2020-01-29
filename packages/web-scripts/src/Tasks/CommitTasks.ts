@@ -1,9 +1,11 @@
 import { default as Debug } from 'debug';
 import { default as spawn } from 'cross-spawn';
+import { default as promiseSpawn } from 'cross-spawn-promise';
 import { SpawnSyncReturns } from 'child_process';
 // @ts-ignore
 import { bootstrap as czBootstrap } from 'commitizen/dist/cli/git-cz';
 
+import { typeCheck } from './LintTask';
 import {
   CommitTaskDesc,
   CommitMsgTaskDesc,
@@ -14,9 +16,31 @@ import { LINT_STAGED_CONFIG } from '../Paths';
 
 const dbg = Debug('web-scripts:commit'); // eslint-disable-line new-cap
 
-export function precommitTask(
+export async function precommitTask(
   task: PrecommitTaskDesc,
-): SpawnSyncReturns<Buffer> {
+): Promise<string[]> {
+  const fns: Array<(task?: PrecommitTaskDesc) => Promise<string>> = [];
+  if (task.typecheck) {
+    fns.push(typeCheck);
+  }
+
+  const results = await Promise.all(
+    fns.map(async fn => {
+      dbg('Beginning %s task', fn.name);
+      const stdout = await fn(task);
+      dbg('Finished %s task', fn.name);
+      return stdout;
+    }),
+  );
+
+  // unfortunately, lint-staged cannot be parallelized alongside any other tasks because it takes over the output
+  // completely, rendering the output unreadable if anything is run with it.
+  results.push(await lintStaged(task));
+
+  return results;
+}
+
+export async function lintStaged(task: PrecommitTaskDesc): Promise<string> {
   const cmd = 'npx';
   const args = [
     '--no-install',
@@ -29,7 +53,6 @@ export function precommitTask(
 
   const env: { [key: string]: string } = {
     ...process.env,
-    WEB_SCRIPTS_SHOULD_FIX: task.fix.toString(),
     WEB_SCRIPTS_RUN_TESTS: task.tests.toString(),
   };
 
@@ -43,10 +66,12 @@ export function precommitTask(
     env.WEB_SCRIPTS_PRETTIER_CONFIG = task.prettierConfig;
   }
 
-  return spawn.sync(cmd, args, {
+  const stdout = await promiseSpawn(cmd, args, {
     stdio: 'inherit',
     env,
   });
+
+  return (stdout || '').toString();
 }
 
 export function commitTask(task: CommitTaskDesc): void {
