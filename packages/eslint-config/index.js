@@ -28,6 +28,7 @@ module.exports = {
     'prettier',
     hasReact ? 'prettier/react' : null,
     hasTypescript ? 'prettier/@typescript-eslint' : null,
+    'plugin:jest/recommended',
   ].filter(s => !!s),
   parser: '@typescript-eslint/parser',
   env: {

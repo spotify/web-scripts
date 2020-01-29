@@ -1,4 +1,3 @@
-import 'jest';
 import { exec as execCP } from 'child_process';
 import { join } from 'path';
 import { promisify } from 'util';
@@ -125,6 +124,7 @@ describe('integration tests', () => {
     // as of ESLint 6, ESLint plugins need to be locally installed too.
     const eslintDependencies: string[] = [
       '@typescript-eslint/eslint-plugin',
+      'eslint-plugin-jest',
       'eslint-plugin-jsx-a11y',
       'eslint-plugin-react',
     ];
