@@ -125,6 +125,7 @@ describe('integration tests', () => {
     // as of ESLint 6, ESLint plugins need to be locally installed too.
     const eslintDependencies: string[] = [
       '@typescript-eslint/eslint-plugin',
+      'eslint-plugin-jest',
       'eslint-plugin-jsx-a11y',
       'eslint-plugin-react',
     ];
