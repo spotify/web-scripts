@@ -6,4 +6,5 @@ if ! [ $? -eq 0 ]; then
   yarn lerna run bootstrap
 fi
 
+git submodule update --init --recursive
 web-scripts audit --threshold low
