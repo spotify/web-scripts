@@ -37,7 +37,7 @@ export default async function createWebScriptsLibrary(projectName?: string) {
   newPkg.devDependencies['@spotify/web-scripts'] =
     (cwslPkg?.devDependencies || {})['@spotify/web-scripts'] ||
     newPkg.devDependencies['@spotify/web-scripts'];
-  await fs.writeFile(newPkgPath, JSON.stringify(newPkg));
+  await fs.writeFile(newPkgPath, JSON.stringify(newPkg, null, 2));
 
   console.log(chalk.gray('Installing dependencies...'));
   process.chdir(projectPath);
