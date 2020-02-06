@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.2](https://github.com/spotify/web-scripts/compare/v6.0.1...v6.0.2) (2020-02-06)
+
+### Bug Fixes
+
+- **create-web-scripts-library:** format package.json ([#194](https://github.com/spotify/web-scripts/issues/194)) ([2d4b072](https://github.com/spotify/web-scripts/commit/2d4b0723a38d7e34f45d427f23dd0cd22c30fc9b))
+
 ## [6.0.1](https://github.com/spotify/web-scripts/compare/v6.0.0...v6.0.1) (2020-02-06)
 
 ### Bug Fixes
