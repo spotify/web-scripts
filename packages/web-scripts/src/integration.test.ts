@@ -115,6 +115,7 @@ describe('integration tests', () => {
     const localDependencies: string[] = [
       'eslint',
       'ts-jest',
+      'jest-config',
       'typescript',
       '@types/jest',
       '@types/react',

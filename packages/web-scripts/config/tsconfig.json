@@ -3,7 +3,6 @@
   "include": ["src"],
   "compilerOptions": {
     "declaration": true,
-    "incremental": true,
     "isolatedModules": false,
     "jsx": "react",
     "lib": ["es6", "dom"],
