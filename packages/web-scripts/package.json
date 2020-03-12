@@ -1,6 +1,6 @@
 {
   "name": "@spotify/web-scripts",
-  "version": "6.0.0",
+  "version": "6.1.0",
   "license": "Apache-2.0",
   "description": "Build, lint, test, format, and release your JS/TS library.",
   "repository": {
@@ -32,7 +32,7 @@
   "dependencies": {
     "@commitlint/cli": "^8.3.3",
     "@commitlint/config-conventional": "^8.3.3",
-    "@spotify/eslint-config": "^6.0.0",
+    "@spotify/eslint-config": "^6.1.0",
     "@spotify/prettier-config": "^6.0.0",
     "@spotify/tsconfig": "^6.0.0",
     "@spotify/web-scripts-utils": "^6.0.0",
