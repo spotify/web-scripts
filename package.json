@@ -19,6 +19,7 @@
     "packages/*"
   ],
   "devDependencies": {
+    "@spotify/eslint-config-oss": "^1.0.0",
     "husky": "^4.0.0",
     "lerna": "^3.20.2",
     "prettier": "^1.18.2",

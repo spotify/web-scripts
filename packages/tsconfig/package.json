@@ -12,9 +12,11 @@
     "tsconfig.json"
   ],
   "scripts": {
-    "test": "./run-tests.sh"
+    "test": "./run-tests.sh",
+    "lint": "web-scripts lint"
   },
   "devDependencies": {
+    "@spotify/web-scripts": "^6.1.0",
     "typescript": "^3.7.4"
   },
   "peerDependencies": {

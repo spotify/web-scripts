@@ -1518,6 +1518,63 @@
   dependencies:
     type-detect "4.0.8"
 
+"@spotify/eslint-config-base@^6.1.0":
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/@spotify/eslint-config-base/-/eslint-config-base-6.1.0.tgz#b48d2764049d56a7d83a95709ec1e6733cb19f2a"
+  integrity sha512-oxR3OBBrms09Ih6yPrqcaeKgwchdw9XgRvKsF6x6uPiMy0OVYald/+GkBtyQy+IChD14WStV/XosqNxEZeTJ4Q==
+
+"@spotify/eslint-config-oss@file:.yalc/@spotify/eslint-config-oss":
+  version "1.0.0-aa550fb9"
+  dependencies:
+    eslint-plugin-notice "^0.8.9"
+
+"@spotify/eslint-config@^6.1.0":
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/@spotify/eslint-config/-/eslint-config-6.1.0.tgz#67ef537c4419ecf275f790a79ce988820b3f5a95"
+  integrity sha512-pRfRFkW9XMHrzSErzzUxMRs/e+IL0i0o8crgMJJgk0J56+f0rQaXWkeDrI9HCw1uCkXLEwUoNPe+Rdd6cDk/lA==
+  dependencies:
+    "@spotify/eslint-config-base" "^6.1.0"
+    "@spotify/eslint-config-react" "^6.0.0"
+    "@spotify/eslint-config-typescript" "^6.0.0"
+    "@spotify/web-scripts-utils" "^6.0.0"
+    "@typescript-eslint/eslint-plugin" "^2.14.0"
+    "@typescript-eslint/parser" "^2.14.0"
+    eslint-config-prettier "^6.0.0"
+    eslint-plugin-jest "^23.6.0"
+    eslint-plugin-jsx-a11y "^6.2.1"
+    eslint-plugin-react "^7.12.4"
+
+"@spotify/web-scripts@^6.1.0":
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/@spotify/web-scripts/-/web-scripts-6.1.0.tgz#3fb52aa9c77c4724e056a33e5b5994b327594278"
+  integrity sha512-1QVbd7HtIlYLIuNwR7Er/S9p3HLmXOFZAwmRLQ0xe67G1/gqIQOXpuMuembWLyTqi15efMrpNBlmvH64eW7nsw==
+  dependencies:
+    "@commitlint/cli" "^8.3.3"
+    "@commitlint/config-conventional" "^8.3.3"
+    "@spotify/eslint-config" "^6.1.0"
+    "@spotify/prettier-config" "^6.0.0"
+    "@spotify/tsconfig" "^6.0.0"
+    "@spotify/web-scripts-utils" "^6.0.0"
+    "@types/cross-spawn" "^6.0.0"
+    "@types/debug" "^4.1.2"
+    "@types/jest" "^25.1.0"
+    "@types/react" "^16.8.19"
+    "@types/react-dom" "^16.8.4"
+    commander "^4.0.1"
+    commitizen "^4.0.3"
+    cross-spawn-promise "^0.10.1"
+    cz-conventional-changelog "^3.0.2"
+    debug "^4.1.1"
+    eslint "^6.8.0"
+    jest "^25.1.0"
+    jest-config "^25.1.0"
+    jest-junit "^10.0.0"
+    lint-staged "^10.0.4"
+    prettier "^1.18.2"
+    semantic-release "^17.0.1"
+    ts-jest "^25.2.1"
+    typescript "^3.7.4"
+
 "@tootallnate/once@1":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@tootallnate/once/-/once-1.0.0.tgz#9c13c2574c92d4503b005feca8f2e16cc1611506"
@@ -3551,6 +3608,15 @@ eslint-plugin-jsx-a11y@^6.2.1:
     has "^1.0.3"
     jsx-ast-utils "^2.2.1"
 
+eslint-plugin-notice@^0.8.9:
+  version "0.8.9"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-notice/-/eslint-plugin-notice-0.8.9.tgz#b3b55ba218b36a01fd4de998f68c66a8bf238a82"
+  integrity sha512-Z6xit9Yv7pCG/rS3DohSou1BeDffPOhmuQzE7UWMxV2h/MJmsOq3QZFyXmbi18cExlyWbz4+ztAogi2edeTbjA==
+  dependencies:
+    find-root "^1.1.0"
+    lodash "^4.17.15"
+    metric-lcs "^0.1.2"
+
 eslint-plugin-react@^7.12.4, eslint-plugin-react@^7.16.0:
   version "7.19.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.19.0.tgz#6d08f9673628aa69c5559d33489e855d83551666"
@@ -3944,7 +4010,7 @@ find-npm-prefix@^1.0.2:
   resolved "https://registry.yarnpkg.com/find-npm-prefix/-/find-npm-prefix-1.0.2.tgz#8d8ce2c78b3b4b9e66c8acc6a37c231eb841cfdf"
   integrity sha512-KEftzJ+H90x6pcKtdXZEPsQse8/y/UnvzRKrOSQFprnrGaFuJ62fVkP34Iu2IYuMvyauCyoLTNkJZgrrGA2wkA==
 
-find-root@1.1.0:
+find-root@1.1.0, find-root@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/find-root/-/find-root-1.1.0.tgz#abcfc8ba76f708c42a97b3d685b7e9450bfb9ce4"
   integrity sha512-NKfW6bec6GfKc0SGx1e07QZY9PE99u0Bft/0rzSD5k3sO/vwkVUpDUKVm5Gpp5Ue3YfShPFTX2070tDs5kB9Ng==
@@ -6533,6 +6599,11 @@ merge@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/merge/-/merge-1.2.1.tgz#38bebf80c3220a8a487b6fcfb3941bb11720c145"
   integrity sha512-VjFo4P5Whtj4vsLzsYBu5ayHhoHJ0UqNm7ibvShmbmoz7tGi0vXaoJbGdB+GmDMLUdg8DpQXEIeVDAe8MaABvQ==
+
+metric-lcs@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/metric-lcs/-/metric-lcs-0.1.2.tgz#87913f149410e39c7c5a19037512814eaf155e11"
+  integrity sha512-+TZ5dUDPKPJaU/rscTzxyN8ZkX7eAVLAiQU/e+YINleXPv03SCmJShaMT1If1liTH8OcmWXZs0CmzCBRBLcMpA==
 
 micromatch@^3.0.4, micromatch@^3.1.10, micromatch@^3.1.4:
   version "3.1.10"
