@@ -78,7 +78,7 @@ export async function eslintRun(task: LintTaskDesc): Promise<string> {
 
 export async function typeCheck(): Promise<string> {
   const cmd = 'npx';
-  const args = ['tsc', '--noEmit'];
+  const args = ['tsc', '--noEmit', 'true', '--incremental', 'false'];
   const stdout = await spawn(cmd, args, { stdio: 'inherit' });
   return (stdout || '').toString();
 }

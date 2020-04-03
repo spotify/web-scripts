@@ -18,9 +18,9 @@
     "clean": "rm -rf cjs esm types",
     "build": "web-scripts build",
     "test": "web-scripts test",
-    "lint": "web-scripts lint --stylecheck",
+    "lint": "web-scripts lint --stylecheck --typecheck",
     "format": "web-scripts format",
-    "bootstrap": "yarn run clean && tsc --allowJs --outDir cjs --noEmit false --module CommonJS && tsc --declaration --isolatedModules false --outDir types --emitDeclarationOnly --noEmit false",
+    "bootstrap": "yarn run clean && tsc --allowJs --outDir cjs --module CommonJS && tsc --declaration --isolatedModules false --outDir types --emitDeclarationOnly ",
     "prepublishOnly": "yarn run bootstrap && yarn run build"
   },
   "dependencies": {

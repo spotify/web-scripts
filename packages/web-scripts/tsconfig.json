@@ -1,9 +1,4 @@
 {
   "extends": "@spotify/tsconfig",
-  "include": ["src"],
-  "compilerOptions": {
-    "isolatedModules": false,
-    "noEmit": true,
-    "jsx": "preserve"
-  }
+  "include": ["src"]
 }

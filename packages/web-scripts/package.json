@@ -24,9 +24,9 @@
     "clean": "rm -rf cjs esm types",
     "build": "node ./bin/web-scripts build",
     "test": "node ./bin/web-scripts test",
-    "lint": "node ./bin/web-scripts lint --stylecheck",
+    "lint": "node ./bin/web-scripts lint --stylecheck --typecheck",
     "format": "node ./bin/web-scripts format",
-    "bootstrap": "yarn run clean && tsc --allowJs --outDir cjs --noEmit false --module CommonJS",
+    "bootstrap": "yarn run clean && tsc --allowJs --outDir cjs --module CommonJS",
     "prepublishOnly": "yarn run bootstrap && yarn run build"
   },
   "dependencies": {
@@ -47,8 +47,8 @@
     "cz-conventional-changelog": "^3.0.2",
     "debug": "^4.1.1",
     "eslint": "^6.8.0",
-    "jest": "^25.1.0",
-    "jest-config": "^25.1.0",
+    "jest": "^25.2.7",
+    "jest-config": "^25.2.7",
     "jest-junit": "^10.0.0",
     "lint-staged": "^10.0.4",
     "prettier": "^1.18.2",

@@ -2,7 +2,7 @@
 
 ## Getting started
 
-This project outputs a single tsconfig.json file for use. This file is configured to disable all output options (`declaration` is `false`, `noEmit` is true) and is set to strictly type check your code (for example, `noImplicitAny` and many other strict type checks). It is likely that you will need to import this file and do a little configuration additionally depending on whether you plan to use this configuration in conjunction with Webpack or Babel, or whether you plan to use `tsc` to output artifacts.
+This project outputs a single tsconfig.json file for use. This file is set to strictly type check your code (for example, `noImplicitAny` and many other strict type checks). It is likely that you will need to import this file and do a little configuration additionally depending on whether you plan to use this configuration in conjunction with Webpack or Babel, or whether you plan to use `tsc` to output artifacts.
 
 ### Questions to answer
 
@@ -63,17 +63,6 @@ module.exports = {
 };
 ```
 
-**IMPORTANT** You will need to turn off `noEmit` when using `ts-loader` with `@spotify/tsconfig`:
-
-```json
-{
-  "extends": "@spotify/tsconfig",
-  "compilerOptions": {
-    "noEmit": false
-  }
-}
-```
-
 ## Libraries
 
 ### @spotify/web-scripts
@@ -95,7 +84,6 @@ Essentially, this config takes the base config and extends it to output Common J
   "extends": "@spotify/tsconfig",
   "include": ["src"],
   "compilerOptions": {
-    "noEmit": false,
     "outDir": "dist",
     "declaration": true,
     "declarationMap": true,
