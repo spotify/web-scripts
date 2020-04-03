@@ -10,7 +10,7 @@ yarn add --dev @spotify/eslint-config-react eslint eslint-plugin-react eslint-pl
 
 ## Usage
 
-After installing, update your project's `.eslintrc` file to import the rule sets you want:
+After installing, update your project's `.eslintrc.json` file to import the rule sets you want:
 
 ```js
 {
