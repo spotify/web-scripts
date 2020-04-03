@@ -13,13 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-const path = require('path');
+const babelJest = require('babel-jest');
+const { hasConfig } = require('@spotify/web-scripts-utils');
 
-module.exports = {
-  rootDir: path.join(process.cwd(), 'src'),
-  coverageDirectory: path.join(process.cwd(), 'coverage'),
-  collectCoverageFrom: ['**/*.{js,jsx,ts,tsx}', '!**/*.d.ts'],
-  transform: {
-    '^.+\\.[jt]sx?$': path.join(__dirname, 'babel-transform.js'),
-  },
-};
+const transformerOptions = {};
+
+if (
+  !hasConfig([
+    { type: 'file', pattern: '.babelrc.*' },
+    { type: 'file', pattern: '.babelrc' },
+    { type: 'package.json', property: 'babel' },
+  ])
+) {
+  transformerOptions.presets = [
+    ['@babel/preset-env', { targets: { node: 'current' } }],
+    '@babel/preset-react',
+    '@babel/preset-typescript',
+  ];
+}
+
+module.exports = babelJest.createTransformer(transformerOptions);

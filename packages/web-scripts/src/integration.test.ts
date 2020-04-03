@@ -121,6 +121,47 @@ describe('integration tests', () => {
     );
   });
 
+  describe('JavaScript - custom babel, tsconfig', () => {
+    beforeEach(async () => {
+      await setupRepo(
+        'index.ts',
+        'index.test.ts',
+        'Component.tsx',
+        'Component.test.tsx',
+      );
+      await writeFile(
+        join(PKG_ROOT, '.babelrc.json'),
+        JSON.stringify({
+          presets: [
+            ['@babel/preset-env', { targets: { node: '8' } }],
+            '@babel/preset-react',
+            '@babel/preset-typescript',
+          ],
+        }),
+      );
+      await writeFile(
+        join(PKG_ROOT, 'tsconfig.json'),
+        JSON.stringify(
+          {
+            extends: TSCONFIG,
+            include: ['src'],
+            compilerOptions: {
+              incremental: true,
+            },
+          },
+          null,
+          2,
+        ),
+      );
+    }, SETUP_REPO_TIMEOUT);
+
+    test(
+      'Full integration test',
+      async () => await testScripts(),
+      TEST_SCRIPTS_TIMEOUT,
+    );
+  });
+
   async function setupRepo(...fileNames: string[]) {
     // we need to locally install some dependencies, but we want to avoid installing
     // all of them to prevent needlessly re-installing everything which significantly
@@ -129,8 +170,10 @@ describe('integration tests', () => {
     // commands are run at the end.
     const localDependencies: string[] = [
       'eslint',
-      'ts-jest',
-      'jest-config',
+      '@babel/core',
+      '@babel/preset-typescript',
+      '@babel/preset-react',
+      '@babel/preset-env',
       'typescript',
       '@types/jest',
       '@types/react',
