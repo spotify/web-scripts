@@ -1,6 +1,6 @@
 {
   "name": "@spotify/eslint-config-base",
-  "version": "6.1.0",
+  "version": "6.1.1",
   "license": "Apache-2.0",
   "description": "Spotify's base ESLint config",
   "main": "index.js",
@@ -12,7 +12,7 @@
     "lint": "web-scripts lint"
   },
   "devDependencies": {
-    "@spotify/web-scripts": "^6.1.0"
+    "@spotify/web-scripts": "^6.1.1"
   },
   "peerDependencies": {
     "eslint": ">=5.x"

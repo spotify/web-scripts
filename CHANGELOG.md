@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.1.1](https://github.com/spotify/web-scripts/compare/v6.1.0...v6.1.1) (2020-04-03)
+
+
+### Bug Fixes
+
+* pin ts-jest to 25.2 ([48e4cd5](https://github.com/spotify/web-scripts/commit/48e4cd5f2a73752cd6670b706edc6315f3998433))
+* **web-scripts:** pin ts-jest version to 25.2 ([01c9d86](https://github.com/spotify/web-scripts/commit/01c9d866304f2c6f5ae01239aaaf95e402e5f4f7))
+
+
+
+
+
 # [6.1.0](https://github.com/spotify/web-scripts/compare/v6.0.2...v6.1.0) (2020-03-12)
 
 ### Features

@@ -1,6 +1,6 @@
 {
   "name": "@spotify/prettier-config",
-  "version": "6.0.0",
+  "version": "6.1.1",
   "license": "Apache-2.0",
   "description": "Spotify's base Prettier config",
   "repository": {
@@ -12,7 +12,7 @@
     "lint": "web-scripts lint"
   },
   "devDependencies": {
-    "@spotify/web-scripts": "^6.1.0",
+    "@spotify/web-scripts": "^6.1.1",
     "prettier": "^1.18.2"
   },
   "peerDependencies": {

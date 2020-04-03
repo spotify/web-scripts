@@ -1,6 +1,6 @@
 {
   "name": "@spotify/eslint-config-react",
-  "version": "6.0.0",
+  "version": "6.1.1",
   "license": "Apache-2.0",
   "description": "Spotify's ESLint config for React projects",
   "repository": {
@@ -12,7 +12,7 @@
     "lint": "web-scripts lint"
   },
   "devDependencies": {
-    "@spotify/web-scripts": "^6.1.0",
+    "@spotify/web-scripts": "^6.1.1",
     "eslint": "^6.8.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.16.0"
