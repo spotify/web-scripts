@@ -19,6 +19,7 @@ import { default as promiseSpawn } from 'cross-spawn-promise';
 import { SpawnSyncReturns } from 'child_process';
 // @ts-ignore
 import { bootstrap as czBootstrap } from 'commitizen/dist/cli/git-cz';
+import { hasConfig } from '@spotify/web-scripts-utils';
 
 import { typeCheck } from './LintTask';
 import {
@@ -28,6 +29,20 @@ import {
   PrecommitTaskDesc,
 } from '../SharedTypes';
 import { LINT_STAGED_CONFIG } from '../Paths';
+
+export function getLintStagedConfig(): string | null {
+  if (
+    !hasConfig([
+      { type: 'file', pattern: 'lint-staged.config.js' },
+      { type: 'file', pattern: '.lintstagedrc*' },
+      { type: 'package.json', property: 'lint-staged' },
+    ])
+  ) {
+    return LINT_STAGED_CONFIG;
+  }
+
+  return null;
+}
 
 const dbg = Debug('web-scripts:commit'); // eslint-disable-line new-cap
 
@@ -56,12 +71,12 @@ export async function precommitTask(
 }
 
 export async function lintStaged(task: PrecommitTaskDesc): Promise<string> {
+  const config = getLintStagedConfig();
   const cmd = 'npx';
   const args = [
     '--no-install',
     'lint-staged',
-    '--config',
-    LINT_STAGED_CONFIG,
+    ...(config ? ['--config', config] : []),
     ...task.restOptions,
   ];
   dbg('npx args %o', args);
