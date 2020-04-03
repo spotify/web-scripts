@@ -1,0 +1,10 @@
+# coverage
+coverage/
+
+# web-scripts generated files
+cjs/
+esm/
+types/
+
+# ignore the template
+template/

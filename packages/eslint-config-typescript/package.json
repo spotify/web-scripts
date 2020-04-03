@@ -3,15 +3,19 @@
   "version": "6.0.0",
   "license": "Apache-2.0",
   "description": "Spotify's ESLint config for TypeScript",
-  "main": "index.js",
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.14.0",
-    "@typescript-eslint/parser": "^2.14.0",
-    "eslint": "^6.8.0"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/spotify/web-scripts.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "lint": "web-scripts lint"
+  },
+  "devDependencies": {
+    "@spotify/web-scripts": "^6.1.0",
+    "@typescript-eslint/eslint-plugin": "^2.14.0",
+    "@typescript-eslint/parser": "^2.14.0",
+    "eslint": "^6.8.0"
   },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": ">=2",

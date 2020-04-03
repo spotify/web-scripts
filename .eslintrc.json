@@ -1,0 +1,3 @@
+{
+  "extends": ["@spotify", "@spotify/eslint-config-oss"]
+}

@@ -8,7 +8,11 @@
     "url": "git+https://github.com/spotify/web-scripts.git"
   },
   "main": "index.js",
+  "scripts": {
+    "lint": "web-scripts lint"
+  },
   "devDependencies": {
+    "@spotify/web-scripts": "^6.1.0",
     "prettier": "^1.18.2"
   },
   "peerDependencies": {
