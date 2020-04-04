@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.2.0](https://github.com/spotify/web-scripts/compare/v6.1.1...v6.2.0) (2020-04-04)
+
+
+### Features
+
+* **web-scripts:** allow custom lint-staged ([#276](https://github.com/spotify/web-scripts/issues/276)) ([49324dc](https://github.com/spotify/web-scripts/commit/49324dcb1c9c8d6e2255a2957323d209b46d5803))
+
+
+
+
+
 ## [6.1.1](https://github.com/spotify/web-scripts/compare/v6.1.0...v6.1.1) (2020-04-03)
 
 

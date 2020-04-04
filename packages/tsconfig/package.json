@@ -1,6 +1,6 @@
 {
   "name": "@spotify/tsconfig",
-  "version": "6.1.1",
+  "version": "6.2.0",
   "license": "Apache-2.0",
   "description": "Common tsconfigs to be used as your base configurations",
   "repository": {
@@ -16,7 +16,7 @@
     "lint": "web-scripts lint"
   },
   "devDependencies": {
-    "@spotify/web-scripts": "^6.1.1",
+    "@spotify/web-scripts": "^6.2.0",
     "typescript": "^3.7.4"
   },
   "peerDependencies": {

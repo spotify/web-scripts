@@ -1,6 +1,6 @@
 {
   "name": "@spotify/eslint-config",
-  "version": "6.1.1",
+  "version": "6.2.0",
   "description": "Combined ESLint config for Spotify",
   "author": "Paul Marbach <pmarbach@spotify.com>",
   "homepage": "https://github.com/spotify/web-scripts#readme",
@@ -20,9 +20,9 @@
     "lint": "web-scripts lint"
   },
   "dependencies": {
-    "@spotify/eslint-config-base": "^6.1.1",
-    "@spotify/eslint-config-react": "^6.1.1",
-    "@spotify/eslint-config-typescript": "^6.1.1",
+    "@spotify/eslint-config-base": "^6.2.0",
+    "@spotify/eslint-config-react": "^6.2.0",
+    "@spotify/eslint-config-typescript": "^6.2.0",
     "@spotify/web-scripts-utils": "^6.1.1",
     "@typescript-eslint/eslint-plugin": "^2.14.0",
     "@typescript-eslint/parser": "^2.14.0",
@@ -32,7 +32,7 @@
     "eslint-plugin-react": "^7.12.4"
   },
   "devDependencies": {
-    "@spotify/web-scripts": "^6.1.1",
+    "@spotify/web-scripts": "^6.2.0",
     "eslint": "^6.8.0"
   },
   "peerDependencies": {
