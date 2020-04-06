@@ -1583,9 +1583,9 @@
     type-detect "4.0.8"
 
 "@spotify/eslint-config-oss@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@spotify/eslint-config-oss/-/eslint-config-oss-1.0.0.tgz#1bcbb9047c0211c378f6e70db1e2aed57818bda6"
-  integrity sha512-c6UQRbtbRK6oSEg93UpJqG6SQ/EgPoN9ptWhQmE2NG1Y6j2E0KA+Dt9sw3M05itrSWc7CjTCjkrEz1bou4SWDA==
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@spotify/eslint-config-oss/-/eslint-config-oss-1.0.1.tgz#01a95517e05063487c8e06b0b95cbdda33014a2a"
+  integrity sha512-G6eVEsp5WnvCglI9uhzhSeUnsKdpJ5gOLyhdZBEtqt8+MdpQSDECIfnkI8mV06dQ8FKtbqVd2NiMbkCC/gwrFQ==
   dependencies:
     eslint-plugin-notice "^0.8.9"
 
