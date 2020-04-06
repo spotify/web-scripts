@@ -34,7 +34,7 @@
     "url": "https://github.com/spotify/web-scripts/issues"
   },
   "dependencies": {
-    "chalk": "^3.0.0",
+    "chalk": "^4.0.0",
     "commander": "^4.0.1",
     "execa": "^4.0.0",
     "fs-extra": "^9.0.0",
