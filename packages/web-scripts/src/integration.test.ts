@@ -143,6 +143,7 @@ describe('integration tests', () => {
       'eslint-plugin-jest',
       'eslint-plugin-jsx-a11y',
       'eslint-plugin-react',
+      'eslint-plugin-react-hooks',
     ];
 
     const pkg = {
