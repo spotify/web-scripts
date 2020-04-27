@@ -24,7 +24,7 @@
     "clean": "rm -rf cjs esm types",
     "build": "node ./bin/web-scripts build",
     "test": "node ./bin/web-scripts test",
-    "lint": "node ./bin/web-scripts lint --stylecheck",
+    "lint": "node ./bin/web-scripts lint",
     "format": "node ./bin/web-scripts format",
     "bootstrap": "yarn run clean && tsc --allowJs --outDir cjs --noEmit false --module CommonJS",
     "prepublishOnly": "yarn run bootstrap && yarn run build"

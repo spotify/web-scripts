@@ -91,7 +91,7 @@ describe('integration tests', () => {
 
     test(
       'Full integration test',
-      async () => await testScripts([], ['--typecheck', '--stylecheck']),
+      async () => await testScripts(),
       TEST_SCRIPTS_TIMEOUT,
     );
   });
@@ -108,7 +108,7 @@ describe('integration tests', () => {
 
     test(
       'Full integration test',
-      async () => await testScripts(['--no-types']),
+      async () => await testScripts(['--no-types'], ['--no-typecheck']),
       TEST_SCRIPTS_TIMEOUT,
     );
   });
