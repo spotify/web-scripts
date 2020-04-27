@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@spotify/web-scripts": "^6.2.0",
-    "prettier": "^1.18.2"
+    "prettier": "^2.0.5"
   },
   "peerDependencies": {
     "prettier": "1.x"
