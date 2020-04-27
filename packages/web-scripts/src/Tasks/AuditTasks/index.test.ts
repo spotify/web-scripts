@@ -20,6 +20,18 @@ import { auditTask } from '.';
 // @ts-ignore
 jest.spyOn(process, 'exit').mockImplementation(c => c);
 
+jest.mock('cross-spawn-promise', () => jest.fn());
+
+const spawn: jest.Mock = require.requireMock('cross-spawn-promise');
+
+class AuditError extends Error {
+  public exitStatus: number;
+  constructor(message: string, exitStatus: number) {
+    super(message);
+    this.exitStatus = exitStatus;
+  }
+}
+
 /**
  * WARNING:
  * These tests have some issues with being potentially non-deterministic.
@@ -53,6 +65,14 @@ describe('web-scripts audit', () => {
     'return status code $status when audited dependencies have $violations violations and $threshold threshold',
     async ({ violations, threshold, status }) => {
       const source = join(__dirname, '__fixtures__', violations.toString());
+
+      if (violations) {
+        spawn.mockRejectedValueOnce(
+          new AuditError('audit failure found', violations),
+        );
+      } else {
+        spawn.mockResolvedValueOnce(null);
+      }
 
       await auditTask({
         name: 'audit',
