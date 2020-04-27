@@ -55,7 +55,7 @@ export async function precommitTask(
   }
 
   const results = await Promise.all(
-    fns.map(async fn => {
+    fns.map(async (fn) => {
       dbg('Beginning %s task', fn.name);
       const stdout = await fn(task);
       dbg('Finished %s task', fn.name);

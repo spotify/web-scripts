@@ -50,7 +50,7 @@ export const hasConfig = (
     cwd: getConsumingRoot(),
   }) || { packageJson: {}, path: getConsumingRoot() };
   const root = pkgPath.slice(0, pkgPath.length - '/package.json'.length);
-  return sources.some(source => {
+  return sources.some((source) => {
     switch (source.type) {
       case 'file':
         return !!glob.sync(source.pattern, { cwd: root }).length;

@@ -8,12 +8,8 @@
     "type": "git",
     "url": "git+https://github.com/spotify/web-scripts.git"
   },
-  "scripts": {
-    "lint": "web-scripts lint"
-  },
-  "devDependencies": {
-    "@spotify/web-scripts": "^6.2.0"
-  },
+  "scripts": {},
+  "devDependencies": {},
   "peerDependencies": {
     "eslint": ">=5.x"
   },

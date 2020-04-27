@@ -19,7 +19,7 @@ export const hasKeyInObj = (
 ): boolean => {
   const [k, ...restOfK] = key.split('.');
   if (restOfK.length === 0) {
-    return Object.keys(obj).some(ok => ok === k);
+    return Object.keys(obj).some((ok) => ok === k);
   }
   const nextObj = obj[k];
   if (!(nextObj instanceof Object)) {

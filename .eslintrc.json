@@ -1,3 +1,7 @@
 {
-  "extends": ["@spotify", "@spotify/eslint-config-oss"]
+  "extends": ["@spotify", "@spotify/eslint-config-oss"],
+  "ignorePatterns": [
+    "__fixtures__",
+    "packages/create-web-scripts-library/template"
+  ]
 }
