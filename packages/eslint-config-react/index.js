@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 module.exports = {
-  plugins: ['react', 'jsx-a11y'],
+  plugins: ['react', 'react-hooks', 'jsx-a11y'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -46,6 +46,10 @@ module.exports = {
     'react/jsx-uses-vars': 2,
     // Prevent missing parentheses around multilines JSX
     'react/jsx-wrap-multilines': 2,
+    // Enforce react rules of hooks
+    'react-hooks/rules-of-hooks': 2,
+    // Enforce the list of dependencies for hooks is correct
+    'react-hooks/exhaustive-deps': 2,
     // Prevent usage of dangerous JSX properties
     'react/no-danger': 0,
     // Prevent usage of setState in componentDidMount
