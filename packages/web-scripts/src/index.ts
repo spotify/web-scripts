@@ -93,8 +93,10 @@ program
   .allowUnknownOption()
   .description('Run ESLint and TypeScript to statically analyze your code')
   .option('--config [path]', 'path to ESLint config')
-  .option('--typecheck', 'run a TypeScript type check')
-  .option('--stylecheck', "run Prettier's style check")
+  .option('--typecheck', 'run a TypeScript type check', true)
+  .option('--no-typecheck', 'do not run a TypeScript type check')
+  .option('--stylecheck', "run Prettier's style check", true)
+  .option('--no-stylecheck', "do not run Prettier's style check")
   .action((...args) => {
     const cmd = getCommand(args);
     const rest = getPositionalArgs(args);

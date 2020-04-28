@@ -10,7 +10,7 @@
     "postinstall": "./postinstall.sh",
     "test": "lerna run test --stream",
     "build": "lerna run build --stream",
-    "lint": "web-scripts lint --stylecheck",
+    "lint": "web-scripts lint --no-typecheck",
     "format": "web-scripts format",
     "commit": "web-scripts commit",
     "bootstrap": "lerna bootstrap --use-workspaces",
