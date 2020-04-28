@@ -8,11 +8,8 @@
     "url": "git+https://github.com/spotify/web-scripts.git"
   },
   "main": "index.js",
-  "scripts": {
-    "lint": "web-scripts lint"
-  },
+  "scripts": {},
   "devDependencies": {
-    "@spotify/web-scripts": "^6.2.0",
     "@typescript-eslint/eslint-plugin": "^2.14.0",
     "@typescript-eslint/parser": "^2.14.0",
     "eslint": "^6.8.0"

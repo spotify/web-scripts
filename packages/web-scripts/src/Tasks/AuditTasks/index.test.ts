@@ -18,7 +18,7 @@ import { join } from 'path';
 import { auditTask } from '.';
 
 // @ts-ignore
-jest.spyOn(process, 'exit').mockImplementation(c => c);
+jest.spyOn(process, 'exit').mockImplementation((c) => c);
 
 jest.mock('cross-spawn-promise', () => jest.fn());
 

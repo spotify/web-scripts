@@ -42,7 +42,7 @@ export async function lintTask(task: LintTaskDesc): Promise<string[]> {
   if (task.stylecheck) fns.push(styleCheck);
 
   return await Promise.all(
-    fns.map(async fn => {
+    fns.map(async (fn) => {
       dbg('Beginning %s task', fn.name);
       const stdout = await fn(task);
       dbg('Finished %s task', fn.name);
@@ -92,7 +92,7 @@ export async function styleCheck(): Promise<string> {
     args.push('--config', config);
   }
 
-  args.push('--check', `${CONSUMING_ROOT}/src/**/*.[jt]s?(x)`);
+  args.push('--check', `${CONSUMING_ROOT}/**/src/**/*.{ts,tsx,js,jsx}`);
   const stdout = await spawn(cmd, args, { stdio: 'inherit' });
   return (stdout || '').toString();
 }

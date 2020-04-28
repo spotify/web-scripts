@@ -34,7 +34,7 @@ export async function auditTask(task: AuditTaskDesc): Promise<string[]> {
   const fns = [yarnRun];
 
   return await Promise.all(
-    fns.map(async fn => {
+    fns.map(async (fn) => {
       dbg('Beginning %s task', fn.name);
       const stdout = await fn(task);
       dbg('Finished %s task', fn.name);

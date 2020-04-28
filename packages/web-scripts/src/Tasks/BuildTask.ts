@@ -37,7 +37,7 @@ export async function buildTask(task: BuildTaskDesc): Promise<string[]> {
   }
 
   return Promise.all(
-    fns.map(async fn => {
+    fns.map(async (fn) => {
       dbg('Beginning %s task', fn.name);
       const result = await fn(task);
       dbg('Finished %s task', fn.name);

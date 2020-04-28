@@ -43,16 +43,8 @@ const copyFile = promisify(copyFileFS);
 // log output after the command finishes
 const exec = async (cmd: string, options?: object) => {
   function _log(resp: { stdout?: string | Buffer; stderr?: string | Buffer }) {
-    if (resp.stdout)
-      resp.stdout
-        .toString()
-        .split('\n')
-        .forEach(dbg);
-    if (resp.stderr)
-      resp.stderr
-        .toString()
-        .split('\n')
-        .forEach(dbg);
+    if (resp.stdout) resp.stdout.toString().split('\n').forEach(dbg);
+    if (resp.stderr) resp.stderr.toString().split('\n').forEach(dbg);
   }
   try {
     const resp = await execPromise(cmd, options);
@@ -188,7 +180,7 @@ describe('integration tests', () => {
     );
 
     await mkdir(join(PKG_ROOT, 'src'));
-    await fileNames.map(fileName =>
+    await fileNames.map((fileName) =>
       copyFile(
         join(THIS_ROOT, '__fixtures__', fileName),
         join(PKG_ROOT, 'src', fileName),

@@ -30,7 +30,7 @@ const readFile = promisify(readFileFS);
 const mkdir = promisify(mkdirFS);
 
 // @ts-ignore
-jest.spyOn(process, 'exit').mockImplementation(c => c);
+jest.spyOn(process, 'exit').mockImplementation((c) => c);
 
 describe('web-scripts format', () => {
   let pkgRoot: string;
