@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/spotify/web-scripts/compare/v6.2.0...v7.0.0) (2020-04-28)
+
+
+* major release- 7.0.0 (#318) ([29509b4](https://github.com/spotify/web-scripts/commit/29509b4a52325080b7a38f3aeb41ce8ed82f04f5)), closes [#318](https://github.com/spotify/web-scripts/issues/318) [#314](https://github.com/spotify/web-scripts/issues/314) [#312](https://github.com/spotify/web-scripts/issues/312) [#310](https://github.com/spotify/web-scripts/issues/310)
+
+
+### BREAKING CHANGES
+
+* running web-scripts without arguments exits code 1 now instead of exiting 0
+* prettier 2.0 may introduce breaking changes
+* prettier 2.0 may introduce breaking changes
+
+* improvement(web-scripts): make stylecheck and typecheck default for lint
+
+the lint script will now default typechecking and stylechecking to true by default. You may shut
+these off with `--no-typecheck` and `--no-stylecheck`.
+* Users who have projects incompatible with TypeScript checks or with projects that
+do not user prettier will now fail yarn lint.
+
+
+
+
+
 # [6.2.0](https://github.com/spotify/web-scripts/compare/v6.1.1...v6.2.0) (2020-04-04)
 
 **Note:** Version bump only for package @spotify/eslint-config-react

@@ -1,6 +1,6 @@
 {
   "name": "@spotify/eslint-config-base",
-  "version": "6.2.0",
+  "version": "7.0.0",
   "license": "Apache-2.0",
   "description": "Spotify's base ESLint config",
   "main": "index.js",
@@ -9,7 +9,6 @@
     "url": "git+https://github.com/spotify/web-scripts.git"
   },
   "scripts": {},
-  "devDependencies": {},
   "peerDependencies": {
     "eslint": ">=5.x"
   },
