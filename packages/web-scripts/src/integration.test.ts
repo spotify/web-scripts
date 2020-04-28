@@ -76,14 +76,17 @@ describe('integration tests', () => {
   });
 
   describe('help', () => {
-    test('The CLI offers help when invoked with no arguments', async () => {
-      const result = await exec(`${CLI}`);
-      expect(result.stdout).toMatch('Usage: web-scripts [options] [command]');
+    const USAGE_MATCH = 'Usage: web-scripts [options] [command]';
+
+    test('The CLI fails and offers help when invoked with no arguments', async () => {
+      await expect(exec(`${CLI}`)).rejects.toMatchObject({
+        stdout: expect.stringContaining(USAGE_MATCH),
+      });
     });
 
     test('The CLI offers help when invoked with --help flag', async () => {
       const result = await exec(`${CLI} --help`);
-      expect(result.stdout).toMatch('Usage: web-scripts [options] [command]');
+      expect(result.stdout).toMatch(USAGE_MATCH);
     });
   });
 
