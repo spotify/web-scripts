@@ -40,14 +40,14 @@ export function getPrettierConfig(): string | null {
 export function formatTask(task: FormatTaskDesc): SpawnSyncReturns<Buffer> {
   const cmd = 'npx';
   const config = task.config || getPrettierConfig();
-  const path = task.path || `${CONSUMING_ROOT}/src`;
+  const path = task.path || `${CONSUMING_ROOT}/**/src`;
 
   const args = [
     '--no-install',
     'prettier',
     ...(config ? ['--config', config] : []),
     '--write',
-    `${path}/**/*.[jt]s?(x)`,
+    `${path}/**/*.{ts,tsx,js,jsx}`,
   ];
   dbg('npx args %o', args);
   return spawn.sync(cmd, args, { stdio: 'inherit' });

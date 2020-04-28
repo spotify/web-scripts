@@ -16,9 +16,7 @@
   "bugs": {
     "url": "https://github.com/spotify/web-scripts/issues"
   },
-  "scripts": {
-    "lint": "web-scripts lint"
-  },
+  "scripts": {},
   "dependencies": {
     "@spotify/eslint-config-base": "^6.2.0",
     "@spotify/eslint-config-react": "^6.2.0",
@@ -33,7 +31,6 @@
     "eslint-plugin-react-hooks": "^3.0.0"
   },
   "devDependencies": {
-    "@spotify/web-scripts": "^6.2.0",
     "eslint": "^6.8.0"
   },
   "peerDependencies": {

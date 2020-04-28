@@ -43,16 +43,8 @@ const copyFile = promisify(copyFileFS);
 // log output after the command finishes
 const exec = async (cmd: string, options?: object) => {
   function _log(resp: { stdout?: string | Buffer; stderr?: string | Buffer }) {
-    if (resp.stdout)
-      resp.stdout
-        .toString()
-        .split('\n')
-        .forEach(dbg);
-    if (resp.stderr)
-      resp.stderr
-        .toString()
-        .split('\n')
-        .forEach(dbg);
+    if (resp.stdout) resp.stdout.toString().split('\n').forEach(dbg);
+    if (resp.stderr) resp.stderr.toString().split('\n').forEach(dbg);
   }
   try {
     const resp = await execPromise(cmd, options);
@@ -76,14 +68,17 @@ describe('integration tests', () => {
   });
 
   describe('help', () => {
-    test('The CLI offers help when invoked with no arguments', async () => {
-      const result = await exec(`${CLI}`);
-      expect(result.stdout).toMatch('Usage: web-scripts [options] [command]');
+    const USAGE_MATCH = 'Usage: web-scripts [options] [command]';
+
+    test('The CLI fails and offers help when invoked with no arguments', async () => {
+      await expect(exec(`${CLI}`)).rejects.toMatchObject({
+        stdout: expect.stringContaining(USAGE_MATCH),
+      });
     });
 
     test('The CLI offers help when invoked with --help flag', async () => {
       const result = await exec(`${CLI} --help`);
-      expect(result.stdout).toMatch('Usage: web-scripts [options] [command]');
+      expect(result.stdout).toMatch(USAGE_MATCH);
     });
   });
 
@@ -99,7 +94,7 @@ describe('integration tests', () => {
 
     test(
       'Full integration test',
-      async () => await testScripts([], ['--typecheck', '--stylecheck']),
+      async () => await testScripts(),
       TEST_SCRIPTS_TIMEOUT,
     );
   });
@@ -116,7 +111,7 @@ describe('integration tests', () => {
 
     test(
       'Full integration test',
-      async () => await testScripts(['--no-types']),
+      async () => await testScripts(['--no-types'], ['--no-typecheck']),
       TEST_SCRIPTS_TIMEOUT,
     );
   });

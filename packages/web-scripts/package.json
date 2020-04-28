@@ -24,7 +24,7 @@
     "clean": "rm -rf cjs esm types",
     "build": "node ./bin/web-scripts build",
     "test": "node ./bin/web-scripts test",
-    "lint": "node ./bin/web-scripts lint --stylecheck",
+    "lint": "node ./bin/web-scripts lint",
     "format": "node ./bin/web-scripts format",
     "bootstrap": "yarn run clean && tsc --allowJs --outDir cjs --noEmit false --module CommonJS",
     "prepublishOnly": "yarn run bootstrap && yarn run build"
@@ -41,7 +41,7 @@
     "@types/jest": "^25.1.0",
     "@types/react": "^16.8.19",
     "@types/react-dom": "^16.8.4",
-    "commander": "^4.0.1",
+    "commander": "^5.1.0",
     "commitizen": "^4.0.3",
     "cross-spawn-promise": "^0.10.1",
     "cz-conventional-changelog": "^3.0.2",
@@ -50,7 +50,7 @@
     "jest": "^25.1.0",
     "jest-junit": "^10.0.0",
     "lint-staged": "^10.0.4",
-    "prettier": "^1.18.2",
+    "prettier": "^2.0.5",
     "semantic-release": "^17.0.1",
     "ts-jest": "^25.4.0",
     "typescript": "^3.7.4"
