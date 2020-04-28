@@ -92,7 +92,7 @@ export async function styleCheck(): Promise<string> {
     args.push('--config', config);
   }
 
-  args.push('--check', `${CONSUMING_ROOT}/src/**/*.[jt]s?(x)`);
+  args.push('--check', `${CONSUMING_ROOT}/**/src/**/*.{ts,tsx,js,jsx}`);
   const stdout = await spawn(cmd, args, { stdio: 'inherit' });
   return (stdout || '').toString();
 }
