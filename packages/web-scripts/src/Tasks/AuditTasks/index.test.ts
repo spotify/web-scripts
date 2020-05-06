@@ -22,7 +22,7 @@ jest.spyOn(process, 'exit').mockImplementation(c => c);
 
 jest.mock('cross-spawn-promise', () => jest.fn());
 
-const spawn: jest.Mock = require.requireMock('cross-spawn-promise');
+const spawn: jest.Mock = jest.requireMock('cross-spawn-promise');
 
 class AuditError extends Error {
   public exitStatus: number;
