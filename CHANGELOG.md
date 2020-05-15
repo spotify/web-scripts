@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.1](https://github.com/spotify/web-scripts/compare/v7.0.0...v7.0.1) (2020-05-15)
+
+
+### Bug Fixes
+
+* **web-scripts:** unknown command options were parsed twice ([d30364b](https://github.com/spotify/web-scripts/commit/d30364b3e2a99b0939dfecc24aa83059732bd134)), closes [#341](https://github.com/spotify/web-scripts/issues/341)
+
+
+
+
+
 # [7.0.0](https://github.com/spotify/web-scripts/compare/v6.2.0...v7.0.0) (2020-04-28)
 
 
