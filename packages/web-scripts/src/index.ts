@@ -56,14 +56,13 @@ program
   .option('--no-types', 'do not build types target')
   .action((...args) => {
     const cmd = getCommand(args);
-    const rest = getPositionalArgs(args);
     const { esm, types, cjs } = getOpts(cmd);
     const t: BuildTaskDesc = {
       name: 'build',
       esm,
       types,
       cjs,
-      restOptions: [...parseRestOptions(cmd), ...rest],
+      restOptions: parseRestOptions(cmd),
     };
 
     handlePromiseResult(buildTask(t));
@@ -76,12 +75,11 @@ program
   .option('--config [path]', 'path to jest config')
   .action((...args) => {
     const cmd = getCommand(args);
-    const rest = getPositionalArgs(args);
     const { config } = getOpts(cmd);
     const t: TestTaskDesc = {
       name: 'test',
       config,
-      restOptions: [...parseRestOptions(cmd), ...rest],
+      restOptions: parseRestOptions(cmd),
     };
 
     const result = testTask(t);
@@ -99,14 +97,13 @@ program
   .option('--no-stylecheck', "do not run Prettier's style check")
   .action((...args) => {
     const cmd = getCommand(args);
-    const rest = getPositionalArgs(args);
     const { stylecheck, typecheck, config } = getOpts(cmd);
     const t: LintTaskDesc = {
       name: 'lint',
       config,
       stylecheck,
       typecheck,
-      restOptions: [...parseRestOptions(cmd), ...rest],
+      restOptions: parseRestOptions(cmd),
     };
 
     handlePromiseResult(lintTask(t));
@@ -123,13 +120,12 @@ program
   )
   .action((...args) => {
     const cmd = getCommand(args);
-    const rest = getPositionalArgs(args);
     const { config, path } = getOpts(cmd);
     const t: FormatTaskDesc = {
       name: 'format',
       config,
       path,
-      restOptions: [...parseRestOptions(cmd), ...rest],
+      restOptions: parseRestOptions(cmd),
     };
 
     handleSpawnResult(formatTask(t));
@@ -146,7 +142,6 @@ program
   .option('--no-typecheck', 'Do not type check using TypeScript')
   .action((...args) => {
     const cmd = getCommand(args);
-    const rest = getPositionalArgs(args);
     const {
       tests,
       typecheck,
@@ -161,7 +156,7 @@ program
       jestConfig,
       eslintConfig,
       prettierConfig,
-      restOptions: [...parseRestOptions(cmd), ...rest],
+      restOptions: parseRestOptions(cmd),
     };
 
     handlePromiseResult(precommitTask(t));
@@ -195,12 +190,11 @@ program
   )
   .action((...args) => {
     const cmd = getCommand(args);
-    const rest = getPositionalArgs(args);
     const { threshold } = getOpts(cmd);
     const t: AuditTaskDesc = {
       name: 'audit',
       threshold,
-      restOptions: [...parseRestOptions(cmd), ...rest],
+      restOptions: parseRestOptions(cmd),
     };
 
     handlePromiseResult(auditTask(t));
@@ -217,12 +211,11 @@ program
   )
   .action((...args) => {
     const cmd = getCommand(args);
-    const rest = getPositionalArgs(args);
     const { path } = getOpts(cmd);
     const t: CommitTaskDesc = {
       name: 'commit',
       path,
-      restOptions: [...parseRestOptions(cmd), ...rest],
+      restOptions: parseRestOptions(cmd),
     };
 
     try {
@@ -243,12 +236,11 @@ program
   )
   .action((...args) => {
     const cmd = getCommand(args);
-    const rest = getPositionalArgs(args);
     const { config } = getOpts(cmd);
     const t: CommitMsgTaskDesc = {
       name: 'commitmsg',
       config,
-      restOptions: [...parseRestOptions(cmd), ...rest],
+      restOptions: parseRestOptions(cmd),
     };
 
     handleSpawnResult(commitMsgTask(t));
@@ -260,10 +252,9 @@ program
   .description('Run semantic-release')
   .action((...args) => {
     const cmd = getCommand(args);
-    const rest = getPositionalArgs(args);
     const t: ReleaseTaskDesc = {
       name: 'release',
-      restOptions: [...parseRestOptions(cmd), ...rest],
+      restOptions: parseRestOptions(cmd),
     };
 
     handleSpawnResult(releaseTask(t));
@@ -295,10 +286,6 @@ function handleSpawnResult(result: SpawnSyncReturns<Buffer>) {
 
 function getCommand(args: any[]): Command {
   return args[0] as Command;
-}
-
-function getPositionalArgs(args: any[]): string[] {
-  return args.slice(1) as string[];
 }
 
 function getOpts(cmd: Command): { [key: string]: any } {
