@@ -200,7 +200,7 @@ describe('integration tests', () => {
 
   async function testScripts(
     buildArgs: string[] = [],
-    lintArgs: string[] = [],
+    lintArgs: string[] = ['--ignore-path=.gitignore', '--format=checkstyle'],
   ) {
     try {
       rimraf.sync(join(PKG_ROOT, 'cjs'));
