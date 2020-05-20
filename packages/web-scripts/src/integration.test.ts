@@ -92,6 +92,7 @@ describe('integration tests', () => {
       );
     }, SETUP_REPO_TIMEOUT);
 
+    // eslint-disable-next-line jest/expect-expect
     test(
       'Full integration test',
       async () => await testScripts(),
@@ -109,6 +110,7 @@ describe('integration tests', () => {
       );
     }, SETUP_REPO_TIMEOUT);
 
+    // eslint-disable-next-line jest/expect-expect
     test(
       'Full integration test',
       async () => await testScripts(['--no-types'], ['--no-typecheck']),
