@@ -62,7 +62,7 @@ program
       esm,
       types,
       cjs,
-      restOptions: parseRestOptions(cmd),
+      restOptions: cmd.args,
     };
 
     handlePromiseResult(buildTask(t));
@@ -79,7 +79,7 @@ program
     const t: TestTaskDesc = {
       name: 'test',
       config,
-      restOptions: parseRestOptions(cmd),
+      restOptions: cmd.args,
     };
 
     const result = testTask(t);
@@ -103,7 +103,7 @@ program
       config,
       stylecheck,
       typecheck,
-      restOptions: parseRestOptions(cmd),
+      restOptions: cmd.args,
     };
 
     handlePromiseResult(lintTask(t));
@@ -125,7 +125,7 @@ program
       name: 'format',
       config,
       path,
-      restOptions: parseRestOptions(cmd),
+      restOptions: cmd.args,
     };
 
     handleSpawnResult(formatTask(t));
@@ -156,7 +156,7 @@ program
       jestConfig,
       eslintConfig,
       prettierConfig,
-      restOptions: parseRestOptions(cmd),
+      restOptions: cmd.args,
     };
 
     handlePromiseResult(precommitTask(t));
@@ -194,7 +194,7 @@ program
     const t: AuditTaskDesc = {
       name: 'audit',
       threshold,
-      restOptions: parseRestOptions(cmd),
+      restOptions: cmd.args,
     };
 
     handlePromiseResult(auditTask(t));
@@ -215,7 +215,7 @@ program
     const t: CommitTaskDesc = {
       name: 'commit',
       path,
-      restOptions: parseRestOptions(cmd),
+      restOptions: cmd.args,
     };
 
     try {
@@ -240,7 +240,7 @@ program
     const t: CommitMsgTaskDesc = {
       name: 'commitmsg',
       config,
-      restOptions: parseRestOptions(cmd),
+      restOptions: cmd.args,
     };
 
     handleSpawnResult(commitMsgTask(t));
@@ -254,7 +254,7 @@ program
     const cmd = getCommand(args);
     const t: ReleaseTaskDesc = {
       name: 'release',
-      restOptions: parseRestOptions(cmd),
+      restOptions: cmd.args,
     };
 
     handleSpawnResult(releaseTask(t));
@@ -290,10 +290,6 @@ function getCommand(args: any[]): Command {
 
 function getOpts(cmd: Command): { [key: string]: any } {
   return cmd.opts();
-}
-
-function parseRestOptions(cmd: Command): string[] {
-  return cmd.parseOptions(process.argv).unknown;
 }
 
 program.parse(process.argv);
