@@ -22,7 +22,7 @@
     "@spotify/eslint-config-react": "^7.0.1",
     "@spotify/eslint-config-typescript": "^7.0.0",
     "@spotify/web-scripts-utils": "^7.0.0",
-    "@typescript-eslint/eslint-plugin": "^2.14.0",
+    "@typescript-eslint/eslint-plugin": "^3.0.1",
     "@typescript-eslint/parser": "^2.14.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-jest": "^23.6.0",
