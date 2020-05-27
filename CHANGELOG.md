@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.2](https://github.com/spotify/web-scripts/compare/v7.0.1...v7.0.2) (2020-05-27)
+
+
+### Bug Fixes
+
+* **web-scripts:** positional args were being stripped out ([bae75b4](https://github.com/spotify/web-scripts/commit/bae75b497b2419d120a9e47111e4442ae48f78b9))
+
+
+
+
+
 ## [7.0.1](https://github.com/spotify/web-scripts/compare/v7.0.0...v7.0.1) (2020-05-15)
 
 
