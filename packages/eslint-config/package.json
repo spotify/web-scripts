@@ -22,19 +22,19 @@
     "@spotify/eslint-config-react": "^7.0.1",
     "@spotify/eslint-config-typescript": "^7.0.0",
     "@spotify/web-scripts-utils": "^7.0.0",
-    "@typescript-eslint/eslint-plugin": "^2.14.0",
+    "@typescript-eslint/eslint-plugin": "^3.4.0",
     "@typescript-eslint/parser": "^3.4.0",
     "eslint-config-prettier": "^6.0.0",
-    "eslint-plugin-jest": "^23.6.0",
+    "eslint-plugin-jest": "^23.17.1",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-react-hooks": "^4.0.0"
   },
   "devDependencies": {
-    "eslint": "^6.8.0"
+    "eslint": "^7.3.1"
   },
   "peerDependencies": {
-    "eslint": ">=6.x"
+    "eslint": ">=7.x"
   },
   "publishConfig": {
     "access": "public"
