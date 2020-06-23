@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.0.0](https://github.com/spotify/web-scripts/compare/v7.0.2...v8.0.0) (2020-06-23)
+
+
+### Features
+
+* **commitlint:** v9 ([2709cb8](https://github.com/spotify/web-scripts/commit/2709cb81e3e4efe4f75ef1f8ec954a9c8dd3b023))
+* **eslint:** v7 ([55ebb7f](https://github.com/spotify/web-scripts/commit/55ebb7f402546e9c8d7c7372cafbd6f49f17790c))
+* **eslint-plugin-jest:** minor bump ([e1fef3b](https://github.com/spotify/web-scripts/commit/e1fef3b1859a91c82e5d13db909919605df170d7))
+* **jest:** v26 ([14c37a8](https://github.com/spotify/web-scripts/commit/14c37a82361095a2c3fc5ecac27ef94552a7d38a))
+* **jest-junit:** v11 ([1ef34c4](https://github.com/spotify/web-scripts/commit/1ef34c4373234e8682f50ce10f3ace05b16f61d3))
+* **semantic-release:** minor bump ([ded14f4](https://github.com/spotify/web-scripts/commit/ded14f46ff128737f5a4beb19e8af9d921433aad))
+* **typescript-eslint:** upgrade to latest to support type export syntax ([688324b](https://github.com/spotify/web-scripts/commit/688324b2702dbf393f058bed6fa55f26bce99bac))
+* **typescript-eslint/eslint-plugin:** v3.4.0 ([195400a](https://github.com/spotify/web-scripts/commit/195400a6082a35db59544d39b156d09d470661c7))
+
+
+### BREAKING CHANGES
+
+* **commitlint:** 'improvement' type will now be rejected by this config.
+* **eslint:** see release notes for eslint v7
+* **jest-junit:** see jest-junit 11 release notes
+* **jest:** See jest 26 release notes
+* **typescript-eslint:** The camelcase rule was deprecated in typescript-eslint. I've tried to replace it
+with an equivalent naming-convention rule config. I question if we should have this at all.
+
+
+
+
+
 ## [7.0.2](https://github.com/spotify/web-scripts/compare/v7.0.1...v7.0.2) (2020-05-27)
 
 
