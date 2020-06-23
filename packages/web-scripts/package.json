@@ -30,8 +30,8 @@
     "prepublishOnly": "yarn run bootstrap && yarn run build"
   },
   "dependencies": {
-    "@commitlint/cli": "^8.3.3",
-    "@commitlint/config-conventional": "^8.3.3",
+    "@commitlint/cli": "^9.0.1",
+    "@commitlint/config-conventional": "^9.0.1",
     "@spotify/eslint-config": "^7.0.1",
     "@spotify/prettier-config": "^7.0.0",
     "@spotify/tsconfig": "^7.0.0",
