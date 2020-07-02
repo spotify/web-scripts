@@ -26,25 +26,7 @@ module.exports = {
   rules: {
     // camelcase interference fix.
     camelcase: 'off',
-    '@typescript-eslint/naming-convention': [
-      'error',
-      {
-        selector: 'default',
-        format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
-        leadingUnderscore: 'allow',
-      },
-
-      {
-        selector: 'parameter',
-        format: ['camelCase'],
-        leadingUnderscore: 'allow',
-      },
-
-      {
-        selector: 'typeLike',
-        format: ['PascalCase'],
-      },
-    ],
+    '@typescript-eslint/naming-convention': 'off',
     // indent interference fix.
     indent: 'off',
     '@typescript-eslint/indent': ['error', 2, { SwitchCase: 1 }],
