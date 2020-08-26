@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.4](https://github.com/spotify/web-scripts/compare/v8.0.3...v8.0.4) (2020-08-26)
+
+
+### Bug Fixes
+
+* use ts-jest 26.2.0 ([0cf896d](https://github.com/spotify/web-scripts/commit/0cf896d9ca7312903784a24a96bf552c9936ea1b))
+
+
+
+
+
 ## [8.0.3](https://github.com/spotify/web-scripts/compare/v8.0.2...v8.0.3) (2020-08-25)
 
 
