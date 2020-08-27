@@ -5,6 +5,7 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "importHelpers": false,
+    "incremental": true,
     "isolatedModules": true,
     "module": "esnext",
     "moduleResolution": "node",
