@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "chalk": "^4.0.0",
-    "commander": "^5.1.0",
+    "commander": "^6.1.0",
     "execa": "^4.0.0",
     "fs-extra": "^9.0.0",
     "read-pkg-up": "^7.0.1"
