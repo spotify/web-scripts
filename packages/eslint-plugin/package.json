@@ -1,6 +1,6 @@
 {
   "name": "@spotify/eslint-plugin",
-  "version": "8.0.2",
+  "version": "8.1.0",
   "description": "Set of rules for Spotify's custom ESLint rules",
   "author": "Bilawal Hameed <bil@spotify.com>",
   "homepage": "https://github.com/spotify/web-scripts/blob/master/packages/eslint-plugin#readme",
@@ -34,7 +34,7 @@
     "format": "web-scripts format"
   },
   "devDependencies": {
-    "@spotify/web-scripts": "^8.0.1",
+    "@spotify/web-scripts": "^8.1.0",
     "@types/eslint": "^7.2.0",
     "@types/jest": "^26.0.0",
     "@typescript-eslint/parser": "^3.4.0",
