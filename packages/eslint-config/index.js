@@ -54,4 +54,9 @@ module.exports = {
     sourceType: 'module',
   },
   settings,
+  plugins: ['@spotify/eslint-plugin'],
+  rules: {
+    // no discouraged words
+    '@spotify/best-practices/no-discouraged-words': 'error',
+  },
 };
