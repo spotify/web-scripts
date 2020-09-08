@@ -1,0 +1,13 @@
+{
+  "overrides": [
+    {
+      "files": [
+        "src/rules/best-practices/no-discouraged-words.{md,ts}",
+        "src/rules/best-practices/no-discouraged-words.test.ts"
+      ],
+      "rules": {
+        "@spotify/best-practices/no-discouraged-words": "off"
+      }
+    }
+  ]
+}

@@ -61,6 +61,7 @@ The other projects in this repo are shared configurations for common tools we us
 - [@spotify/eslint-config-base](./packages/eslint-config-base)
 - [@spotify/eslint-config-react](./packages/eslint-config-react)
 - [@spotify/eslint-config-typescript](./packages/eslint-config-typescript)
+- [@spotify/eslint-plugin](./packages/eslint-plugin)
 - [@spotify/prettier-config](./packages/prettier-config)
 - [@spotify/tsconfig](./packages/tsconfig)
 
