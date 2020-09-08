@@ -17,6 +17,8 @@ jobs:
         node-version: 12.0
     - name: yarn install
       run: yarn
+    - name: yarn build
+      run: yarn build
     - name: lint
       run: yarn lint
     - name: test
