@@ -43,7 +43,7 @@
     "typescript": "^3.9.6"
   },
   "peerDependencies": {
-    "@typescript-eslint/parser": "^3.0.0",
+    "@typescript-eslint/parser": ">=3.x",
     "eslint": ">=7.x"
   },
   "publishConfig": {
