@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.1.1](https://github.com/spotify/web-scripts/compare/v8.1.0...v8.1.1) (2020-09-22)
+
+
+### Bug Fixes
+
+* update eslint-plugin to allow for @typescript-eslint/parser@4 ([0363558](https://github.com/spotify/web-scripts/commit/0363558716e39ec175e14375070206e97a418d39))
+
+
+
+
+
 # [8.1.0](https://github.com/spotify/web-scripts/compare/v8.0.4...v8.1.0) (2020-09-08)
 
 
