@@ -111,4 +111,4 @@ $ yarn lerna run bootstrap
 
 ### Releasing
 
-The repo [releases automatically on merge to master](https://github.com/spotify/web-scripts/blob/master/release.sh) using `semantic-release` and `lerna` in a Github Action.
+The repo [releases automatically on merge to master](https://github.com/spotify/web-scripts/blob/master/release.sh) using `semantic-release` and `lerna` in a Github Action, if the commit message has the right [semantic-release format](https://github.com/semantic-release/semantic-release#commit-message-format)
