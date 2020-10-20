@@ -42,5 +42,14 @@ module.exports = {
     // semi interference fix.
     semi: 'off',
     '@typescript-eslint/semi': 'warn',
+    // no-shadow interference fix.
+    'no-shadow': 'off',
+    '@typescript-eslint/no-shadow': 'error',
+    // no-redeclare interference fix.
+    'no-redeclare': 'off',
+    '@typescript-eslint/no-redeclare': 'error',
+    // no-use-before-define interference fix.
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': 'error',
   },
 };
