@@ -49,7 +49,8 @@ module.exports = {
     'no-redeclare': 'off',
     '@typescript-eslint/no-redeclare': 'error',
     // no-use-before-define interference fix.
+    // allow functions to be defined after they're used
     'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': 'error',
+    '@typescript-eslint/no-use-before-define': ['error', 'nofunc'],
   },
 };
