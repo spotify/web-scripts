@@ -1,0 +1,55 @@
+{
+  "name": "@spotify/eslint-plugin",
+  "version": "8.1.1",
+  "description": "Set of rules for Spotify's custom ESLint rules",
+  "author": "Bilawal Hameed <bil@spotify.com>",
+  "homepage": "https://github.com/spotify/web-scripts/blob/master/packages/eslint-plugin#readme",
+  "keywords": [
+    "eslint",
+    "eslint-plugin",
+    "react",
+    "typescript"
+  ],
+  "license": "Apache-2.0",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "types": "types",
+  "files": [
+    "cjs",
+    "esm",
+    "types"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spotify/web-scripts.git",
+    "directory": "packages/eslint-plugin"
+  },
+  "bugs": {
+    "url": "https://github.com/spotify/web-scripts/issues"
+  },
+  "scripts": {
+    "build": "web-scripts build",
+    "test": "web-scripts test",
+    "lint": "web-scripts lint --stylecheck",
+    "format": "web-scripts format"
+  },
+  "devDependencies": {
+    "@spotify/web-scripts": "^8.1.1",
+    "@types/eslint": "^7.2.0",
+    "@types/jest": "^26.0.0",
+    "@typescript-eslint/parser": "^3.4.0",
+    "@typescript-eslint/types": "^4.1.0",
+    "eslint": "^7.3.1",
+    "typescript": "^3.9.6"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/parser": ">=3.x",
+    "eslint": ">=7.x"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=10.18.0"
+  }
+}

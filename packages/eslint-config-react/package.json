@@ -1,6 +1,6 @@
 {
   "name": "@spotify/eslint-config-react",
-  "version": "7.0.1",
+  "version": "8.0.2",
   "license": "Apache-2.0",
   "description": "Spotify's ESLint config for React projects",
   "repository": {
@@ -10,16 +10,16 @@
   "main": "index.js",
   "scripts": {},
   "devDependencies": {
-    "eslint": "^6.8.0",
+    "eslint": "^7.3.1",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^4.0.0"
   },
   "peerDependencies": {
-    "eslint": ">=6.x",
+    "eslint": ">=7.x",
     "eslint-plugin-jsx-a11y": "6.x",
     "eslint-plugin-react": ">=7.7.0 <8",
-    "eslint-plugin-react-hooks": "^3.x"
+    "eslint-plugin-react-hooks": "^4.0.0"
   },
   "publishConfig": {
     "access": "public"

@@ -1,6 +1,6 @@
 {
   "name": "@spotify/eslint-config",
-  "version": "7.0.1",
+  "version": "8.1.1",
   "description": "Combined ESLint config for Spotify",
   "author": "Paul Marbach <pmarbach@spotify.com>",
   "homepage": "https://github.com/spotify/web-scripts#readme",
@@ -18,22 +18,25 @@
   },
   "scripts": {},
   "dependencies": {
-    "@spotify/eslint-config-base": "^7.0.0",
-    "@spotify/eslint-config-react": "^7.0.1",
-    "@spotify/eslint-config-typescript": "^7.0.0",
-    "@spotify/web-scripts-utils": "^7.0.0",
-    "@typescript-eslint/eslint-plugin": "^2.14.0",
-    "@typescript-eslint/parser": "^2.14.0",
+    "@spotify/eslint-config-base": "^8.0.0",
+    "@spotify/eslint-config-react": "^8.0.2",
+    "@spotify/eslint-config-typescript": "^8.1.1",
+    "@spotify/eslint-plugin": "^8.1.1",
+    "@spotify/web-scripts-utils": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.1.0",
+    "@typescript-eslint/parser": "^3.4.0",
     "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-jest": "^23.17.1",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-react-hooks": "^4.0.0"
   },
   "devDependencies": {
-    "eslint": "^6.8.0"
+    "eslint": "^7.3.1"
   },
   "peerDependencies": {
-    "eslint": ">=6.x"
+    "@spotify/eslint-plugin": ">=8.x",
+    "eslint": ">=7.x"
   },
   "publishConfig": {
     "access": "public"

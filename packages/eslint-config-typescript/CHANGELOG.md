@@ -3,6 +3,45 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.1.1](https://github.com/spotify/web-scripts/compare/v8.1.0...v8.1.1) (2020-09-22)
+
+**Note:** Version bump only for package @spotify/eslint-config-typescript
+
+
+
+
+
+## [8.0.1](https://github.com/spotify/web-scripts/compare/v8.0.0...v8.0.1) (2020-07-02)
+
+
+### Bug Fixes
+
+* **eslint-config-typescript:** turn off naming-convention ([ed5eec3](https://github.com/spotify/web-scripts/commit/ed5eec3b879a5a9c08916cf8fd334ae99ec7cbaa))
+
+
+
+
+
+# [8.0.0](https://github.com/spotify/web-scripts/compare/v7.0.2...v8.0.0) (2020-06-23)
+
+
+### Features
+
+* **eslint:** v7 ([55ebb7f](https://github.com/spotify/web-scripts/commit/55ebb7f402546e9c8d7c7372cafbd6f49f17790c))
+* **typescript-eslint:** upgrade to latest to support type export syntax ([688324b](https://github.com/spotify/web-scripts/commit/688324b2702dbf393f058bed6fa55f26bce99bac))
+* **typescript-eslint/eslint-plugin:** v3.4.0 ([195400a](https://github.com/spotify/web-scripts/commit/195400a6082a35db59544d39b156d09d470661c7))
+
+
+### BREAKING CHANGES
+
+* **eslint:** see release notes for eslint v7
+* **typescript-eslint:** The camelcase rule was deprecated in typescript-eslint. I've tried to replace it
+with an equivalent naming-convention rule config. I question if we should have this at all.
+
+
+
+
+
 # [7.0.0](https://github.com/spotify/web-scripts/compare/v6.2.0...v7.0.0) (2020-04-28)
 
 

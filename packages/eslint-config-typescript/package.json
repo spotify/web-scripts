@@ -1,6 +1,6 @@
 {
   "name": "@spotify/eslint-config-typescript",
-  "version": "7.0.0",
+  "version": "8.1.1",
   "license": "Apache-2.0",
   "description": "Spotify's ESLint config for TypeScript",
   "repository": {
@@ -10,14 +10,14 @@
   "main": "index.js",
   "scripts": {},
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.14.0",
-    "@typescript-eslint/parser": "^2.14.0",
-    "eslint": "^6.8.0"
+    "@typescript-eslint/eslint-plugin": "^4.1.0",
+    "@typescript-eslint/parser": "^3.4.0",
+    "eslint": "^7.3.1"
   },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": ">=2",
     "@typescript-eslint/parser": ">=2",
-    "eslint": ">=6.x"
+    "eslint": ">=7.x"
   },
   "publishConfig": {
     "access": "public"
