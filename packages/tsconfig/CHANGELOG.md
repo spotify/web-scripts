@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.0.0](https://github.com/spotify/web-scripts/compare/v8.1.1...v9.0.0) (2020-10-26)
+
+
+### Features
+
+* use TypeScript 4 ([bbf1164](https://github.com/spotify/web-scripts/commit/bbf1164c75c40457d6457274f83deb59d0de7c09)), closes [#487](https://github.com/spotify/web-scripts/issues/487) [#252](https://github.com/spotify/web-scripts/issues/252)
+
+
+### BREAKING CHANGES
+
+* must upgrade to TypeScript 4 as a consumer; new tsconfig takes advantage of
+incremental + noEmit
+
+
+
+
+
 # [8.0.0](https://github.com/spotify/web-scripts/compare/v7.0.2...v8.0.0) (2020-06-23)
 
 **Note:** Version bump only for package @spotify/tsconfig

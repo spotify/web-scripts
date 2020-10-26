@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.0.0](https://github.com/spotify/web-scripts/compare/v8.1.1...v9.0.0) (2020-10-26)
+
+
+### Bug Fixes
+
+* bl ([526a096](https://github.com/spotify/web-scripts/commit/526a096de76e02bd938114b905bb0d542c01e3aa))
+* incorporate overrides for new typescript-eslint rules ([81b7111](https://github.com/spotify/web-scripts/commit/81b711141b08613a78a2020513f1b21df0c91116))
+* relax no-use-before-define rule ([ee719aa](https://github.com/spotify/web-scripts/commit/ee719aa153b0debd8901006aef3b71a791ef093b))
+* sync [@typescript-eslint](https://github.com/typescript-eslint) versions across repo ([fb20119](https://github.com/spotify/web-scripts/commit/fb201196a551a3b942410b1e5a3b40c5f43bc721)), closes [#555](https://github.com/spotify/web-scripts/issues/555)
+
+
+### Features
+
+* **@spotify/best-practices/no-discouraged-words:** switch to warn ([f1aed8c](https://github.com/spotify/web-scripts/commit/f1aed8c023e06bda5ac9efede0ff936c4e531866))
+* use TypeScript 4 ([bbf1164](https://github.com/spotify/web-scripts/commit/bbf1164c75c40457d6457274f83deb59d0de7c09)), closes [#487](https://github.com/spotify/web-scripts/issues/487) [#252](https://github.com/spotify/web-scripts/issues/252)
+
+
+### BREAKING CHANGES
+
+* must upgrade to TypeScript 4 as a consumer; new tsconfig takes advantage of
+incremental + noEmit
+
+
+
+
+
 ## [8.1.1](https://github.com/spotify/web-scripts/compare/v8.1.0...v8.1.1) (2020-09-22)
 
 

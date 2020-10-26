@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.0.0](https://github.com/spotify/web-scripts/compare/v8.1.1...v9.0.0) (2020-10-26)
+
+
+### Bug Fixes
+
+* incorporate overrides for new typescript-eslint rules ([81b7111](https://github.com/spotify/web-scripts/commit/81b711141b08613a78a2020513f1b21df0c91116))
+* relax no-use-before-define rule ([ee719aa](https://github.com/spotify/web-scripts/commit/ee719aa153b0debd8901006aef3b71a791ef093b))
+* sync [@typescript-eslint](https://github.com/typescript-eslint) versions across repo ([fb20119](https://github.com/spotify/web-scripts/commit/fb201196a551a3b942410b1e5a3b40c5f43bc721)), closes [#555](https://github.com/spotify/web-scripts/issues/555)
+
+
+
+
+
 ## [8.1.1](https://github.com/spotify/web-scripts/compare/v8.1.0...v8.1.1) (2020-09-22)
 
 **Note:** Version bump only for package @spotify/eslint-config-typescript
