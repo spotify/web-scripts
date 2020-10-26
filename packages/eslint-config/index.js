@@ -57,6 +57,6 @@ module.exports = {
   plugins: ['@spotify/eslint-plugin'],
   rules: {
     // no discouraged words
-    '@spotify/best-practices/no-discouraged-words': 'warn',
+    '@spotify/best-practices/no-discouraged-words': 'error',
   },
 };
