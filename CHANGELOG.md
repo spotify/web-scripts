@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.1](https://github.com/spotify/web-scripts/compare/v9.0.0...v9.0.1) (2021-02-21)
+
+
+### Bug Fixes
+
+* update ts-jest config ([052a888](https://github.com/spotify/web-scripts/commit/052a888c2d06f2e1f64d7755d6cd9c48fb456bce))
+
+
+
+
+
 # [9.0.0](https://github.com/spotify/web-scripts/compare/v8.1.1...v9.0.0) (2020-10-26)
 
 
