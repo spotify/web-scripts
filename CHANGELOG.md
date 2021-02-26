@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.2](https://github.com/spotify/web-scripts/compare/v9.0.1...v9.0.2) (2021-02-26)
+
+
+### Bug Fixes
+
+* disable no-undef ([52926ad](https://github.com/spotify/web-scripts/commit/52926ad7b8d94170b0b2584afc14cdb666d47427))
+
+
+
+
+
 ## [9.0.1](https://github.com/spotify/web-scripts/compare/v9.0.0...v9.0.1) (2021-02-21)
 
 
