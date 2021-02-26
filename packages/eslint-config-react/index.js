@@ -33,7 +33,7 @@ module.exports = {
     // Prevent duplicate props in JSX
     'react/jsx-no-duplicate-props': 0,
     // Disallow undeclared variables in JSX
-    'react/jsx-no-undef': 2,
+    'react/jsx-no-undef': 0,
     // Enforce quote style for JSX attributes
     'react/jsx-quotes': 0,
     // Enforce propTypes declarations alphabetical sorting
