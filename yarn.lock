@@ -1956,10 +1956,15 @@
     "@typescript-eslint/types" "4.5.0"
     "@typescript-eslint/visitor-keys" "4.5.0"
 
-"@typescript-eslint/types@4.5.0", "@typescript-eslint/types@^4.1.0":
+"@typescript-eslint/types@4.5.0":
   version "4.5.0"
   resolved "https://registry.npmjs.org/@typescript-eslint/types/-/types-4.5.0.tgz"
   integrity sha512-n2uQoXnyWNk0Les9MtF0gCK3JiWd987JQi97dMSxBOzVoLZXCNtxFckVqt1h8xuI1ix01t+iMY4h4rFMj/303g==
+
+"@typescript-eslint/types@^4.1.0":
+  version "4.16.1"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/types/-/types-4.16.1.tgz#5ba2d3e38b1a67420d2487519e193163054d9c15"
+  integrity sha512-nnKqBwMgRlhzmJQF8tnFDZWfunXmJyuXj55xc8Kbfup4PbkzdoDXZvzN8//EiKR27J6vUSU8j4t37yUuYPiLqA==
 
 "@typescript-eslint/typescript-estree@2.34.0":
   version "2.34.0"
@@ -4538,7 +4543,7 @@ get-stdin@^6.0.0:
 
 get-stream@^3.0.0:
   version "3.0.0"
-  resolved "http://registry.npmjs.org/get-stream/-/get-stream-3.0.0.tgz"
+  resolved "https://registry.npmjs.org/get-stream/-/get-stream-3.0.0.tgz"
   integrity sha1-jpQ9E1jcN1VQVOy+LtsFqhdO3hQ=
 
 get-stream@^4.0.0, get-stream@^4.1.0:
