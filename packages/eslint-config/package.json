@@ -32,7 +32,7 @@
     "eslint-plugin-react-hooks": "^4.0.0"
   },
   "devDependencies": {
-    "eslint": "^7.3.1"
+    "eslint": "^7.23.0"
   },
   "peerDependencies": {
     "@spotify/eslint-plugin": ">=8.x",
