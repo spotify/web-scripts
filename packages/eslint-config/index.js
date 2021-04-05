@@ -45,8 +45,6 @@ module.exports = {
     hasReact ? '@spotify/eslint-config-react' : null,
     hasTypescript ? '@spotify/eslint-config-typescript' : null,
     'prettier',
-    hasReact ? 'prettier/react' : null,
-    hasTypescript ? 'prettier/@typescript-eslint' : null,
     'plugin:jest/recommended',
   ].filter(s => !!s),
   parser: '@typescript-eslint/parser',
