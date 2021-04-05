@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "@commitlint/cli": "^9.0.1",
-    "@commitlint/config-conventional": "^9.1.2",
+    "@commitlint/config-conventional": "^12.1.1",
     "@spotify/eslint-config": "^9.0.2",
     "@spotify/prettier-config": "^9.0.0",
     "@spotify/tsconfig": "^9.0.0",
