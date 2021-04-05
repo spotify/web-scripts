@@ -43,7 +43,7 @@
   "devDependencies": {
     "@spotify/web-scripts": "^9.0.2",
     "@types/fs-extra": "^9.0.1",
-    "tempy": "^0.7.0"
+    "tempy": "^1.0.1"
   },
   "publishConfig": {
     "access": "public"
