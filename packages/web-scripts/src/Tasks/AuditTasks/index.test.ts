@@ -81,6 +81,7 @@ describe('web-scripts audit', () => {
         restOptions: ['--cwd', source],
       });
 
+      /* eslint jest/no-conditional-expect: off */
       if (status) expect(process.exit).toHaveBeenCalledWith(status);
       else expect(process.exit).not.toHaveBeenCalled();
     },
