@@ -1,4 +1,4 @@
-# @spotify/eslint-config
+# @spotify/eslint-config-jest
 
 Spotify's TypeScript full ESLint config.
 
@@ -12,15 +12,13 @@ npm install --save-dev eslint @spotify/eslint-config
 
 After installing, update your project's ESLint config:
 
-```js
+```json
 {
-  "extends" : ["@spotify"]
+  "extends": ["@spotify/eslint-config-jest"]
 }
 ```
 
-### Linting Jest code
-
-This configuration does not support Jest out of the box. If you want to configure eslint for your Jest unit test code too, you can use this package and @spotify/eslint-config-jest together:
+It will often be useful to extend this configuration only for test files. This way, eslint will warn you if you try to use things like Jest globals in non-test code:
 
 ```js
 {

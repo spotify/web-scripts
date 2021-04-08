@@ -1,0 +1,36 @@
+{
+  "name": "@spotify/eslint-config-jest",
+  "version": "7.0.0",
+  "description": "Spotify's eslint config for Jest test files",
+  "author": "Paul Marbach <pmarbach@spotify.com>",
+  "homepage": "https://github.com/spotify/web-scripts#readme",
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spotify/web-scripts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/spotify/web-scripts/issues"
+  },
+  "scripts": {},
+  "dependencies": {
+    "@spotify/eslint-config": "^7.0.1",
+    "eslint-plugin-jest": "^23.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=6.x"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=10.18.0"
+  }
+}
