@@ -3,10 +3,10 @@ name: Tests
 on:
   push:
     branches:
-    - master
+      - master
   pull_request:
     branches:
-    - '*'
+      - '*'
 
 jobs:
   test:
@@ -15,21 +15,21 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x]
+        node-version: [12.x, 14.x]
 
     steps:
-    - uses: actions/checkout@v1
-      with:
-        fetch-depth: 0
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: yarn install
-      run: yarn
-    - name: yarn build
-      run: yarn build
-    - name: lint
-      run: yarn lint
-    - name: test
-      run: yarn test
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 0
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: yarn install
+        run: yarn
+      - name: yarn build
+        run: yarn build
+      - name: lint
+        run: yarn lint
+      - name: test
+        run: yarn test
