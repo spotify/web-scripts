@@ -23,8 +23,8 @@
     "@spotify/eslint-config-oss": "^1.0.0",
     "@spotify/eslint-plugin": "^9.0.1",
     "husky": "^4.0.0",
-    "lerna": "^3.20.2",
-    "typescript": "^4.0.2"
+    "lerna": "^4.0.0",
+    "typescript": "^4.2.3"
   },
   "husky": {
     "hooks": {

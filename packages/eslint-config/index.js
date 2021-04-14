@@ -25,13 +25,17 @@ const hasTypescript = hasConfig([
   { type: 'file', pattern: 'tsconfig.json' },
 ]);
 
-let settings;
+// We explicitly set the Jest version because auto-detection doesn't work in the monorepo.
+// Ref: https://github.com/jest-community/eslint-plugin-jest/pull/564/files#diff-b335630551682c19a781afebcf4d07bf978fb1f8ac04c6bf87428ed5106870f5
+const settings = {
+  jest: {
+    version: 24,
+  },
+};
 
 if (hasReact) {
-  settings = {
-    react: {
-      version: 'detect',
-    },
+  settings.react = {
+    version: 'detect',
   };
 }
 
@@ -41,8 +45,6 @@ module.exports = {
     hasReact ? '@spotify/eslint-config-react' : null,
     hasTypescript ? '@spotify/eslint-config-typescript' : null,
     'prettier',
-    hasReact ? 'prettier/react' : null,
-    hasTypescript ? 'prettier/@typescript-eslint' : null,
     'plugin:jest/recommended',
   ].filter(s => !!s),
   parser: '@typescript-eslint/parser',

@@ -15,7 +15,7 @@
     "test": "./run-tests.sh"
   },
   "devDependencies": {
-    "typescript": "^4.0.2"
+    "typescript": "^4.2.3"
   },
   "peerDependencies": {
     "typescript": ">=4 <5"
@@ -24,6 +24,6 @@
     "access": "public"
   },
   "engines": {
-    "node": ">=10.18.0"
+    "node": ">=12.0.0"
   }
 }

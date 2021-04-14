@@ -35,7 +35,7 @@ module.exports = {
     '@typescript-eslint/no-array-constructor': 'error',
     // no-unused-vars interference fix.
     'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': 'warn',
+    '@typescript-eslint/no-unused-vars': 'off',
     // no-useless-constructor interference fix.
     'no-useless-constructor': 'off',
     '@typescript-eslint/no-useless-constructor': 'error',

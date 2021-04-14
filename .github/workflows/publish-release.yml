@@ -18,9 +18,9 @@ jobs:
       # pulls all tags (needed for lerna / semantic release to correctly version)
       - name: fetch tags
         run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         with:
-          node-version: 12.0
+          node-version: 14
       - name: yarn install
         run: yarn
       - name: yarn build
