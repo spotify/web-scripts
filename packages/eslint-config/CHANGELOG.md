@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/spotify/web-scripts/compare/v9.0.2...v10.0.0) (2021-04-14)
+
+
+### Bug Fixes
+
+* **eslint-config:** use jest version setting to fix no-deprecated-functions functionality ([9a67198](https://github.com/spotify/web-scripts/commit/9a67198677c7aaec199ed291e0ebbb02b643c042))
+
+
+### Build System
+
+* drop support for nodejs v10.x ([3fe3059](https://github.com/spotify/web-scripts/commit/3fe3059225c33cc550027dd77dbf1a48fde810a3))
+* **deps:** bump eslint-plugin-jest from 23.20.0 to 24.3.4 ([7d8b247](https://github.com/spotify/web-scripts/commit/7d8b24794f4bd35a5181df872c8274a560207acd)), closes [/github.com/jest-community/eslint-plugin-jest/blob/main/CHANGELOG.md#2400-2020-09-04](https://github.com//github.com/jest-community/eslint-plugin-jest/blob/main/CHANGELOG.md/issues/2400-2020-09-04)
+
+
+### BREAKING CHANGES
+
+* drop support for NodeJS v10.x, which reaches EOL on
+April 30, 2021.
+* **deps:** introduces new lint rules for jest that might break
+existing tests.
+
+
+
+
+
 ## [9.0.2](https://github.com/spotify/web-scripts/compare/v9.0.1...v9.0.2) (2021-02-26)
 
 **Note:** Version bump only for package @spotify/eslint-config
