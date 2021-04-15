@@ -1720,6 +1720,11 @@
   dependencies:
     eslint-plugin-notice "^0.9.10"
 
+"@spotify/eslint-plugin@^9.0.1":
+  version "9.0.2"
+  resolved "https://registry.yarnpkg.com/@spotify/eslint-plugin/-/eslint-plugin-9.0.2.tgz#f916933248be3c74e3734062f87db99db8230348"
+  integrity sha512-FyR5BydFdsNzY/aFRwgasBSaPysQOrWnx7DlwW+/gWxEP+JY7BnBhFHXd7+VAuwhjPidew1mdyhLnjcTg48VhQ==
+
 "@tootallnate/once@1":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@tootallnate/once/-/once-1.1.2.tgz"
@@ -1891,10 +1896,19 @@
   dependencies:
     "@types/react" "^16"
 
-"@types/react@^16", "@types/react@^16.8.19":
+"@types/react@^16":
   version "16.14.5"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.14.5.tgz#2c39b5cadefaf4829818f9219e5e093325979f4d"
   integrity sha512-YRRv9DNZhaVTVRh9Wmmit7Y0UFhEVqXqCSw3uazRWMxa2x85hWQZ5BN24i7GXZbaclaLXEcodEeIHsjBA8eAMw==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
+"@types/react@^17.0.3":
+  version "17.0.3"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.3.tgz#ba6e215368501ac3826951eef2904574c262cc79"
+  integrity sha512-wYOUxIgs2HZZ0ACNiIayItyluADNbONl7kt8lkLjVK8IitMH5QMyAh75Fwhmo37r1m7L2JaFj03sIfxBVDvRAg==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
