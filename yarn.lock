@@ -1720,6 +1720,11 @@
   dependencies:
     eslint-plugin-notice "^0.9.10"
 
+"@spotify/eslint-plugin@^9.0.1":
+  version "9.0.2"
+  resolved "https://registry.yarnpkg.com/@spotify/eslint-plugin/-/eslint-plugin-9.0.2.tgz#f916933248be3c74e3734062f87db99db8230348"
+  integrity sha512-FyR5BydFdsNzY/aFRwgasBSaPysQOrWnx7DlwW+/gWxEP+JY7BnBhFHXd7+VAuwhjPidew1mdyhLnjcTg48VhQ==
+
 "@tootallnate/once@1":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@tootallnate/once/-/once-1.1.2.tgz"
@@ -1778,9 +1783,9 @@
   integrity sha512-Q1y515GcOdTHgagaVFhHnIFQ38ygs/kmxdNpvpou+raI9UO3YZcHDngBSYKQklcKlvA7iuQlmIKbzvmxcOE9CQ==
 
 "@types/eslint@^7.2.8":
-  version "7.2.9"
-  resolved "https://registry.yarnpkg.com/@types/eslint/-/eslint-7.2.9.tgz#5d26eadbb6d04a225967176399a18eff622da982"
-  integrity sha512-SdAAXZNvWfhtf3X3y1cbbCZhP3xyPh7mfTvzV6CgfWc/ZhiHpyr9bVroe2/RCHIf7gczaNcprhaBLsx0CCJHQA==
+  version "7.2.10"
+  resolved "https://registry.yarnpkg.com/@types/eslint/-/eslint-7.2.10.tgz#4b7a9368d46c0f8cd5408c23288a59aa2394d917"
+  integrity sha512-kUEPnMKrqbtpCq/KTaGFFKAcz6Ethm2EjCoKIDaCmfRBWLbFuTcOJfTlorwbnboXBzahqWLgUp1BQeKHiJzPUQ==
   dependencies:
     "@types/estree" "*"
     "@types/json-schema" "*"
