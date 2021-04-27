@@ -1702,11 +1702,6 @@
   dependencies:
     eslint-plugin-notice "^0.9.10"
 
-"@spotify/eslint-plugin@^9.0.1":
-  version "9.0.2"
-  resolved "https://registry.yarnpkg.com/@spotify/eslint-plugin/-/eslint-plugin-9.0.2.tgz#f916933248be3c74e3734062f87db99db8230348"
-  integrity sha512-FyR5BydFdsNzY/aFRwgasBSaPysQOrWnx7DlwW+/gWxEP+JY7BnBhFHXd7+VAuwhjPidew1mdyhLnjcTg48VhQ==
-
 "@tootallnate/once@1":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@tootallnate/once/-/once-1.1.2.tgz"
