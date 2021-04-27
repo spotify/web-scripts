@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.1](https://github.com/spotify/web-scripts/compare/v10.0.0...v10.0.1) (2021-04-27)
+
+
+### Bug Fixes
+
+* precommit opts destructuring ([e8a238f](https://github.com/spotify/web-scripts/commit/e8a238f18a977d1c6940baa2e88106a44ddf7b11))
+
+
+
+
+
 # [10.0.0](https://github.com/spotify/web-scripts/compare/v9.0.2...v10.0.0) (2021-04-14)
 
 
