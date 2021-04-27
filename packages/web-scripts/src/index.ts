@@ -145,9 +145,9 @@ program
     const {
       tests,
       typecheck,
-      'jest-config': jestConfig,
-      'eslint-config': eslintConfig,
-      'prettier-config': prettierConfig,
+      jestConfig,
+      eslintConfig,
+      prettierConfig,
     } = getOpts(cmd);
     const t: PrecommitTaskDesc = {
       name: 'precommit',
