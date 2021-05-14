@@ -1,0 +1,25 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: daily
+  - package-ecosystem: npm
+    directory: /packages/web-scripts/src/Tasks/AuditTasks/__fixtures__/12
+    schedule:
+      interval: daily
+    ignore:
+      # these dependencies are intentionally included in
+      # the test fixtures to see if the audit task works as designed
+      - dependency-name: geddy
+  - package-ecosystem: npm
+    directory: /packages/web-scripts/src/Tasks/AuditTasks/__fixtures__/30
+    schedule:
+      interval: daily
+    ignore:
+      # these dependencies are intentionally included in
+      # the test fixtures to see if the audit task works as designed
+      - dependency-name: bassmaster
+      - dependency-name: chokidar
+      - dependency-name: geddy
+      - dependency-name: uglify-js
