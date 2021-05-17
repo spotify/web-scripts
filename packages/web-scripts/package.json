@@ -40,7 +40,7 @@
     "@types/debug": "^4.1.2",
     "@types/jest": "^26.0.0",
     "@types/react": "^16.8.19",
-    "@types/react-dom": "^16.8.4",
+    "@types/react-dom": "^17.0.5",
     "commander": "^6.1.0",
     "commitizen": "^4.2.3",
     "cross-spawn-promise": "^0.10.1",
