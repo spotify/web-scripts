@@ -142,13 +142,8 @@ program
   .option('--no-typecheck', 'Do not type check using TypeScript')
   .action((...args) => {
     const cmd = getCommand(args);
-    const {
-      tests,
-      typecheck,
-      jestConfig,
-      eslintConfig,
-      prettierConfig,
-    } = getOpts(cmd);
+    const { tests, typecheck, jestConfig, eslintConfig, prettierConfig } =
+      getOpts(cmd);
     const t: PrecommitTaskDesc = {
       name: 'precommit',
       tests,
