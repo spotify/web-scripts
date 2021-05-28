@@ -22,7 +22,7 @@ It is intended to be used within a project as a series of npm scripts.
 ```json
 {
   "devDependencies": {
-    "@spotify/web-scripts": "^10.0.0",
+    "@spotify/web-scripts": "^11.0.0",
     "husky": "^4.3.8"
   },
   "scripts": {
