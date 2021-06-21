@@ -229,12 +229,17 @@ program
     'path to the commitlint config.',
     COMMITLINT_CONIFG,
   )
+  .option(
+    '--edit [path]',
+    'read last commit message from the specified file (only necessary when using Husky v6).',
+  )
   .action((...args) => {
     const cmd = getCommand(args);
-    const { config } = getOpts(cmd);
+    const { config, edit } = getOpts(cmd);
     const t: CommitMsgTaskDesc = {
       name: 'commitmsg',
       config,
+      edit,
       restOptions: cmd.args,
     };
 

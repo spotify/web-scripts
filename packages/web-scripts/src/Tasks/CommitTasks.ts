@@ -145,7 +145,7 @@ export function commitMsgTask(
     '--no-install',
     'commitlint',
     `--config=${task.config}`,
-    `--edit=${process.env.HUSKY_GIT_PARAMS}`,
+    `--edit=${task.edit || process.env.HUSKY_GIT_PARAMS}`,
     ...task.restOptions,
   ];
   dbg('npx args %o', args);

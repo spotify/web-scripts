@@ -71,6 +71,7 @@ export type CommitTaskDesc = {
 export type CommitMsgTaskDesc = {
   name: 'commitmsg';
   config: string;
+  edit?: string;
 } & TaskDesc;
 
 export type ReleaseTaskDesc = {
