@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.1.0](https://github.com/spotify/web-scripts/compare/v10.0.1...v10.1.0) (2021-06-30)
+
+
+### chore
+
+* **release:** trigger 11.0.0 release ([b869407](https://github.com/spotify/web-scripts/commit/b869407bd524ec98453370caac1aadac53d661bc))
+
+
+### Features
+
+* **husky:** add support for Husky v6 ([934ee73](https://github.com/spotify/web-scripts/commit/934ee73699f131bf9a72b5a60f78df7e12b78574))
+
+
+### BREAKING CHANGES
+
+* **release:** trigger major release due to major release of jest with breaking changes
+
+
+
+
+
 ## [10.0.1](https://github.com/spotify/web-scripts/compare/v10.0.0...v10.0.1) (2021-04-27)
 
 
