@@ -1,3 +1,10 @@
+# This release script determines if a publish should happen using a dry run of semantic release to determine if the
+# commits contain publishable changes (feat, bug, breaking change). If so, lerna will be used to perform the actual
+# publish, however, lerna also has its own logic for determining whether to publish. Specifically, it will run git diff
+# in each package, excluding markdown files, tests, etc. So any attempt to force a version bump with an empty commit or
+# readme tweak will fail. To get around this, we pass the `force-publish` option to lerna, skipping the git diff for
+# changed packages. This allows the semantic release dry run check to be the deciding factor for publishing.
+
 # this message is logged by semantic-release when one of the commits found by web-scripts should trigger a release
 expected_release_message="The release type for the commit is"
 
@@ -15,7 +22,7 @@ then
   echo "spotify/web-scripts: Configuring npm for publishing..."
   echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
   echo "spotify/web-scripts: Attempting publish..."
-  npx lerna publish --yes --conventional-commits --create-release=github --registry=https://registry.npmjs.org
+  npx lerna publish --yes --force-publish --conventional-commits --create-release=github --registry=https://registry.npmjs.org
   exit $?
 else
   echo "spotify/web-scripts: No release will be triggered." >&2
