@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.0.0](https://github.com/spotify/web-scripts/compare/v10.1.0...v11.0.0) (2021-07-16)
+
+**Note:** Version bump only for package @spotify/create-web-scripts-library
+
+
+
+
+
 # [10.1.0](https://github.com/spotify/web-scripts/compare/v10.0.1...v10.1.0) (2021-06-30)
 
 **Note:** Version bump only for package @spotify/create-web-scripts-library

@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.0.0](https://github.com/spotify/web-scripts/compare/v10.1.0...v11.0.0) (2021-07-16)
+
+
+### chore
+
+* **web-scripts:** trigger v11 release ([7bc90f6](https://github.com/spotify/web-scripts/commit/7bc90f65c9f01a2309745a253a36221e5c58721b))
+
+
+### Features
+
+* trigger 11.x release ([6de2afc](https://github.com/spotify/web-scripts/commit/6de2afce7ced2f0bcdc911f337613c4c7bed6322))
+
+
+### BREAKING CHANGES
+
+* **web-scripts:** Trigger v11 release
+* trigger 11.x release
+
+
+
+
+
 # [10.1.0](https://github.com/spotify/web-scripts/compare/v10.0.1...v10.1.0) (2021-06-30)
 
 
