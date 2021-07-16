@@ -105,9 +105,7 @@ The following steps should be from your local repository folder.
 ```yml
 language: node_js
 node_js:
-  - '8'
-  - '10'
-  - '12'
+  - '14'
 branches:
   only:
     - master
