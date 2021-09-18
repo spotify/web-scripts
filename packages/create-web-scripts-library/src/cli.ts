@@ -40,7 +40,7 @@ async function run() {
   } catch (err) {
     /* eslint-disable no-console */
     console.log(chalk.redBright('Failed to create your project!'));
-    console.log(err.message);
+    console.log((err as Error).message);
     /* eslint-enable no-console */
     process.exit(1);
     return;
