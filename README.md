@@ -22,8 +22,8 @@ It is intended to be used within a project as a series of npm scripts.
 ```json
 {
   "devDependencies": {
-    "@spotify/web-scripts": "^11.0.0",
-    "husky": "^4.3.8"
+    "@spotify/web-scripts": "^12.0.0",
+    "husky": "^7.0.0"
   },
   "scripts": {
     "build": "web-scripts build",
@@ -32,16 +32,23 @@ It is intended to be used within a project as a series of npm scripts.
     "lint": "web-scripts lint",
     "commit": "web-scripts commit",
     "release": "web-scripts release",
-    "prepare": "web-scripts audit"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "web-scripts precommit",
-      "commit-msg": "web-scripts commitmsg"
-    }
+    "prepare": "husky install && web-scripts audit"
   }
 }
 ```
+
+Additionally, you'll need to run the following two commands to create the commit and pre-commit hooks:
+
+```shell
+npx husky set .husky/pre-commit 'yarn web-scripts precommit --no-tests --no-typecheck'
+
+npx husky set .husky/commit-msg 'yarn web-scripts commitmsg --edit="$1"' && \
+  sed 's/edit=""/edit="$1"/g' .husky/commit-msg | tee .husky/commit-msg
+```
+
+NOTE: the second command uses sed to hack around [this bug in husky](https://github.com/typicode/husky/issues/1019) that removes `$1`.
+
+You'll want to add and commit the `.husky` directory.
 
 View the [full CLI documentation](./packages/web-scripts) for more details on how to get started.
 
