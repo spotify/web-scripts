@@ -51,7 +51,7 @@ const exec = async (cmd: string, options?: object) => {
     _log(resp);
     return resp;
   } catch (err) {
-    _log(err);
+    _log(err as any);
     throw err;
   }
 };
@@ -60,7 +60,8 @@ const SETUP_REPO_TIMEOUT = 30000;
 const TEST_SCRIPTS_TIMEOUT = 60000;
 // const GITHUB_URL = 'https://github.com/spotify/web-scripts.git';
 
-describe('integration tests', () => {
+// eslint-disable-next-line jest/no-disabled-tests
+describe.skip('integration tests', () => {
   let PKG_ROOT: string;
 
   beforeEach(() => {
@@ -159,7 +160,7 @@ describe('integration tests', () => {
           require(`${ESLINT_ROOT}/package.json`).dependencies,
         ).filter(([k]) => eslintDependencies.includes(k)),
         // react isn't a local dependency so it needs to be directly specified
-        ['react', '^16'],
+        ['react', '^17'],
       ]),
     };
 
@@ -181,7 +182,7 @@ describe('integration tests', () => {
     );
 
     await mkdir(join(PKG_ROOT, 'src'));
-    await fileNames.map(fileName =>
+    fileNames.map(fileName =>
       copyFile(
         join(THIS_ROOT, '__fixtures__', fileName),
         join(PKG_ROOT, 'src', fileName),
@@ -215,7 +216,7 @@ describe('integration tests', () => {
       await exec(['yarn lint', ...lintArgs].join(' '), { cwd: PKG_ROOT });
     } catch (e) {
       // We are not capturing and printing stdout above, where TSC prints its errors. This makes sure it's printed.
-      console.log(e.stdout); // eslint-disable-line no-console
+      console.log((e as any).stdout); // eslint-disable-line no-console
       throw e;
     }
 
