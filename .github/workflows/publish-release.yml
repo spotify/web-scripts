@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: 16.9
       - name: yarn install
-        run: yarn
+        run: yarn install --frozen-lockfile
       - name: yarn build
         run: yarn build
       - name: lint
