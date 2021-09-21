@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@spotify/tsconfig": "^11.0.0",
-    "@types/jest": "^26.0.0"
+    "@types/jest": "^27.0.2"
   },
   "publishConfig": {
     "access": "public"

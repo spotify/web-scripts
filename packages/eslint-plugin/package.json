@@ -36,7 +36,7 @@
   "devDependencies": {
     "@spotify/web-scripts": "^11.0.0",
     "@types/eslint": "^7.2.8",
-    "@types/jest": "^26.0.0",
+    "@types/jest": "^27.0.2",
     "@typescript-eslint/parser": "^4.21.0",
     "@typescript-eslint/types": "^4.21.0",
     "eslint": "^7.23.0",
