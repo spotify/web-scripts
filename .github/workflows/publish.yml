@@ -3,7 +3,7 @@ name: Publish
 on:
   push:
     branches:
-    - master
+      - master
 
 jobs:
   publish:
@@ -11,21 +11,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
-      with:
-        node-version: 14
-    - name: yarn install
-      run: yarn
-    - name: yarn build
-      run: yarn build
-    - name: lint
-      run: yarn lint
-    - name: test
-      run: yarn test
-    - name: release
-      run: yarn release
-      env:
-        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        GH_USERNAME: ${{ secrets.GH_USERNAME }}
+      - uses: actions/checkout@v2
+        with:
+          # pulls all commits (needed for lerna / semantic release to correctly version)
+          fetch-depth: '0'
+      # pulls all tags (needed for lerna / semantic release to correctly version)
+      - name: fetch tags
+        run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16.9
+      - name: yarn install
+        run: yarn install --frozen-lockfile
+      - name: yarn build
+        run: yarn build
+      - name: lint
+        run: yarn lint
+      - name: test
+        run: yarn test
+      - name: release
+        run: yarn release
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_USERNAME: ${{ secrets.GH_USERNAME }}

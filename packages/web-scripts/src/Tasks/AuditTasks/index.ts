@@ -73,8 +73,9 @@ async function yarnRun(task: AuditTaskDesc): Promise<string> {
   try {
     await spawn(cmd, args, { stdio: 'inherit' });
   } catch (err) {
-    const thresholdReached = err.exitStatus >= ThresholdLimits[threshold];
-    if (thresholdReached) process.exit(err.exitStatus);
+    const thresholdReached =
+      (err as any).exitStatus >= ThresholdLimits[threshold];
+    if (thresholdReached) process.exit((err as any).exitStatus);
   }
 
   return '';

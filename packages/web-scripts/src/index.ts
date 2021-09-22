@@ -216,7 +216,7 @@ program
     try {
       commitTask(t);
     } catch (err) {
-      handleError(err);
+      handleError(err as Error & { exitStatus?: number });
     }
   });
 
