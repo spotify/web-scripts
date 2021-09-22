@@ -41,7 +41,7 @@
     "@types/jest": "^27.0.1",
     "@types/react": "^17.0.24",
     "@types/react-dom": "^17.0.5",
-    "commander": "^6.1.0",
+    "commander": "^8.2.0",
     "commitizen": "^4.2.3",
     "cross-spawn-promise": "^0.10.1",
     "cz-conventional-changelog": "^3.0.2",
