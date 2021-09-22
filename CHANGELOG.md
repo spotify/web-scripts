@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.0.0](https://github.com/spotify/web-scripts/compare/v11.0.0...v12.0.0) (2021-09-22)
+
+### Build System
+
+- **deps:** bump typescript from 4.3.5 to 4.4.3 ([b50b7b3](https://github.com/spotify/web-scripts/commit/b50b7b3907681dc0a3b325ff2464764ad4e8e32e))
+- **node:** drop support for Node v12. Support only NodeJS >= 14.17.x ([be04398](https://github.com/spotify/web-scripts/commit/be043986089b79feab63f2a06527f48239ac5144))
+
+### BREAKING CHANGES
+
+- **node:** Dropped support for Node v12. Minimum supported NodeJS version is now >= 14.17.x.
+- **deps:** https://devblogs.microsoft.com/typescript/announcing-typescript-4-4/#breaking-changes
+
 # [11.0.0](https://github.com/spotify/web-scripts/compare/v10.1.0...v11.0.0) (2021-07-16)
 
 ### Features

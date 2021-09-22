@@ -3,245 +3,162 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [11.0.0](https://github.com/spotify/web-scripts/compare/v10.1.0...v11.0.0) (2021-07-16)
-
-
-### chore
-
-* **web-scripts:** trigger v11 release ([7bc90f6](https://github.com/spotify/web-scripts/commit/7bc90f65c9f01a2309745a253a36221e5c58721b))
-
-
-### BREAKING CHANGES
-
-* **web-scripts:** Trigger v11 release
-
-
-
-
-
-# [10.1.0](https://github.com/spotify/web-scripts/compare/v10.0.1...v10.1.0) (2021-06-30)
-
-
-### Features
-
-* **husky:** add support for Husky v6 ([934ee73](https://github.com/spotify/web-scripts/commit/934ee73699f131bf9a72b5a60f78df7e12b78574))
-
-
-
-
-
-## [10.0.1](https://github.com/spotify/web-scripts/compare/v10.0.0...v10.0.1) (2021-04-27)
-
-
-### Bug Fixes
-
-* precommit opts destructuring ([e8a238f](https://github.com/spotify/web-scripts/commit/e8a238f18a977d1c6940baa2e88106a44ddf7b11))
-
-
-
-
-
-# [10.0.0](https://github.com/spotify/web-scripts/compare/v9.0.2...v10.0.0) (2021-04-14)
-
-
-### Bug Fixes
-
-* **eslint-config:** use jest version setting to fix no-deprecated-functions functionality ([9a67198](https://github.com/spotify/web-scripts/commit/9a67198677c7aaec199ed291e0ebbb02b643c042))
-
+# [12.0.0](https://github.com/spotify/web-scripts/compare/v11.0.0...v12.0.0) (2021-09-22)
 
 ### Build System
 
-* drop support for nodejs v10.x ([3fe3059](https://github.com/spotify/web-scripts/commit/3fe3059225c33cc550027dd77dbf1a48fde810a3))
-
+- **deps:** bump typescript from 4.3.5 to 4.4.3 ([b50b7b3](https://github.com/spotify/web-scripts/commit/b50b7b3907681dc0a3b325ff2464764ad4e8e32e))
+- **node:** drop support for Node v12. Support only NodeJS >= 14.17.x ([be04398](https://github.com/spotify/web-scripts/commit/be043986089b79feab63f2a06527f48239ac5144))
 
 ### BREAKING CHANGES
 
-* drop support for NodeJS v10.x, which reaches EOL on
-April 30, 2021.
+- **node:** Dropped support for Node v12. Minimum supported NodeJS version is now >= 14.17.x.
+- **deps:** https://devblogs.microsoft.com/typescript/announcing-typescript-4-4/#breaking-changes
 
+# [11.0.0](https://github.com/spotify/web-scripts/compare/v10.1.0...v11.0.0) (2021-07-16)
 
+### chore
 
+- **web-scripts:** trigger v11 release ([7bc90f6](https://github.com/spotify/web-scripts/commit/7bc90f65c9f01a2309745a253a36221e5c58721b))
 
+### BREAKING CHANGES
+
+- **web-scripts:** Trigger v11 release
+
+# [10.1.0](https://github.com/spotify/web-scripts/compare/v10.0.1...v10.1.0) (2021-06-30)
+
+### Features
+
+- **husky:** add support for Husky v6 ([934ee73](https://github.com/spotify/web-scripts/commit/934ee73699f131bf9a72b5a60f78df7e12b78574))
+
+## [10.0.1](https://github.com/spotify/web-scripts/compare/v10.0.0...v10.0.1) (2021-04-27)
+
+### Bug Fixes
+
+- precommit opts destructuring ([e8a238f](https://github.com/spotify/web-scripts/commit/e8a238f18a977d1c6940baa2e88106a44ddf7b11))
+
+# [10.0.0](https://github.com/spotify/web-scripts/compare/v9.0.2...v10.0.0) (2021-04-14)
+
+### Bug Fixes
+
+- **eslint-config:** use jest version setting to fix no-deprecated-functions functionality ([9a67198](https://github.com/spotify/web-scripts/commit/9a67198677c7aaec199ed291e0ebbb02b643c042))
+
+### Build System
+
+- drop support for nodejs v10.x ([3fe3059](https://github.com/spotify/web-scripts/commit/3fe3059225c33cc550027dd77dbf1a48fde810a3))
+
+### BREAKING CHANGES
+
+- drop support for NodeJS v10.x, which reaches EOL on
+  April 30, 2021.
 
 ## [9.0.2](https://github.com/spotify/web-scripts/compare/v9.0.1...v9.0.2) (2021-02-26)
 
 **Note:** Version bump only for package @spotify/web-scripts
 
-
-
-
-
 ## [9.0.1](https://github.com/spotify/web-scripts/compare/v9.0.0...v9.0.1) (2021-02-21)
-
 
 ### Bug Fixes
 
-* update ts-jest config ([052a888](https://github.com/spotify/web-scripts/commit/052a888c2d06f2e1f64d7755d6cd9c48fb456bce))
-
-
-
-
+- update ts-jest config ([052a888](https://github.com/spotify/web-scripts/commit/052a888c2d06f2e1f64d7755d6cd9c48fb456bce))
 
 # [9.0.0](https://github.com/spotify/web-scripts/compare/v8.1.1...v9.0.0) (2020-10-26)
 
-
 ### Features
 
-* use TypeScript 4 ([bbf1164](https://github.com/spotify/web-scripts/commit/bbf1164c75c40457d6457274f83deb59d0de7c09)), closes [#487](https://github.com/spotify/web-scripts/issues/487) [#252](https://github.com/spotify/web-scripts/issues/252)
-
+- use TypeScript 4 ([bbf1164](https://github.com/spotify/web-scripts/commit/bbf1164c75c40457d6457274f83deb59d0de7c09)), closes [#487](https://github.com/spotify/web-scripts/issues/487) [#252](https://github.com/spotify/web-scripts/issues/252)
 
 ### BREAKING CHANGES
 
-* must upgrade to TypeScript 4 as a consumer; new tsconfig takes advantage of
-incremental + noEmit
-
-
-
-
+- must upgrade to TypeScript 4 as a consumer; new tsconfig takes advantage of
+  incremental + noEmit
 
 ## [8.1.1](https://github.com/spotify/web-scripts/compare/v8.1.0...v8.1.1) (2020-09-22)
 
 **Note:** Version bump only for package @spotify/web-scripts
 
-
-
-
-
 # [8.1.0](https://github.com/spotify/web-scripts/compare/v8.0.4...v8.1.0) (2020-09-08)
 
 **Note:** Version bump only for package @spotify/web-scripts
 
-
-
-
-
 ## [8.0.4](https://github.com/spotify/web-scripts/compare/v8.0.3...v8.0.4) (2020-08-26)
-
 
 ### Bug Fixes
 
-* use ts-jest 26.2.0 ([0cf896d](https://github.com/spotify/web-scripts/commit/0cf896d9ca7312903784a24a96bf552c9936ea1b))
-
-
-
-
+- use ts-jest 26.2.0 ([0cf896d](https://github.com/spotify/web-scripts/commit/0cf896d9ca7312903784a24a96bf552c9936ea1b))
 
 ## [8.0.3](https://github.com/spotify/web-scripts/compare/v8.0.2...v8.0.3) (2020-08-25)
 
-
 ### Bug Fixes
 
-* upgrade dependencies ([19f61d1](https://github.com/spotify/web-scripts/commit/19f61d127991d019579ab072bc4437201f24d01d))
-
-
-
-
+- upgrade dependencies ([19f61d1](https://github.com/spotify/web-scripts/commit/19f61d127991d019579ab072bc4437201f24d01d))
 
 ## [8.0.2](https://github.com/spotify/web-scripts/compare/v8.0.1...v8.0.2) (2020-07-15)
 
 **Note:** Version bump only for package @spotify/web-scripts
 
-
-
-
-
 ## [8.0.1](https://github.com/spotify/web-scripts/compare/v8.0.0...v8.0.1) (2020-07-02)
 
 **Note:** Version bump only for package @spotify/web-scripts
 
-
-
-
-
 # [8.0.0](https://github.com/spotify/web-scripts/compare/v7.0.2...v8.0.0) (2020-06-23)
-
 
 ### Features
 
-* **commitlint:** v9 ([2709cb8](https://github.com/spotify/web-scripts/commit/2709cb81e3e4efe4f75ef1f8ec954a9c8dd3b023))
-* **eslint:** v7 ([55ebb7f](https://github.com/spotify/web-scripts/commit/55ebb7f402546e9c8d7c7372cafbd6f49f17790c))
-* **jest:** v26 ([14c37a8](https://github.com/spotify/web-scripts/commit/14c37a82361095a2c3fc5ecac27ef94552a7d38a))
-* **jest-junit:** v11 ([1ef34c4](https://github.com/spotify/web-scripts/commit/1ef34c4373234e8682f50ce10f3ace05b16f61d3))
-* **semantic-release:** minor bump ([ded14f4](https://github.com/spotify/web-scripts/commit/ded14f46ff128737f5a4beb19e8af9d921433aad))
-
+- **commitlint:** v9 ([2709cb8](https://github.com/spotify/web-scripts/commit/2709cb81e3e4efe4f75ef1f8ec954a9c8dd3b023))
+- **eslint:** v7 ([55ebb7f](https://github.com/spotify/web-scripts/commit/55ebb7f402546e9c8d7c7372cafbd6f49f17790c))
+- **jest:** v26 ([14c37a8](https://github.com/spotify/web-scripts/commit/14c37a82361095a2c3fc5ecac27ef94552a7d38a))
+- **jest-junit:** v11 ([1ef34c4](https://github.com/spotify/web-scripts/commit/1ef34c4373234e8682f50ce10f3ace05b16f61d3))
+- **semantic-release:** minor bump ([ded14f4](https://github.com/spotify/web-scripts/commit/ded14f46ff128737f5a4beb19e8af9d921433aad))
 
 ### BREAKING CHANGES
 
-* **commitlint:** 'improvement' type will now be rejected by this config.
-* **eslint:** see release notes for eslint v7
-* **jest-junit:** see jest-junit 11 release notes
-* **jest:** See jest 26 release notes
-
-
-
-
+- **commitlint:** 'improvement' type will now be rejected by this config.
+- **eslint:** see release notes for eslint v7
+- **jest-junit:** see jest-junit 11 release notes
+- **jest:** See jest 26 release notes
 
 ## [7.0.2](https://github.com/spotify/web-scripts/compare/v7.0.1...v7.0.2) (2020-05-27)
 
-
 ### Bug Fixes
 
-* **web-scripts:** positional args were being stripped out ([bae75b4](https://github.com/spotify/web-scripts/commit/bae75b497b2419d120a9e47111e4442ae48f78b9))
-
-
-
-
+- **web-scripts:** positional args were being stripped out ([bae75b4](https://github.com/spotify/web-scripts/commit/bae75b497b2419d120a9e47111e4442ae48f78b9))
 
 ## [7.0.1](https://github.com/spotify/web-scripts/compare/v7.0.0...v7.0.1) (2020-05-15)
 
-
 ### Bug Fixes
 
-* **web-scripts:** unknown command options were parsed twice ([d30364b](https://github.com/spotify/web-scripts/commit/d30364b3e2a99b0939dfecc24aa83059732bd134)), closes [#341](https://github.com/spotify/web-scripts/issues/341)
-
-
-
-
+- **web-scripts:** unknown command options were parsed twice ([d30364b](https://github.com/spotify/web-scripts/commit/d30364b3e2a99b0939dfecc24aa83059732bd134)), closes [#341](https://github.com/spotify/web-scripts/issues/341)
 
 # [7.0.0](https://github.com/spotify/web-scripts/compare/v6.2.0...v7.0.0) (2020-04-28)
 
-
-* major release- 7.0.0 (#318) ([29509b4](https://github.com/spotify/web-scripts/commit/29509b4a52325080b7a38f3aeb41ce8ed82f04f5)), closes [#318](https://github.com/spotify/web-scripts/issues/318) [#314](https://github.com/spotify/web-scripts/issues/314) [#312](https://github.com/spotify/web-scripts/issues/312) [#310](https://github.com/spotify/web-scripts/issues/310)
-
+- major release- 7.0.0 (#318) ([29509b4](https://github.com/spotify/web-scripts/commit/29509b4a52325080b7a38f3aeb41ce8ed82f04f5)), closes [#318](https://github.com/spotify/web-scripts/issues/318) [#314](https://github.com/spotify/web-scripts/issues/314) [#312](https://github.com/spotify/web-scripts/issues/312) [#310](https://github.com/spotify/web-scripts/issues/310)
 
 ### BREAKING CHANGES
 
-* running web-scripts without arguments exits code 1 now instead of exiting 0
-* prettier 2.0 may introduce breaking changes
-* prettier 2.0 may introduce breaking changes
+- running web-scripts without arguments exits code 1 now instead of exiting 0
+- prettier 2.0 may introduce breaking changes
+- prettier 2.0 may introduce breaking changes
 
-* improvement(web-scripts): make stylecheck and typecheck default for lint
+- improvement(web-scripts): make stylecheck and typecheck default for lint
 
 the lint script will now default typechecking and stylechecking to true by default. You may shut
 these off with `--no-typecheck` and `--no-stylecheck`.
-* Users who have projects incompatible with TypeScript checks or with projects that
-do not user prettier will now fail yarn lint.
 
-
-
-
+- Users who have projects incompatible with TypeScript checks or with projects that
+  do not user prettier will now fail yarn lint.
 
 # [6.2.0](https://github.com/spotify/web-scripts/compare/v6.1.1...v6.2.0) (2020-04-04)
 
-
 ### Features
 
-* **web-scripts:** allow custom lint-staged ([#276](https://github.com/spotify/web-scripts/issues/276)) ([49324dc](https://github.com/spotify/web-scripts/commit/49324dcb1c9c8d6e2255a2957323d209b46d5803))
-
-
-
-
+- **web-scripts:** allow custom lint-staged ([#276](https://github.com/spotify/web-scripts/issues/276)) ([49324dc](https://github.com/spotify/web-scripts/commit/49324dcb1c9c8d6e2255a2957323d209b46d5803))
 
 ## [6.1.1](https://github.com/spotify/web-scripts/compare/v6.1.0...v6.1.1) (2020-04-03)
 
-
 ### Bug Fixes
 
-* pin ts-jest to 25.2 ([48e4cd5](https://github.com/spotify/web-scripts/commit/48e4cd5f2a73752cd6670b706edc6315f3998433))
-
-
-
-
+- pin ts-jest to 25.2 ([48e4cd5](https://github.com/spotify/web-scripts/commit/48e4cd5f2a73752cd6670b706edc6315f3998433))
 
 # [6.1.0](https://github.com/spotify/web-scripts/compare/v6.0.2...v6.1.0) (2020-03-12)
 
