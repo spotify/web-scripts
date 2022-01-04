@@ -52,5 +52,7 @@ module.exports = {
     // allow functions to be defined after they're used
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error', 'nofunc'],
+    // all promises must have appropriate error handling
+    '@typescript-eslint/no-floating-promises': 'warn',
   },
 };
