@@ -10,14 +10,14 @@
   "main": "index.js",
   "scripts": {},
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.21.0",
-    "@typescript-eslint/parser": "^4.21.0",
-    "eslint": "^7.23.0"
+    "@typescript-eslint/eslint-plugin": "^5.13.0",
+    "@typescript-eslint/parser": "^5.13.0",
+    "eslint": "^8.10.0"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": ">=4",
-    "@typescript-eslint/parser": ">=4",
-    "eslint": ">=7.x"
+    "@typescript-eslint/eslint-plugin": ">=5",
+    "@typescript-eslint/parser": ">=5",
+    "eslint": ">=8.x"
   },
   "publishConfig": {
     "access": "public"
