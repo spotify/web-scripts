@@ -1823,6 +1823,11 @@
   dependencies:
     eslint-plugin-notice "^0.9.10"
 
+"@spotify/eslint-plugin@^12.0.0":
+  version "12.0.0"
+  resolved "https://registry.yarnpkg.com/@spotify/eslint-plugin/-/eslint-plugin-12.0.0.tgz#2a737930cf3154b8eaf01a144cbf7e9a8c0be489"
+  integrity sha512-TTguTnJjXpLuE6dwAzAx4F2uLf/zmSj6txnm8UVYX0/ES04T9jGfujQ8VKoItjqr7UepaQbJbaMIpnnSCwcFzg==
+
 "@tootallnate/once@1":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@tootallnate/once/-/once-1.1.2.tgz#ccb91445360179a04e7fe6aff78c00ffc1eeaf82"
@@ -2112,10 +2117,15 @@
     debug "^4.3.2"
     tsutils "^3.21.0"
 
-"@typescript-eslint/types@5.15.0", "@typescript-eslint/types@^5.13.0":
+"@typescript-eslint/types@5.15.0":
   version "5.15.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/types/-/types-5.15.0.tgz#c7bdd103843b1abae97b5518219d3e2a0d79a501"
   integrity sha512-yEiTN4MDy23vvsIksrShjNwQl2vl6kJeG9YkVJXjXZnkJElzVK8nfPsWKYxcsGWG8GhurYXP4/KGj3aZAxbeOA==
+
+"@typescript-eslint/types@^5.13.0":
+  version "5.16.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/types/-/types-5.16.0.tgz#5827b011982950ed350f075eaecb7f47d3c643ee"
+  integrity sha512-oUorOwLj/3/3p/HFwrp6m/J2VfbLC8gjW5X3awpQJ/bSG+YRGFS4dpsvtQ8T2VNveV+LflQHjlLvB6v0R87z4g==
 
 "@typescript-eslint/typescript-estree@5.15.0":
   version "5.15.0"
