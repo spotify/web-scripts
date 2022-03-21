@@ -30,8 +30,8 @@
     "prepublishOnly": "yarn run bootstrap && yarn run build"
   },
   "dependencies": {
-    "@commitlint/cli": "^13.1.0",
-    "@commitlint/config-conventional": "^13.1.0",
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-conventional": "^16.2.1",
     "@spotify/eslint-config": "^12.0.0",
     "@spotify/prettier-config": "^12.0.0",
     "@spotify/tsconfig": "^12.0.0",
@@ -46,12 +46,12 @@
     "cross-spawn-promise": "^0.10.1",
     "cz-conventional-changelog": "^3.0.2",
     "debug": "^4.1.1",
-    "eslint": "^7.23.0",
+    "eslint": "^8.10.0",
     "jest": "^27.0.1",
-    "jest-junit": "^12.3.0",
-    "lint-staged": "^11.0.0",
+    "jest-junit": "^13.0.0",
+    "lint-staged": "^12.3.4",
     "prettier": "^2.2.1",
-    "semantic-release": "^18.0.0",
+    "semantic-release": "^19.0.2",
     "ts-jest": "^27.0.1",
     "typescript": "^4.2.3"
   },

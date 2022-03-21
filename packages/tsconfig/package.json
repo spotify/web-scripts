@@ -12,7 +12,7 @@
     "tsconfig.json"
   ],
   "scripts": {
-    "test": "./run-tests.sh"
+    "test": "true"
   },
   "devDependencies": {
     "typescript": "^4.2.3"

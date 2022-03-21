@@ -23,16 +23,16 @@
     "@spotify/eslint-config-typescript": "^12.0.0",
     "@spotify/eslint-plugin": "^12.0.0",
     "@spotify/web-scripts-utils": "^12.0.0",
-    "@typescript-eslint/eslint-plugin": "^4.21.0",
-    "@typescript-eslint/parser": "^4.21.0",
+    "@typescript-eslint/eslint-plugin": "^5.13.0",
+    "@typescript-eslint/parser": "^5.13.0",
     "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-jest": "^24.3.4",
+    "eslint-plugin-jest": "^26.1.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react": "^7.29.2",
     "eslint-plugin-react-hooks": "^4.2.0"
   },
   "devDependencies": {
-    "eslint": "^7.23.0"
+    "eslint": "^8.10.0"
   },
   "peerDependencies": {
     "@spotify/eslint-plugin": ">=8.x",
