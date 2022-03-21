@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.0.0](https://github.com/spotify/web-scripts/compare/v12.0.0...v13.0.0) (2022-03-21)
+
+### chore
+
+- update [@typescript-eslint](https://github.com/typescript-eslint) from v4 to v5, eslint from v7 to v8 ([e284943](https://github.com/spotify/web-scripts/commit/e28494330a6dd9c2561370f56a4eed1ef152f23d))
+- update eslint from v7 to v8 ([725749c](https://github.com/spotify/web-scripts/commit/725749c6cf177de20b4011057198dd590cdbb742))
+
+### BREAKING CHANGES
+
+- update @typescript-eslint from v4 to v5, eslint from v7 to v8
+- update eslint from v7 to v8
+
 # [12.0.0](https://github.com/spotify/web-scripts/compare/v11.0.0...v12.0.0) (2021-09-22)
 
 ### Build System
