@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.0.0](https://github.com/spotify/web-scripts/compare/v12.0.0...v13.0.0) (2022-03-21)
+
+### Bug Fixes
+
+- **eslint:** specify parserOptions.project ([5ea256c](https://github.com/spotify/web-scripts/commit/5ea256cc7a05927d94dc5bf1974fdb4e3ee94bc1))
+- remove parserOptions.project ([c901579](https://github.com/spotify/web-scripts/commit/c901579eef6ed3723e94aca079d6f5171525ac41))
+
+### chore
+
+- update [@typescript-eslint](https://github.com/typescript-eslint) from v4 to v5, eslint from v7 to v8 ([e284943](https://github.com/spotify/web-scripts/commit/e28494330a6dd9c2561370f56a4eed1ef152f23d))
+
+### BREAKING CHANGES
+
+- update @typescript-eslint from v4 to v5, eslint from v7 to v8
+
 # [12.0.0](https://github.com/spotify/web-scripts/compare/v11.0.0...v12.0.0) (2021-09-22)
 
 ### Build System

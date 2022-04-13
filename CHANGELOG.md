@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.0.0](https://github.com/spotify/web-scripts/compare/v12.0.0...v13.0.0) (2022-03-21)
+
+### Bug Fixes
+
+- **eslint:** specify parserOptions.project ([5ea256c](https://github.com/spotify/web-scripts/commit/5ea256cc7a05927d94dc5bf1974fdb4e3ee94bc1))
+- remove parserOptions.project ([c901579](https://github.com/spotify/web-scripts/commit/c901579eef6ed3723e94aca079d6f5171525ac41))
+- update yarn.lock ([9ed6d68](https://github.com/spotify/web-scripts/commit/9ed6d68746f35718861f94811eaaed0b24d1dda7))
+
+### chore
+
+- update [@typescript-eslint](https://github.com/typescript-eslint) from v4 to v5, eslint from v7 to v8 ([e284943](https://github.com/spotify/web-scripts/commit/e28494330a6dd9c2561370f56a4eed1ef152f23d))
+- update @spotify/eslint-plugin from v11 to v12 ([64f9885](https://github.com/spotify/web-scripts/commit/64f98853483a0354adcdcfbefb16076abab9328b))
+- update commitlint from v13 to v16 ([51edc87](https://github.com/spotify/web-scripts/commit/51edc87eee8041fa0def448ac3dfc588d4a61ee4))
+- update eslint from v7 to v8 ([725749c](https://github.com/spotify/web-scripts/commit/725749c6cf177de20b4011057198dd590cdbb742))
+- update jest-junit from v12 to v13 ([40701b0](https://github.com/spotify/web-scripts/commit/40701b0ccff1220b881dd4bdff866091799f8de7))
+- update semantic-release from v18 to v19 ([b9fecfd](https://github.com/spotify/web-scripts/commit/b9fecfd7bcbee493bc58187dca6aea8aeb4f06e1))
+
+### BREAKING CHANGES
+
+- update semantic-release from v18 to v19
+- update jest-junit from v12 to v13
+- update @typescript-eslint from v4 to v5, eslint from v7 to v8
+- update eslint from v7 to v8
+- update @spotify/eslint-plugin from v11 to v12
+- update commitlint from v13 to v16
+
 # [12.0.0](https://github.com/spotify/web-scripts/compare/v11.0.0...v12.0.0) (2021-09-22)
 
 ### Build System
