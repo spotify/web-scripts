@@ -39,7 +39,7 @@
     "@types/cross-spawn": "^6.0.0",
     "@types/debug": "^4.1.2",
     "@types/jest": "^27.0.1",
-    "@types/react": "^17.0.24",
+    "@types/react": "^18.0.6",
     "@types/react-dom": "^17.0.5",
     "commander": "^6.1.0",
     "commitizen": "^4.2.3",
