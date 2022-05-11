@@ -69,6 +69,8 @@ async function buildCJS(task: BuildTaskDesc): Promise<string> {
   const cmd = 'npx';
   const args = [
     'tsc',
+    '--declaration',
+    'false',
     '--allowJs',
     '--outDir',
     'cjs',
@@ -86,6 +88,8 @@ async function buildESM(task: BuildTaskDesc): Promise<string> {
   const cmd = 'npx';
   const args = [
     'tsc',
+    '--declaration',
+    'false',
     '--allowJs',
     '--outDir',
     'esm',
