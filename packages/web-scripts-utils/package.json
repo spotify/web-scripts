@@ -24,7 +24,7 @@
     "prepublishOnly": "yarn run bootstrap && yarn run build"
   },
   "dependencies": {
-    "glob": "^7.1.4",
+    "glob": "^8.0.2",
     "read-pkg-up": "^7.0.1"
   },
   "devDependencies": {
