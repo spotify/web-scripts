@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.0.0](https://github.com/spotify/web-scripts/compare/v13.0.1...v14.0.0) (2022-07-11)
+
+### chore
+
+- **deps:** upgrade deps; jest from v27 to v28 ([13aff23](https://github.com/spotify/web-scripts/commit/13aff23c90c7b23ca0a8bb27eb58695663d3f644))
+
+### BREAKING CHANGES
+
+- **deps:** Jest bump from v27 to v28
+
 ## [13.0.1](https://github.com/spotify/web-scripts/compare/v13.0.0...v13.0.1) (2022-04-19)
 
 **Note:** Version bump only for package @spotify/web-scripts-utils
