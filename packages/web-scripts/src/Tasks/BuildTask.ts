@@ -59,6 +59,8 @@ async function buildTypes(task: BuildTaskDesc): Promise<string> {
     '--emitDeclarationOnly',
     '--noEmit',
     'false',
+    '--module',
+    'CommonJS',
     ...task.restOptions,
   ];
   const stdout = await spawn(cmd, args, { stdio: 'inherit' });
