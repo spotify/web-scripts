@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.0.0](https://github.com/spotify/web-scripts/compare/v13.0.1...v14.0.0) (2022-07-11)
+
+### Bug Fixes
+
+- do not output type declarations for cjs/esm ([262a174](https://github.com/spotify/web-scripts/commit/262a174ee68ce57a4835846ece160d2d223af5cd))
+- **web-scripts:** fix type declaration output by specifying module ([814fc6b](https://github.com/spotify/web-scripts/commit/814fc6b09cde075d317865aa2ddcb8c9e2f9afaf))
+
+### chore
+
+- **deps:** upgrade deps; jest from v27 to v28 ([13aff23](https://github.com/spotify/web-scripts/commit/13aff23c90c7b23ca0a8bb27eb58695663d3f644))
+
+### BREAKING CHANGES
+
+- **deps:** Jest bump from v27 to v28
+
 ## [13.0.1](https://github.com/spotify/web-scripts/compare/v13.0.0...v13.0.1) (2022-04-19)
 
 ### Bug Fixes
