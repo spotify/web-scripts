@@ -59,6 +59,8 @@ async function buildTypes(task: BuildTaskDesc): Promise<string> {
     '--emitDeclarationOnly',
     '--noEmit',
     'false',
+    '--module',
+    'CommonJS',
     ...task.restOptions,
   ];
   const stdout = await spawn(cmd, args, { stdio: 'inherit' });
@@ -69,6 +71,8 @@ async function buildCJS(task: BuildTaskDesc): Promise<string> {
   const cmd = 'npx';
   const args = [
     'tsc',
+    '--declaration',
+    'false',
     '--allowJs',
     '--outDir',
     'cjs',
@@ -86,6 +90,8 @@ async function buildESM(task: BuildTaskDesc): Promise<string> {
   const cmd = 'npx';
   const args = [
     'tsc',
+    '--declaration',
+    'false',
     '--allowJs',
     '--outDir',
     'esm',
