@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.0.1](https://github.com/spotify/web-scripts/compare/v14.0.0...v14.0.1) (2022-07-12)
+
+### Bug Fixes
+
+- **web-scripts:** v14 borked, unpublished, must use v15 ([df0acb5](https://github.com/spotify/web-scripts/commit/df0acb524f090e2a3dca81a802932d2d210302c1))
+
+### BREAKING CHANGES
+
+- **web-scripts:** v14 borked, unpublished, must use v15
+
 # [14.0.0](https://github.com/spotify/web-scripts/compare/v13.0.1...v14.0.0) (2022-07-11)
 
 ### Bug Fixes
