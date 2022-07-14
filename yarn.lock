@@ -2204,12 +2204,50 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
+"@spotify/eslint-config-base@^13.0.1":
+  version "13.0.1"
+  resolved "https://registry.yarnpkg.com/@spotify/eslint-config-base/-/eslint-config-base-13.0.1.tgz#91471028de6426a1f1a5cc06aa9aeb6d8c85565f"
+  integrity sha512-7dC5zMJpNud9UBCHVk/IWfZOXKyuRkcyopHzTJi3xsfmZcZvi0jTSVIf7sv8315lpjmqroVZoUdKbxZFkZcZpA==
+
 "@spotify/eslint-config-oss@^1.0.0":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@spotify/eslint-config-oss/-/eslint-config-oss-1.0.2.tgz#b0e56e549c78dcdd79063ce48521f10c3420f701"
   integrity sha512-3Tn6R98f5BWeb8anOhxYdvZywasp1RaJb+y65W7Db5+xiQVmCnSFvIM3jwysQpu1xRdlUJSCqeDHR7S4Nz3thw==
   dependencies:
     eslint-plugin-notice "^0.9.10"
+
+"@spotify/eslint-config-react@^13.0.1":
+  version "13.0.1"
+  resolved "https://registry.yarnpkg.com/@spotify/eslint-config-react/-/eslint-config-react-13.0.1.tgz#f309f5d3c53ef1e2c7c6ce05f76ee681970112c3"
+  integrity sha512-gyC0CtJ2H9K57HyQG5/RcMsJiB6qmVbBHOHWukZcPLfYtwkK201kgMjHrVfJXoSN+mJxcWhDVPxqe+eA7LHshQ==
+
+"@spotify/eslint-config-typescript@^13.0.1":
+  version "13.0.1"
+  resolved "https://registry.yarnpkg.com/@spotify/eslint-config-typescript/-/eslint-config-typescript-13.0.1.tgz#47801a66d5569074a110f4422eba60aafc6bd7f8"
+  integrity sha512-1wLQFyN2H2v+rn/mytA2PGzmGxOmdZdcKBpNyW+4z0qJydpvavp2SeBj/X+FEbwKoYBoUdG9QLr40eLQh1ZHZA==
+
+"@spotify/eslint-plugin@^13.0.0":
+  version "13.0.1"
+  resolved "https://registry.yarnpkg.com/@spotify/eslint-plugin/-/eslint-plugin-13.0.1.tgz#46789dbbbae4a5154197d678d498e93e6930cd4f"
+  integrity sha512-N5mipnByFPrCFLhYXgevNGGgiqzmk7mGrvm58Gh2iobzvPi6pLtGS0R//Jg5cXydYnJ5wupK1zAxuG3AD1lULQ==
+
+"@spotify/prettier-config@^13.0.1":
+  version "13.0.1"
+  resolved "https://registry.yarnpkg.com/@spotify/prettier-config/-/prettier-config-13.0.1.tgz#0fdceb3d4ab543259ce6adc0ec1d10e34898b812"
+  integrity sha512-oVd4hjx2+y0MeUdk1l+ItwVLwlrDlvTlGwXBWMMzPYc7DLyxuxFvDfoHGkAQkrikfAgtdnzxrW6u9a8ywUqdfw==
+
+"@spotify/tsconfig@^13.0.1":
+  version "13.0.1"
+  resolved "https://registry.yarnpkg.com/@spotify/tsconfig/-/tsconfig-13.0.1.tgz#c9495476ff36e9b8a6e47870e489a9755488666d"
+  integrity sha512-gwF13n4WEsfOneHbIzmJuOrmeuusSdFzT7mxEEFsxPEeoLuFDGW6Gahf1qUsdhFWlVbuIqVwN0GRczAdENUXuA==
+
+"@spotify/web-scripts-utils@^13.0.1":
+  version "13.0.1"
+  resolved "https://registry.yarnpkg.com/@spotify/web-scripts-utils/-/web-scripts-utils-13.0.1.tgz#73c944c84befc0fb0b1ccd414bb3f126100b0852"
+  integrity sha512-goL6BjMmFfsnFrxEYpZGU6qB4gRDpkK3H8+3av4AbLbbCgMJd652jCpnF93DY5dDeggK39uZv/FCjIKKIVA5Tg==
+  dependencies:
+    glob "^7.1.4"
+    read-pkg-up "^7.0.1"
 
 "@tootallnate/once@1":
   version "1.1.2"
@@ -5675,14 +5713,7 @@ json-stringify-safe@^5.0.1:
   resolved "https://registry.yarnpkg.com/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb"
   integrity sha1-Epai1Y/UXxmg9s4B1lcB4sc1tus=
 
-json5@^2.1.2:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.0.tgz#2dfefe720c6ba525d9ebd909950f0515316c89a3"
-  integrity sha512-f+8cldu7X/y7RAJurMEJmdoKXGB/X550w2Nr3tTbezL6RwEE/iMcm+tZnXeoZtKuOq6ft8+CqzEkrIgx1fPoQA==
-  dependencies:
-    minimist "^1.2.5"
-
-json5@^2.2.1:
+json5@^2.1.2, json5@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.1.tgz#655d50ed1e6f95ad1a3caababd2b0efda10b395c"
   integrity sha512-1hqLFMSrGHRHxav9q9gNjJ5EXznIxGVO09xQRrwplcS8qs28pZ8s8hupZAmqDwZUmVZ2Qb2jnyPOWcDH8m8dlA==
@@ -8341,9 +8372,9 @@ trim-newlines@^3.0.0:
   integrity sha512-c1PTsA3tYrIsLGkJkzHF+w9F2EyxfXGo4UyJc4pFL++FMjnq0HJS69T3M7d//gKrFKwy429bouPescbjecU+Zw==
 
 ts-jest@^28.0.5:
-  version "28.0.5"
-  resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-28.0.5.tgz#31776f768fba6dfc8c061d488840ed0c8eeac8b9"
-  integrity sha512-Sx9FyP9pCY7pUzQpy4FgRZf2bhHY3za576HMKJFs+OnQ9jS96Du5vNsDKkyedQkik+sEabbKAnCliv9BEsHZgQ==
+  version "28.0.6"
+  resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-28.0.6.tgz#d63df9a9908044cd891e066ad869b1a432e70d67"
+  integrity sha512-yLAWoaSJ6c9o+IT7+nyutp5uvwGzhMYb/LD5WEQAi2tBq4ZSAPay4Lf69pP/IU+GFYg87pdg5eADSzuNAFSK4g==
   dependencies:
     bs-logger "0.x"
     fast-json-stable-stringify "2.x"
