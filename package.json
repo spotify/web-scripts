@@ -28,6 +28,7 @@
     "typescript": "^4.2.3"
   },
   "resolutions": {
-    "minimist": "^1.2.6"
+    "minimist": "^1.2.6",
+    "ansi-regex": "^4.1.1"
   }
 }
