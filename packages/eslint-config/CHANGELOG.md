@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.0.2](https://github.com/spotify/web-scripts/compare/v14.0.1...v14.0.2) (2022-07-15)
+
+**Note:** Version bump only for package @spotify/eslint-config
+
 ## [14.0.1](https://github.com/spotify/web-scripts/compare/v14.0.0...v14.0.1) (2022-07-12)
 
 **Note:** Version bump only for package @spotify/eslint-config

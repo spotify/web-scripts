@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.0.2](https://github.com/spotify/web-scripts/compare/v14.0.1...v14.0.2) (2022-07-15)
+
+### Bug Fixes
+
+- **web-scripts:** resolve sec issue with ansi-regex, must use ^4.1.1 ([85b2c78](https://github.com/spotify/web-scripts/commit/85b2c781827e9f9b7465099aecbd0678567cea9d))
+- **web-scripts:** resolve sec issue with minimist, must use ^1.2.6 ([d52b6a3](https://github.com/spotify/web-scripts/commit/d52b6a3c3595a4fdde4cfb2d2d9eda51baad9c28))
+
 ## [14.0.1](https://github.com/spotify/web-scripts/compare/v14.0.0...v14.0.1) (2022-07-12)
 
 ### Bug Fixes
