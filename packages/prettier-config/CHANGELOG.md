@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.1.0](https://github.com/spotify/web-scripts/compare/v14.0.2...v14.1.0) (2022-08-08)
+
+**Note:** Version bump only for package @spotify/prettier-config
+
 ## [14.0.2](https://github.com/spotify/web-scripts/compare/v14.0.1...v14.0.2) (2022-07-15)
 
 **Note:** Version bump only for package @spotify/prettier-config

@@ -1,6 +1,6 @@
 {
   "name": "@spotify/eslint-config-typescript",
-  "version": "14.0.2",
+  "version": "14.1.0",
   "license": "Apache-2.0",
   "description": "Spotify's ESLint config for TypeScript",
   "repository": {

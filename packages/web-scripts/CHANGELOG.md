@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.1.0](https://github.com/spotify/web-scripts/compare/v14.0.2...v14.1.0) (2022-08-08)
+
+### Features
+
+- **package.json/yarn.lock:** upgrade minimum version of commitizen to latest (4.2.5) ([81ba9e3](https://github.com/spotify/web-scripts/commit/81ba9e36618c49c4311f28f249a2325712a9952f)), closes [#1026](https://github.com/spotify/web-scripts/issues/1026)
+
 ## [14.0.2](https://github.com/spotify/web-scripts/compare/v14.0.1...v14.0.2) (2022-07-15)
 
 ### Bug Fixes

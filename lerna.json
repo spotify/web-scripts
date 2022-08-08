@@ -2,7 +2,7 @@
   "packages": ["packages/*"],
   "npmClient": "yarn",
   "useWorkspaces": true,
-  "version": "14.0.2",
+  "version": "14.1.0",
   "command": {
     "publish": {
       "ignoreChanges": [
