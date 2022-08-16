@@ -8,9 +8,10 @@
   },
   "scripts": {
     "postinstall": "./postinstall.sh",
-    "test": "lerna run test --stream",
-    "build": "lerna run build --stream",
-    "lint": "web-scripts lint --no-typecheck",
+    "dev": "turbo run dev --parallel --no-cache",
+    "test": "turbo run test",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
     "format": "web-scripts format",
     "commit": "web-scripts commit",
     "bootstrap": "lerna bootstrap --use-workspaces",
@@ -25,6 +26,7 @@
     "@spotify/eslint-plugin": "^13.0.0",
     "husky": "^8.0.1",
     "lerna": "^5.1.8",
+    "turbo": "^1.4.3",
     "typescript": "^4.2.3"
   },
   "resolutions": {

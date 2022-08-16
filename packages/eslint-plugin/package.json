@@ -28,13 +28,12 @@
     "url": "https://github.com/spotify/web-scripts/issues"
   },
   "scripts": {
-    "build": "web-scripts build",
-    "test": "web-scripts test",
-    "lint": "web-scripts lint --stylecheck",
-    "format": "web-scripts format"
+    "build": "npx @spotify/web-scripts build",
+    "test": "npx @spotify/web-scripts test",
+    "lint": "npx @spotify/web-scripts lint --stylecheck",
+    "format": "npx @spotify/web-scripts format"
   },
   "devDependencies": {
-    "@spotify/web-scripts": "^14.1.0",
     "@types/eslint": "^8.4.1",
     "@types/jest": "^28.1.4",
     "@typescript-eslint/parser": "^5.13.0",
