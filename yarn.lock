@@ -1967,50 +1967,12 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@spotify/eslint-config-base@^13.0.1":
-  version "13.0.1"
-  resolved "https://registry.yarnpkg.com/@spotify/eslint-config-base/-/eslint-config-base-13.0.1.tgz#91471028de6426a1f1a5cc06aa9aeb6d8c85565f"
-  integrity sha512-7dC5zMJpNud9UBCHVk/IWfZOXKyuRkcyopHzTJi3xsfmZcZvi0jTSVIf7sv8315lpjmqroVZoUdKbxZFkZcZpA==
-
 "@spotify/eslint-config-oss@^1.0.0":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@spotify/eslint-config-oss/-/eslint-config-oss-1.0.2.tgz#b0e56e549c78dcdd79063ce48521f10c3420f701"
   integrity sha512-3Tn6R98f5BWeb8anOhxYdvZywasp1RaJb+y65W7Db5+xiQVmCnSFvIM3jwysQpu1xRdlUJSCqeDHR7S4Nz3thw==
   dependencies:
     eslint-plugin-notice "^0.9.10"
-
-"@spotify/eslint-config-react@^13.0.1":
-  version "13.0.1"
-  resolved "https://registry.yarnpkg.com/@spotify/eslint-config-react/-/eslint-config-react-13.0.1.tgz#f309f5d3c53ef1e2c7c6ce05f76ee681970112c3"
-  integrity sha512-gyC0CtJ2H9K57HyQG5/RcMsJiB6qmVbBHOHWukZcPLfYtwkK201kgMjHrVfJXoSN+mJxcWhDVPxqe+eA7LHshQ==
-
-"@spotify/eslint-config-typescript@^13.0.1":
-  version "13.0.1"
-  resolved "https://registry.yarnpkg.com/@spotify/eslint-config-typescript/-/eslint-config-typescript-13.0.1.tgz#47801a66d5569074a110f4422eba60aafc6bd7f8"
-  integrity sha512-1wLQFyN2H2v+rn/mytA2PGzmGxOmdZdcKBpNyW+4z0qJydpvavp2SeBj/X+FEbwKoYBoUdG9QLr40eLQh1ZHZA==
-
-"@spotify/eslint-plugin@^13.0.0":
-  version "13.0.1"
-  resolved "https://registry.yarnpkg.com/@spotify/eslint-plugin/-/eslint-plugin-13.0.1.tgz#46789dbbbae4a5154197d678d498e93e6930cd4f"
-  integrity sha512-N5mipnByFPrCFLhYXgevNGGgiqzmk7mGrvm58Gh2iobzvPi6pLtGS0R//Jg5cXydYnJ5wupK1zAxuG3AD1lULQ==
-
-"@spotify/prettier-config@^13.0.1":
-  version "13.0.1"
-  resolved "https://registry.yarnpkg.com/@spotify/prettier-config/-/prettier-config-13.0.1.tgz#0fdceb3d4ab543259ce6adc0ec1d10e34898b812"
-  integrity sha512-oVd4hjx2+y0MeUdk1l+ItwVLwlrDlvTlGwXBWMMzPYc7DLyxuxFvDfoHGkAQkrikfAgtdnzxrW6u9a8ywUqdfw==
-
-"@spotify/tsconfig@^13.0.1":
-  version "13.0.1"
-  resolved "https://registry.yarnpkg.com/@spotify/tsconfig/-/tsconfig-13.0.1.tgz#c9495476ff36e9b8a6e47870e489a9755488666d"
-  integrity sha512-gwF13n4WEsfOneHbIzmJuOrmeuusSdFzT7mxEEFsxPEeoLuFDGW6Gahf1qUsdhFWlVbuIqVwN0GRczAdENUXuA==
-
-"@spotify/web-scripts-utils@^13.0.1":
-  version "13.0.1"
-  resolved "https://registry.yarnpkg.com/@spotify/web-scripts-utils/-/web-scripts-utils-13.0.1.tgz#73c944c84befc0fb0b1ccd414bb3f126100b0852"
-  integrity sha512-goL6BjMmFfsnFrxEYpZGU6qB4gRDpkK3H8+3av4AbLbbCgMJd652jCpnF93DY5dDeggK39uZv/FCjIKKIVA5Tg==
-  dependencies:
-    glob "^7.1.4"
-    read-pkg-up "^7.0.1"
 
 "@tootallnate/once@2":
   version "2.0.0"
