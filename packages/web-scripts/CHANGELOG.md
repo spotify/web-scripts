@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.1.1](https://github.com/spotify/web-scripts/compare/v14.1.0...v14.1.1) (2022-11-25)
+
+### Bug Fixes
+
+- **precommit:** add in --passWithNoTests flag to enable precommit hook to succeed with no tests ([67cba2a](https://github.com/spotify/web-scripts/commit/67cba2a757c887391468b3f7f494f8dce07b75cc)), closes [#1020](https://github.com/spotify/web-scripts/issues/1020)
+
 # [14.1.0](https://github.com/spotify/web-scripts/compare/v14.0.2...v14.1.0) (2022-08-08)
 
 ### Features
