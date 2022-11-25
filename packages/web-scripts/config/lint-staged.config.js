@@ -25,7 +25,7 @@ const eslintConfig = process.env.WEB_SCRIPTS_ESLINT_CONFIG || getEslintConfig();
 
 const testRelatedChanges = `jest ${
   jestConfig ? `--config ${jestConfig} ` : ''
-}--bail --findRelatedTests`;
+}--bail --findRelatedTests --passWithNoTests`;
 
 const lintRelatedChanges = `eslint --fix ${
   eslintConfig ? `--config ${eslintConfig}` : ''
