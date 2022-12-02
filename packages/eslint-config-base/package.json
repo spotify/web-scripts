@@ -1,6 +1,6 @@
 {
   "name": "@spotify/eslint-config-base",
-  "version": "14.1.1",
+  "version": "14.1.2",
   "license": "Apache-2.0",
   "description": "Spotify's base ESLint config",
   "main": "index.js",

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.1.2](https://github.com/spotify/web-scripts/compare/v14.1.1...v14.1.2) (2022-12-02)
+
+### Bug Fixes
+
+- **web-scripts:** security vulnerability in glob ([a278f21](https://github.com/spotify/web-scripts/commit/a278f219a0c350cfc7c7244edab714971ca62dd3))
+
 ## [14.1.1](https://github.com/spotify/web-scripts/compare/v14.1.0...v14.1.1) (2022-11-25)
 
 ### Bug Fixes
