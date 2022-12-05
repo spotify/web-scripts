@@ -2241,14 +2241,6 @@
   resolved "https://registry.yarnpkg.com/@spotify/tsconfig/-/tsconfig-13.0.1.tgz#c9495476ff36e9b8a6e47870e489a9755488666d"
   integrity sha512-gwF13n4WEsfOneHbIzmJuOrmeuusSdFzT7mxEEFsxPEeoLuFDGW6Gahf1qUsdhFWlVbuIqVwN0GRczAdENUXuA==
 
-"@spotify/web-scripts-utils@^13.0.1":
-  version "13.0.1"
-  resolved "https://registry.yarnpkg.com/@spotify/web-scripts-utils/-/web-scripts-utils-13.0.1.tgz#73c944c84befc0fb0b1ccd414bb3f126100b0852"
-  integrity sha512-goL6BjMmFfsnFrxEYpZGU6qB4gRDpkK3H8+3av4AbLbbCgMJd652jCpnF93DY5dDeggK39uZv/FCjIKKIVA5Tg==
-  dependencies:
-    glob "^7.1.4"
-    read-pkg-up "^7.0.1"
-
 "@tootallnate/once@1":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@tootallnate/once/-/once-1.1.2.tgz#ccb91445360179a04e7fe6aff78c00ffc1eeaf82"
