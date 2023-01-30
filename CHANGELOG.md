@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.1.5](https://github.com/spotify/web-scripts/compare/v14.1.4...v14.1.5) (2023-01-30)
+
+### Bug Fixes
+
+- update dependencies ([32226e3](https://github.com/spotify/web-scripts/commit/32226e3c918d221ddb101c74745b8cd7609d89f8))
+
 ## [14.1.4](https://github.com/spotify/web-scripts/compare/v14.1.3...v14.1.4) (2023-01-19)
 
 ### Bug Fixes
