@@ -1,0 +1,7 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: web-scripts
+spec:
+  type: library
+  owner: web-infra
