@@ -1,6 +1,6 @@
 {
   "name": "@spotify/web-scripts-utils",
-  "version": "14.1.5",
+  "version": "14.1.6",
   "description": "Private package which contains re-used utils within web-scripts projects",
   "repository": {
     "type": "git",
@@ -28,7 +28,7 @@
     "read-pkg-up": "^7.0.1"
   },
   "devDependencies": {
-    "@spotify/tsconfig": "^14.1.5",
+    "@spotify/tsconfig": "^14.1.6",
     "@types/jest": "^28.1.4"
   },
   "publishConfig": {
