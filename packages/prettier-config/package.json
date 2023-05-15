@@ -10,7 +10,7 @@
   "main": "index.js",
   "scripts": {},
   "devDependencies": {
-    "prettier": "^2.2.1"
+    "prettier": "^2.8.8"
   },
   "peerDependencies": {
     "prettier": "2.x"

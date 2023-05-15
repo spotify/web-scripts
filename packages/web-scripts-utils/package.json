@@ -2,6 +2,7 @@
   "name": "@spotify/web-scripts-utils",
   "version": "14.1.6",
   "description": "Private package which contains re-used utils within web-scripts projects",
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/spotify/web-scripts.git"
@@ -24,12 +25,13 @@
     "prepublishOnly": "yarn run bootstrap && yarn run build"
   },
   "dependencies": {
-    "glob": "^8.0.3",
+    "@types/glob": "8.1.0",
+    "glob": "8.1.0",
     "read-pkg-up": "^7.0.1"
   },
   "devDependencies": {
     "@spotify/tsconfig": "^14.1.6",
-    "@types/jest": "^28.1.4"
+    "@types/jest": "^29.5.1"
   },
   "publishConfig": {
     "access": "public"
