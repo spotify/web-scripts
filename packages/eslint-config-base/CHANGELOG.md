@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.0.0](https://github.com/spotify/web-scripts/compare/v14.1.6...v15.0.0) (2023-05-18)
+
+### chore
+
+- **node:** upgrade required Node version to 18 ([9528841](https://github.com/spotify/web-scripts/commit/952884179ba7378440599b8acb109a98500535ee))
+
+### BREAKING CHANGES
+
+- **node:** Node bump from v14 to v18
+
 ## [14.1.6](https://github.com/spotify/web-scripts/compare/v14.1.5...v14.1.6) (2023-02-14)
 
 **Note:** Version bump only for package @spotify/eslint-config-base

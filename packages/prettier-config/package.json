@@ -1,6 +1,6 @@
 {
   "name": "@spotify/prettier-config",
-  "version": "14.1.6",
+  "version": "15.0.0",
   "license": "Apache-2.0",
   "description": "Spotify's base Prettier config",
   "repository": {

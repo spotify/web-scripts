@@ -1,6 +1,6 @@
 {
   "name": "@spotify/tsconfig",
-  "version": "14.1.6",
+  "version": "15.0.0",
   "license": "Apache-2.0",
   "description": "Common tsconfigs to be used as your base configurations",
   "repository": {
