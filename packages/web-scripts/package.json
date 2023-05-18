@@ -57,7 +57,7 @@
   "devDependencies": {
     "@types/rimraf": "^3.0.0",
     "object.fromentries": "^2.0.0",
-    "rimraf": "^3.0.0",
+    "rimraf": "^5.0.1",
     "tempy": "^1.0.1"
   },
   "publishConfig": {
