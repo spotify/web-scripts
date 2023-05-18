@@ -1525,6 +1525,11 @@
   dependencies:
     eslint-plugin-notice "^0.9.10"
 
+"@spotify/eslint-plugin@^14.1.6":
+  version "14.1.6"
+  resolved "https://registry.yarnpkg.com/@spotify/eslint-plugin/-/eslint-plugin-14.1.6.tgz#55ca0ab60bfc368b7d626a52877e7c09ecb70e5b"
+  integrity sha512-zJfoCXmrUCFStGAmJiQldzgLuEQx2NJnvdqsTz7uzt0OUqwnJ5+qrQSL8xP7EeRBJpCrfa7BvRXcVym4AuYnww==
+
 "@tootallnate/once@2":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@tootallnate/once/-/once-2.0.0.tgz#f544a148d3ab35801c1f633a7441fd87c2e484bf"
