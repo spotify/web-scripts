@@ -15,15 +15,15 @@
     "test": "true"
   },
   "devDependencies": {
-    "typescript": "^4.5.0"
+    "typescript": "^5.0.4"
   },
   "peerDependencies": {
-    "typescript": ">=4 <5"
+    "typescript": ">=5"
   },
   "publishConfig": {
     "access": "public"
   },
   "engines": {
-    "node": ">=14.17.0"
+    "node": ">=18"
   }
 }

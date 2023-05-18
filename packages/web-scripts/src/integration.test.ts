@@ -130,7 +130,6 @@ describe.skip('integration tests', () => {
       'typescript',
       '@types/jest',
       '@types/react',
-      '@types/react-dom',
     ];
 
     // as of ESLint 6, ESLint plugins need to be locally installed too.
