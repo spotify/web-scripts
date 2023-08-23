@@ -32,4 +32,4 @@ jobs:
       - name: lint
         run: yarn lint
       - name: test
-        run: yarn install npm
+        run: yarn add npm
