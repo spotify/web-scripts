@@ -3,6 +3,12 @@
 [![Actions Status](https://github.com/spotify/web-scripts/workflows/Tests/badge.svg)](https://github.com/spotify/web-scripts/actions)
 [![Version](https://img.shields.io/npm/v/@spotify/web-scripts.svg)](https://www.npmjs.com/package/@spotify/web-scripts)
 
+# ⚠️ DEPRECATION NOTICE
+
+2023-12-15: This repository is now officially deprecated. This means that the repository is no longer actively maintained and will not receive any further updates or bug fixes.
+
+---
+
 A monorepo of base configs and CLI wrappers used to speed up development @ Spotify.
 
 Want to use it? Check out the [CLI documentation](https://github.com/spotify/web-scripts/blob/master/packages/web-scripts) to get started!
