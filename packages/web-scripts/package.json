@@ -40,7 +40,7 @@
     "@types/debug": "^4.1.2",
     "@types/jest": "^29.5.1",
     "@types/react": "^18.2.6",
-    "commander": "^10.0.1",
+    "commander": "^12.0.0",
     "commitizen": "^4.2.6",
     "cross-spawn-promise": "^0.10.1",
     "cz-conventional-changelog": "^3.3.0",
